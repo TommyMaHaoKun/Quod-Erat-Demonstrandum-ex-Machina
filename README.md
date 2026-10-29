@@ -37,3 +37,9 @@ All verification programs are plain Python (3.9 or later). Most use only the sta
 ## Status
 
 These are AI-generated mathematical results. Each proof was checked by internal review and by the exact computations included here, but none has been externally peer reviewed or formalized in a proof assistant. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.
+
+## License
+
+- **Code** — all programs in the `reproducibility/` folders — is released under the [MIT License](LICENSE).
+- **Papers, READMEs, certificates and data** are released under [Creative Commons Attribution 4.0 International](LICENSE-CC-BY-4.0.txt) (CC BY 4.0). Please credit the paper's author and link to this repository.
+- **Exception:** `four-row-arrays-increasing-in-four-directions-a181198/reproducibility/data/OEIS_b181198.txt` is taken from the [OEIS](https://oeis.org/A181198) and remains under its original CC BY-SA 4.0 license.

@@ -28,3 +28,7 @@ A few minutes. The SAT step is skipped if `z3-solver` is not installed.
 ## Status
 
 Analytic proof. The proof and the programs were produced by Claude Opus 5.5, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+
+## License
+
+The paper and data are licensed under [CC BY 4.0](../LICENSE-CC-BY-4.0.txt); the code is under the [MIT License](../LICENSE).
