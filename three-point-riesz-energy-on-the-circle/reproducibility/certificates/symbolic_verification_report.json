@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "tool": "SymPy 1.14.0",
+  "checks": [
+    {
+      "name": "D_alt_form",
+      "statement": "D = 4ab-(a+b-c)^2",
+      "passed": true
+    },
+    {
+      "name": "det_M",
+      "statement": "det M = 2abc",
+      "passed": true
+    },
+    {
+      "name": "critical_eq_0",
+      "statement": "M x = lambda 1 at the claimed critical point",
+      "passed": true
+    },
+    {
+      "name": "critical_eq_1",
+      "statement": "M x = lambda 1 at the claimed critical point",
+      "passed": true
+    },
+    {
+      "name": "critical_eq_2",
+      "statement": "M x = lambda 1 at the claimed critical point",
+      "passed": true
+    },
+    {
+      "name": "critical_sum",
+      "statement": "claimed critical weights sum to 1",
+      "passed": true
+    },
+    {
+      "name": "critical_value",
+      "statement": "Q(x) = lambda = 2abc/D",
+      "passed": true
+    },
+    {
+      "name": "inv_sum",
+      "statement": "1^T M^{-1} 1 = D/(2abc), so the critical point is unique when D != 0",
+      "passed": true
+    },
+    {
+      "name": "edge_value",
+      "statement": "edge maximum a/2 at u=v=1/2",
+      "passed": true
+    },
+    {
+      "name": "F_minus_half_c",
+      "statement": "F - c/2 = c(a+b-c)^2/(2D)",
+      "passed": true
+    },
+    {
+      "name": "endpoint_value",
+      "statement": "F at (e,c,c) equals 2c^2/(4c-e)",
+      "passed": true
+    },
+    {
+      "name": "endpoint_weight_A",
+      "statement": "endpoint weight at A = c/(4c-e)",
+      "passed": true
+    },
+    {
+      "name": "endpoint_weight_B",
+      "statement": "endpoint weight at B = c/(4c-e)",
+      "passed": true
+    },
+    {
+      "name": "endpoint_weight_C",
+      "statement": "endpoint weight at C = (2c-e)/(4c-e)",
+      "passed": true
+    },
+    {
+      "name": "comparison_identity",
+      "statement": "F_end - F = 2c[e ab - c(a+b-c)^2]/((4c-e)D)",
+      "passed": true
+    },
+    {
+      "name": "k_identity",
+      "statement": "p+q-s = cos(phi)(cos(phi)-cos(psi))",
+      "passed": true
+    },
+    {
+      "name": "k_product_form",
+      "statement": "k = -2 cos(phi) sin((phi-psi)/2) sin((phi+psi)/2)",
+      "passed": true
+    },
+    {
+      "name": "k_square",
+      "statement": "k^2 = 4 cos(phi)^2 p q",
+      "passed": true
+    },
+    {
+      "name": "endpoint_chord",
+      "statement": "|A_end-B|^2/4 = sin^2(2phi) = 4 s cos(phi)^2",
+      "passed": true
+    },
+    {
+      "name": "endpoint_AC",
+      "statement": "|A_end-C| = |B-C|",
+      "passed": true
+    },
+    {
+      "name": "chord_AB",
+      "statement": "|A-B|^2 = 4 sin^2((phi-psi)/2)",
+      "passed": true
+    },
+    {
+      "name": "chord_AC",
+      "statement": "|A-C|^2 = 4 sin^2((phi+psi)/2)",
+      "passed": true
+    },
+    {
+      "name": "chord_BC",
+      "statement": "|B-C|^2 = 4 sin^2(phi)",
+      "passed": true
+    },
+    {
+      "name": "major_p",
+      "statement": "p = lam k + (1-lam) s",
+      "passed": true
+    },
+    {
+      "name": "major_q",
+      "statement": "q = (1-lam) k + lam s when p+q=k+s",
+      "passed": true
+    },
+    {
+      "name": "isosceles_formula",
+      "statement": "F_end in angle form equals Fan formula 2^(r-1) sin^r g/(1-2^(r-2) cos^r g)",
+      "passed": true
+    }
+  ],
+  "count": 26
+}

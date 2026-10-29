@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "constants": {
+    "A_lower": "321/100",
+    "A_upper": "161/50",
+    "gamma_lower_float": 0.8929535142938763,
+    "gamma_upper_float": 0.8929814695128682,
+    "zeta_lower_float": 3.600887805961107,
+    "zeta_upper_float": 3.6009877393483847
+  },
+  "elementary_inequalities": {
+    "minor_normalized_upper_bound": "1/16 X^-7",
+    "minor_endpoint_rational_upper_float": 0.06005516306823807,
+    "transform_normalized_upper_bound": "1/500 X^-7",
+    "transform_endpoint_rational_upper_float": 0.001624279309447589,
+    "domain": "x=t^(-1/3) >= 50; X=(A/3)x"
+  }
+}

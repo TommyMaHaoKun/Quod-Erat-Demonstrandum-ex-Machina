@@ -1,0 +1,711 @@
+{
+  "arithmetic": "exact rational FLINT",
+  "quotient": "D4+translation; unlabelled cell sets",
+  "results": [
+    {
+      "n": 1,
+      "embeddings": 1,
+      "minimum": "5",
+      "maximum": "5",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "turn_words": [
+        ""
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.452
+    },
+    {
+      "n": 2,
+      "embeddings": 1,
+      "minimum": "71/5",
+      "maximum": "71/5",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "turn_words": [
+        ""
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.001
+    },
+    {
+      "n": 3,
+      "embeddings": 2,
+      "minimum": "233/8",
+      "maximum": "214/7",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "turn_words": [
+        "L"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 4,
+      "embeddings": 3,
+      "minimum": "565/11",
+      "maximum": "11725/209",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.001
+    },
+    {
+      "n": 5,
+      "embeddings": 7,
+      "minimum": "3205/39",
+      "maximum": "6031/65",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.001
+    },
+    {
+      "n": 6,
+      "embeddings": 13,
+      "minimum": "357831/2911",
+      "maximum": "415177/2911",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.002
+    },
+    {
+      "n": 7,
+      "embeddings": 30,
+      "minimum": "1900383/10864",
+      "maximum": "140972/679",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.005
+    },
+    {
+      "n": 8,
+      "embeddings": 64,
+      "minimum": "9711229/40545",
+      "maximum": "1305393/4505",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.018
+    },
+    {
+      "n": 9,
+      "embeddings": 150,
+      "minimum": "12030917/37829",
+      "maximum": "14793725/37829",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.048
+    },
+    {
+      "n": 10,
+      "embeddings": 338,
+      "minimum": "232556377/564719",
+      "maximum": "289997917/564719",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.112
+    },
+    {
+      "n": 11,
+      "embeddings": 794,
+      "minimum": "366838357/702520",
+      "maximum": "57882242/87815",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 0.325
+    },
+    {
+      "n": 12,
+      "embeddings": 1836,
+      "minimum": "5116249387/7865521",
+      "maximum": "6527639365/7865521",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRLRL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 1.01
+    },
+    {
+      "n": 13,
+      "embeddings": 4313,
+      "minimum": "5856328073/7338631",
+      "maximum": "7542845429/7338631",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRLRLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 2.554
+    },
+    {
+      "n": 14,
+      "embeddings": 10067,
+      "minimum": "21168913103/21910515",
+      "maximum": "1833039251/1460701",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRLRLRL"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 9.294
+    },
+    {
+      "n": 15,
+      "embeddings": 23621,
+      "minimum": "472726040895/408855776",
+      "maximum": "19332937048/12776743",
+      "minimizers": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ]
+      ],
+      "turn_words": [
+        "RLRLRLRLRLRLR"
+      ],
+      "minimizing_graph_classes": 1,
+      "seconds": 24.379
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+PASS: F derivative: W squared coefficient
+PASS: F derivative: W Wprime coefficient
+PASS: F derivative: Wprime squared coefficient
+PASS: quadratic reduction
+PASS: linear reduction
+PASS: constant reduction
+PASS: moment reduction
+PASS: moment rational source
+PASS: moment homogeneous coefficient
+PASS: moment source coefficient
+PASS: normalized target moment cancellation
+PASS: normalized target source
+PASS: original target middle coefficient
+PASS: original target trailing coefficient
+All rational identities proved by exact numerator cancellation.

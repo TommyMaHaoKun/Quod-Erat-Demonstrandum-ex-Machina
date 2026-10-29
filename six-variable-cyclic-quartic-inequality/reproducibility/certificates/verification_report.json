@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "arithmetic": "Python standard-library fractions.Fraction; exact rational arithmetic only",
+  "certificate_sha256": "6de4fe3c87fdc25a1bf3899f1c8b81fe5e00a67477cdaa749f42143e97eadcec",
+  "target": "(sum x_i^2)^2 - (sum x_i)(sum x_i x_(i+1)^2), with six cyclic variables",
+  "domain": "all real six-tuples",
+  "quartic_coefficients_checked": 126,
+  "reduced_gram_dimension": 18,
+  "positive_ldl_pivots": 18,
+  "basis_rank": 18,
+  "equality": "x_1 = x_2 = x_3 = x_4 = x_5 = x_6",
+  "checks": [
+    "polynomial identity",
+    "symmetric reduced Gram matrix",
+    "exact LDL identity",
+    "strictly positive LDL pivots",
+    "basis rank",
+    "kernel dimension and basis",
+    "all pairwise equality functionals"
+  ],
+  "qualification": "Exact algebraic verification, not a formal proof-assistant check or external peer review."
+}

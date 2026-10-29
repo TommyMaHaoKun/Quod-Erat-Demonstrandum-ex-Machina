@@ -1,0 +1,202 @@
+{
+  "scope": "Exact constants for the Wright-model lemma only.",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "normalization_k4",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)*k^2) > (7/40)^2"
+    },
+    {
+      "name": "Stirling_exponent_k4",
+      "result": "PASS",
+      "detail": "25/96 <= 259/720"
+    },
+    {
+      "name": "positive_normalization_k4",
+      "result": "PASS",
+      "detail": "k/(2*(22/7)*(k+1)) > 1/16"
+    },
+    {
+      "name": "normalization_k5",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)*k^2) > (7/40)^2"
+    },
+    {
+      "name": "Stirling_exponent_k5",
+      "result": "PASS",
+      "detail": "31/100 <= 259/720"
+    },
+    {
+      "name": "positive_normalization_k5",
+      "result": "PASS",
+      "detail": "k/(2*(22/7)*(k+1)) > 1/16"
+    },
+    {
+      "name": "normalization_k6",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)*k^2) > (7/40)^2"
+    },
+    {
+      "name": "Stirling_exponent_k6",
+      "result": "PASS",
+      "detail": "259/720 <= 259/720"
+    },
+    {
+      "name": "positive_normalization_k6",
+      "result": "PASS",
+      "detail": "k/(2*(22/7)*(k+1)) > 1/16"
+    },
+    {
+      "name": "floor_ratio",
+      "result": "PASS",
+      "detail": "1-2/10 > (8/9)^2"
+    },
+    {
+      "name": "exponential_lower",
+      "result": "PASS",
+      "detail": "Taylor upper bound for exp(259/720) < 100/69"
+    },
+    {
+      "name": "single_term_product",
+      "result": "PASS",
+      "detail": "161/1500 > 1/10"
+    },
+    {
+      "name": "negative_terms_small",
+      "result": "PASS",
+      "detail": "50^10/10! > 5,200,000, hence 520*10^2*exp(-50)<1/100"
+    },
+    {
+      "name": "final_model_bound",
+      "result": "PASS",
+      "detail": "99/1000 > 1/12"
+    },
+    {
+      "name": "block_normalization_k4",
+      "result": "PASS",
+      "detail": "(k-1/3)^2*(k+1)/(2*(22/7)*k^2) > 16/25"
+    },
+    {
+      "name": "block_Stirling_k4",
+      "result": "PASS",
+      "detail": "(k+1)/(100*k) <= 1/80"
+    },
+    {
+      "name": "block_normalization_k5",
+      "result": "PASS",
+      "detail": "(k-1/3)^2*(k+1)/(2*(22/7)*k^2) > 16/25"
+    },
+    {
+      "name": "block_Stirling_k5",
+      "result": "PASS",
+      "detail": "(k+1)/(100*k) <= 1/80"
+    },
+    {
+      "name": "block_normalization_k6",
+      "result": "PASS",
+      "detail": "(k-1/3)^2*(k+1)/(2*(22/7)*k^2) > 16/25"
+    },
+    {
+      "name": "block_Stirling_k6",
+      "result": "PASS",
+      "detail": "(k+1)/(100*k) <= 1/80"
+    },
+    {
+      "name": "block_sqrt_factor",
+      "result": "PASS",
+      "detail": "5/6-1/10 > (5/6)^2, so L-1 > 25*X/36"
+    },
+    {
+      "name": "block_exponent",
+      "result": "PASS",
+      "detail": "21/20+1/80=17/16"
+    },
+    {
+      "name": "block_exp_bound",
+      "result": "PASS",
+      "detail": "rational Taylor upper bound for exp(17/16) < 3"
+    },
+    {
+      "name": "block_sum",
+      "result": "PASS",
+      "detail": "(4/5)*(5/18)=2/9"
+    },
+    {
+      "name": "block_final_bound",
+      "result": "PASS",
+      "detail": "(99/100)*(2/9)>1/5"
+    },
+    {
+      "name": "pi_lower_Machin",
+      "result": "PASS",
+      "detail": "16*(1/5-(1/5)^3/3)-4/239 > 157/50"
+    },
+    {
+      "name": "large_block_floor",
+      "result": "PASS",
+      "detail": "1/15 < (4/15)^2, so 1/sqrt(X)<4/15 for X>=15"
+    },
+    {
+      "name": "large_block_sqrt",
+      "result": "PASS",
+      "detail": "11/15-1/15 > (4/5)^2"
+    },
+    {
+      "name": "mesh_step",
+      "result": "PASS",
+      "detail": "(4*sqrt(15))^2 > 15^2"
+    },
+    {
+      "name": "large_block_Stirling_k4",
+      "result": "PASS",
+      "detail": "(k+1)/(12*k*11) < 1/100"
+    },
+    {
+      "name": "large_block_normalization_k4",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)) > (89/100)^2"
+    },
+    {
+      "name": "large_block_Stirling_k5",
+      "result": "PASS",
+      "detail": "(k+1)/(12*k*11) < 1/100"
+    },
+    {
+      "name": "large_block_normalization_k5",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)) > (89/100)^2"
+    },
+    {
+      "name": "large_block_Stirling_k6",
+      "result": "PASS",
+      "detail": "(k+1)/(12*k*11) < 1/100"
+    },
+    {
+      "name": "large_block_normalization_k6",
+      "result": "PASS",
+      "detail": "(k+1)/(2*(22/7)) > (89/100)^2"
+    },
+    {
+      "name": "Gaussian_full_integral",
+      "result": "PASS",
+      "detail": "(157/50)/(105/22) > (81/100)^2"
+    },
+    {
+      "name": "Gaussian_tail",
+      "result": "PASS",
+      "detail": "Taylor lower bound for exp(105/22) > 100/(105/22)"
+    },
+    {
+      "name": "large_block_exp",
+      "result": "PASS",
+      "detail": "Taylor upper bound for exp(1/100) < 100/99"
+    },
+    {
+      "name": "half_normalization",
+      "result": "PASS",
+      "detail": "(4/5)*(99/100)*(89/100)*(11/15)=64614/125000 > 1/2"
+    }
+  ],
+  "source_sha256": "83a820802526f5a459e2c1b527ede876e1692af7efce06d076d1a072208dd693"
+}

@@ -1,0 +1,68 @@
+{
+  "method": "Independent standard-library exact integer/Fraction arithmetic",
+  "symbolic_elimination_residual_coefficients": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "hermite_transition_indices_verified": [
+    1,
+    9
+  ],
+  "recurrence_diagnostic_indices_verified": [
+    0,
+    7
+  ],
+  "normalized_initial_state_n1": [
+    30,
+    10,
+    10
+  ],
+  "normalized_initial_state_n2": [
+    4530,
+    2340,
+    1800
+  ],
+  "a_n_0_through_10": [
+    1,
+    90,
+    67950,
+    90291600,
+    154700988750,
+    306407299538340,
+    666569141498660400,
+    1548539246648239560000,
+    3776577900841430197548750,
+    9561215418596022668009737500,
+    24935177268489106332174087326700
+  ],
+  "b_n_0_through_10": [
+    1,
+    30,
+    4530,
+    1074900,
+    312527250,
+    102033732780,
+    35906547161100,
+    13317330982527000,
+    5134910691028511250,
+    2040019718806659661500,
+    829927269748046600481780
+  ],
+  "proof_boundary": "Finite diagnostics do not themselves prove the recurrence; the exact identities verify the algebra in the all-index Hermite argument."
+}

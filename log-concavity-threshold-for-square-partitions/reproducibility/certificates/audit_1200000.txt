@@ -1,0 +1,25 @@
+Finite certificate audit, performed 2026-10-23.
+
+Working directory:
+
+
+Command:
+python code/verify_finite_certificate.py certificates/finite_1200000.json
+
+Observed output:
+Fresh coin-change computation complete in 46.63s
+PASS: D(1)..D(1200000), all signs, all boundary values, both checksums,
+and independent recurrence for s(0)..s(10001).
+No statement about n > 1200000 was checked.
+Elapsed 50.77s
+
+Additional checkpoint integrity check:
+A partial DP table through square 17^2, with coefficient bound 1043, was
+saved using the producer checkpoint function and resumed at square 18^2.
+The resulting entire table was exactly equal to the independent
+logarithmic-derivative recurrence through s(1043). Flipping one checksum
+byte caused load_checkpoint to raise ValueError as required. The temporary
+checkpoint test file was then removed.
+
+Scope: this is a record of observed exact computational checks, not a
+proof-assistant certificate and not an infinite-tail proof.

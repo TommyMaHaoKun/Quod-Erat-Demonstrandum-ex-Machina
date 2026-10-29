@@ -1,0 +1,11 @@
+m=3: z(m,3)=m+3 confirmed; 6 labelled extremal bases, all of the classified form
+m=4: z(m,3)=m+3 confirmed; 72 labelled extremal bases, all of the classified form
+m=5: z(m,3)=m+3 confirmed; 540 labelled extremal bases, all of the classified form
+m=6: z(m,3)=m+3 confirmed; 3240 labelled extremal bases, all of the classified form
+m=7: z(m,3)=m+3 confirmed; 17010 labelled extremal bases, all of the classified form
+m=8: z(m,3)=m+3 confirmed; 81648 labelled extremal bases, all of the classified form
+m=3: 6 labelled bases, 6 admissible configurations, all with <= 1 full row; max |E2| = 0 (formula floor((m-2)/2) = 0)
+m=4: 72 labelled bases, 288 admissible configurations, all with <= 1 full row; max |E2| = 1 (formula floor((m-2)/2) = 1)
+m=5: 540 labelled bases, 5220 admissible configurations, all with <= 1 full row; max |E2| = 1 (formula floor((m-2)/2) = 1)
+m=6: 3240 labelled bases, 125280 admissible configurations, all with <= 1 full row; max |E2| = 2 (formula floor((m-2)/2) = 2)
+m=7: 17010 labelled bases, 2262330 admissible configurations, all with <= 1 full row; max |E2| = 2 (formula floor((m-2)/2) = 2)

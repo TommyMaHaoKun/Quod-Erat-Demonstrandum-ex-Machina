@@ -1,0 +1,14 @@
+Executed 2026-10-23 from the project root with Python 3.9.9.
+Command: python src/verify_theorem.py --max-n 24 --word-n 8 --laplacian-n 5
+Exit code: 0
+
+Exact full-state validations: 121; cells <= 5.
+C4: 5
+Domino: 71/5
+Straight triomino: 214/7
+L triomino: 233/8
+Straight values verified for 1 <= n <= 24.
+Exact matrix certificates, including PSD elimination: 3 <= n <= 24.
+Quadratic formula verified on 1092 abstract words, n <= 8.
+Relaxed minimizers classified exactly for 3 <= n <= 8.
+All checks passed. Universal proofs and source-domain audit are separate.

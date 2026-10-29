@@ -1,0 +1,5 @@
+# Optional: minimum.py and the core verifier require only the standard library.
+# These pinned versions reproduce geometric enumeration and symbolic audits.
+python-flint==0.6.0
+sympy==1.14.0
+networkx==3.2.1

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "python": "3.9.9",
+  "sympy": "1.14.0",
+  "all_parameter_symbolic_verifiers": 3,
+  "positive_sum_terms": 100,
+  "oeis_terms_matched": 100,
+  "profile_dp_max_n": 30,
+  "cell_bitmask_max_n": 14,
+  "pfaffian_max_n": 20,
+  "target_recurrence_residual_zero_n": [
+    1,
+    98
+  ],
+  "seconds": 13.25,
+  "scope": "Exact rational identities support the all-n written proof; finite counts are independent implementation checks."
+}

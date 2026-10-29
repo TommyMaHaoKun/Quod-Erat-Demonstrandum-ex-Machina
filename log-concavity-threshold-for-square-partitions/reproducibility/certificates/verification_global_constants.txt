@@ -1,0 +1,2 @@
+All exact rational global-constant checks passed.
+2.31 < A < 2.32; pi in (3.14,22/7); major replacement < X^-5/1000.

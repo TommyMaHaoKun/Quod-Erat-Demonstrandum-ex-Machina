@@ -1,0 +1,12 @@
+{
+  "valid_records": 89,
+  "corruptions_rejected": [
+    "mismatched rational label",
+    "mismatched base label",
+    "mismatched parameter pair",
+    "duplicate record",
+    "duplicate rational identifier in unreduced notation",
+    "missing required seam",
+    "duplicate replacing a missing seam"
+  ]
+}

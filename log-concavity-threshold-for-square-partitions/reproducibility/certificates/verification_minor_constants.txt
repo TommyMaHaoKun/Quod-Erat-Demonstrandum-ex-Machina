@@ -1,0 +1,29 @@
+{
+  "scope": "Exact rational checks of explicit minor-arc constants and uniform normalization",
+  "domain": "x=t^(-1/2)>=100; X=A*x/2; 2.31<A<2.32",
+  "assumption": "The transformed product identity and finite far-arc certificate are established separately",
+  "log_enclosures": {
+    "log(46/25)": [
+      "304882785810447/500000000000000",
+      "121953114324179/200000000000000"
+    ],
+    "log(361/25)": [
+      "66750053336617/25000000000000",
+      "2670002133464681/1000000000000000"
+    ],
+    "log(4)": [
+      "138629436111989/100000000000000",
+      "1386294361119891/1000000000000000"
+    ]
+  },
+  "weighted_term_upper_bounds_at_x_100": {
+    "near": "4683836574539/250000000000000",
+    "middle_exponential": "41/200000000000000",
+    "middle_power": "11004445583/200000000000000",
+    "far": "36669/50000000000000"
+  },
+  "weighted_total_upper_bound": "9395184629827/500000000000000",
+  "weighted_target": "1/40",
+  "conclusion": "Normalized absolute minor-arc contribution <= (1/40)*X^(-5) for every real x>=100",
+  "arithmetic": "Python arbitrary-precision integers and fractions only"
+}

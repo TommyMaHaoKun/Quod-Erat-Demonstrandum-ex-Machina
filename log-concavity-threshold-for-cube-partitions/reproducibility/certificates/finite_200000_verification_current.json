@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "certificate": "finite_200000.json",
+  "coin_change_coefficient_range": [
+    0,
+    200001
+  ],
+  "independent_recurrence_coefficient_range": [
+    0,
+    15657
+  ],
+  "exact_determinant_range": [
+    1,
+    200000
+  ],
+  "negative_count": 5505,
+  "equality_count": 41,
+  "largest_negative_index": 15655,
+  "largest_equality_index": 100,
+  "elapsed_seconds": 8.3653657,
+  "python": "3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)]",
+  "verifier_sha256": "cdb1b1edd4061c59e274bef4f5f2490bfccd3d991e01d7125edb8db35d6ea8e5"
+}

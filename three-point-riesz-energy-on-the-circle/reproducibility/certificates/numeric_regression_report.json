@@ -1,0 +1,464 @@
+{
+  "A_bruteforce_vs_formula": {
+    "samples": 253,
+    "max_relative_difference": 4.440892098500627e-16
+  },
+  "B_endpoint_grid": {
+    "evaluations": 627120,
+    "r_values": [
+      2.0,
+      2.000000001,
+      2.0001,
+      2.1,
+      2.5,
+      3.0,
+      4.0,
+      6.0,
+      10.0,
+      20.0,
+      50.0,
+      100.0,
+      200.0
+    ],
+    "max_relative_excess_over_endpoint": 6.007038828597603e-15,
+    "max_abs_deviation_from_2_when_r_eq_2": 8.881784197001252e-16,
+    "min_relative_gap_r_ge_2.1_psi_le_0.9_endpoint_600_digits": "2.29798e-473"
+  },
+  "C_endpoint_bruteforce_only": {
+    "comparisons": 240,
+    "max_relative_excess": 0.0
+  },
+  "D_odd_polygon_experiment": {
+    "rows": 60,
+    "max_rel_triple_minus_G": 3.055910088007553e-15,
+    "max_rel_measure_excess": 2.7163645226733804e-15,
+    "details": [
+      {
+        "N": 3,
+        "r": 2.5,
+        "conjectured_value": 2.6321480259049856,
+        "max_over_triples": 2.6321480259049848,
+        "replicator_best_over_measures": 2.6321480259049856
+      },
+      {
+        "N": 3,
+        "r": 3.0,
+        "conjectured_value": 3.4641016151377553,
+        "max_over_triples": 3.464101615137755,
+        "replicator_best_over_measures": 3.4641016151377553
+      },
+      {
+        "N": 3,
+        "r": 6.0,
+        "conjectured_value": 18.0,
+        "max_over_triples": 18.000000000000004,
+        "replicator_best_over_measures": 18.000000000000004
+      },
+      {
+        "N": 3,
+        "r": 15.0,
+        "conjectured_value": 2525.330077435424,
+        "max_over_triples": 2525.3300774354243,
+        "replicator_best_over_measures": 2525.3300774354248
+      },
+      {
+        "N": 5,
+        "r": 2.5,
+        "conjectured_value": 2.6974431842839626,
+        "max_over_triples": 2.6974431842839626,
+        "replicator_best_over_measures": 2.697443184283963
+      },
+      {
+        "N": 5,
+        "r": 3.0,
+        "conjectured_value": 3.6567661483878364,
+        "max_over_triples": 3.6567661483878378,
+        "replicator_best_over_measures": 3.656766148387837
+      },
+      {
+        "N": 5,
+        "r": 6.0,
+        "conjectured_value": 24.014916240907937,
+        "max_over_triples": 24.014916240907947,
+        "replicator_best_over_measures": 24.014916240907947
+      },
+      {
+        "N": 5,
+        "r": 15.0,
+        "conjectured_value": 7719.593453531833,
+        "max_over_triples": 7719.593453531839,
+        "replicator_best_over_measures": 7719.590310935743
+      },
+      {
+        "N": 7,
+        "r": 2.5,
+        "conjectured_value": 2.745139394298238,
+        "max_over_triples": 2.7451393942982376,
+        "replicator_best_over_measures": 2.7451393942982376
+      },
+      {
+        "N": 7,
+        "r": 3.0,
+        "conjectured_value": 3.790136563412488,
+        "max_over_triples": 3.790136563412488,
+        "replicator_best_over_measures": 3.790136563412488
+      },
+      {
+        "N": 7,
+        "r": 6.0,
+        "conjectured_value": 27.531470699827633,
+        "max_over_triples": 27.531470699827633,
+        "replicator_best_over_measures": 27.531470699827636
+      },
+      {
+        "N": 7,
+        "r": 15.0,
+        "conjectured_value": 11194.587191938126,
+        "max_over_triples": 11194.587191938128,
+        "replicator_best_over_measures": 11194.58709366182
+      },
+      {
+        "N": 9,
+        "r": 2.5,
+        "conjectured_value": 2.7714720508878283,
+        "max_over_triples": 2.771472050887829,
+        "replicator_best_over_measures": 2.771472050887829
+      },
+      {
+        "N": 9,
+        "r": 3.0,
+        "conjectured_value": 3.860880835860463,
+        "max_over_triples": 3.8608808358604643,
+        "replicator_best_over_measures": 3.8608808358604643
+      },
+      {
+        "N": 9,
+        "r": 6.0,
+        "conjectured_value": 29.204467195251038,
+        "max_over_triples": 29.204467195251052,
+        "replicator_best_over_measures": 29.204467173944558
+      },
+      {
+        "N": 9,
+        "r": 15.0,
+        "conjectured_value": 13022.424189394314,
+        "max_over_triples": 13022.424189394338,
+        "replicator_best_over_measures": 13022.424188268662
+      },
+      {
+        "N": 11,
+        "r": 2.5,
+        "conjectured_value": 2.787118255347078,
+        "max_over_triples": 2.7871182553470786,
+        "replicator_best_over_measures": 2.7871182553470786
+      },
+      {
+        "N": 11,
+        "r": 3.0,
+        "conjectured_value": 3.9015880039897994,
+        "max_over_triples": 3.9015880039898003,
+        "replicator_best_over_measures": 3.9015880039898
+      },
+      {
+        "N": 11,
+        "r": 6.0,
+        "conjectured_value": 30.098777547956324,
+        "max_over_triples": 30.098777547956335,
+        "replicator_best_over_measures": 30.098735380088534
+      },
+      {
+        "N": 11,
+        "r": 15.0,
+        "conjectured_value": 14053.121509962877,
+        "max_over_triples": 14053.121509962888,
+        "replicator_best_over_measures": 14053.121509936285
+      },
+      {
+        "N": 13,
+        "r": 2.5,
+        "conjectured_value": 2.7971062978758106,
+        "max_over_triples": 2.7971062978758114,
+        "replicator_best_over_measures": 2.7971062978758106
+      },
+      {
+        "N": 13,
+        "r": 3.0,
+        "conjectured_value": 3.926897123984386,
+        "max_over_triples": 3.9268971239843884,
+        "replicator_best_over_measures": 3.9268971239843884
+      },
+      {
+        "N": 13,
+        "r": 6.0,
+        "conjectured_value": 30.626877091066433,
+        "max_over_triples": 30.626877091066465,
+        "replicator_best_over_measures": 30.62687654163354
+      },
+      {
+        "N": 13,
+        "r": 15.0,
+        "conjectured_value": 14680.758751585825,
+        "max_over_triples": 14680.75875158586,
+        "replicator_best_over_measures": 14680.758751585261
+      },
+      {
+        "N": 15,
+        "r": 2.5,
+        "conjectured_value": 2.8038574741398423,
+        "max_over_triples": 2.803857474139843,
+        "replicator_best_over_measures": 2.8038574741398428
+      },
+      {
+        "N": 15,
+        "r": 3.0,
+        "conjectured_value": 3.943630233564367,
+        "max_over_triples": 3.943630233564369,
+        "replicator_best_over_measures": 3.9436302335643694
+      },
+      {
+        "N": 15,
+        "r": 6.0,
+        "conjectured_value": 30.963149959508947,
+        "max_over_triples": 30.963149959508968,
+        "replicator_best_over_measures": 30.963149901277383
+      },
+      {
+        "N": 15,
+        "r": 15.0,
+        "conjectured_value": 15088.121548011868,
+        "max_over_triples": 15088.121548011895,
+        "replicator_best_over_measures": 15088.121548008523
+      },
+      {
+        "N": 17,
+        "r": 2.5,
+        "conjectured_value": 2.8086313187799705,
+        "max_over_triples": 2.8086313187799714,
+        "replicator_best_over_measures": 2.8086313187799723
+      },
+      {
+        "N": 17,
+        "r": 3.0,
+        "conjectured_value": 3.955242031949297,
+        "max_over_triples": 3.955242031949299,
+        "replicator_best_over_measures": 3.9552420319492905
+      },
+      {
+        "N": 17,
+        "r": 6.0,
+        "conjectured_value": 31.189954937074887,
+        "max_over_triples": 31.189954937074912,
+        "replicator_best_over_measures": 31.189954907530996
+      },
+      {
+        "N": 17,
+        "r": 15.0,
+        "conjectured_value": 15366.36491722485,
+        "max_over_triples": 15366.36491722488,
+        "replicator_best_over_measures": 15366.364917224542
+      },
+      {
+        "N": 19,
+        "r": 2.5,
+        "conjectured_value": 2.812131113850091,
+        "max_over_triples": 2.812131113850092,
+        "replicator_best_over_measures": 2.812131113850093
+      },
+      {
+        "N": 19,
+        "r": 3.0,
+        "conjectured_value": 3.963617867238326,
+        "max_over_triples": 3.963617867238328,
+        "replicator_best_over_measures": 3.9636178672360107
+      },
+      {
+        "N": 19,
+        "r": 6.0,
+        "conjectured_value": 31.349955821444848,
+        "max_over_triples": 31.349955821444873,
+        "replicator_best_over_measures": 31.34995479888936
+      },
+      {
+        "N": 19,
+        "r": 15.0,
+        "conjectured_value": 15564.37971085843,
+        "max_over_triples": 15564.379710858455,
+        "replicator_best_over_measures": 15564.37971085835
+      },
+      {
+        "N": 21,
+        "r": 2.5,
+        "conjectured_value": 2.814773543315884,
+        "max_over_triples": 2.8147735433158845,
+        "replicator_best_over_measures": 2.8147735433158845
+      },
+      {
+        "N": 21,
+        "r": 3.0,
+        "conjectured_value": 3.9698528342939357,
+        "max_over_triples": 3.9698528342939365,
+        "replicator_best_over_measures": 3.9698528341431425
+      },
+      {
+        "N": 21,
+        "r": 6.0,
+        "conjectured_value": 31.466955785551836,
+        "max_over_triples": 31.466955785551846,
+        "replicator_best_over_measures": 31.466955770847015
+      },
+      {
+        "N": 21,
+        "r": 15.0,
+        "conjectured_value": 15710.094325275822,
+        "max_over_triples": 15710.094325275837,
+        "replicator_best_over_measures": 15710.0943252758
+      },
+      {
+        "N": 23,
+        "r": 2.5,
+        "conjectured_value": 2.8168179374877433,
+        "max_over_triples": 2.8168179374877442,
+        "replicator_best_over_measures": 2.816817937487744
+      },
+      {
+        "N": 23,
+        "r": 3.0,
+        "conjectured_value": 3.9746167153777927,
+        "max_over_triples": 3.974616715377795,
+        "replicator_best_over_measures": 3.9746167132938393
+      },
+      {
+        "N": 23,
+        "r": 6.0,
+        "conjectured_value": 31.55505520968043,
+        "max_over_triples": 31.55505520968046,
+        "replicator_best_over_measures": 31.55505518645487
+      },
+      {
+        "N": 23,
+        "r": 15.0,
+        "conjectured_value": 15820.332241517495,
+        "max_over_triples": 15820.332241517535,
+        "replicator_best_over_measures": 15820.332241517508
+      },
+      {
+        "N": 25,
+        "r": 2.5,
+        "conjectured_value": 2.8184324686430124,
+        "max_over_triples": 2.8184324686430133,
+        "replicator_best_over_measures": 2.818432468643011
+      },
+      {
+        "N": 25,
+        "r": 3.0,
+        "conjectured_value": 3.978337198288201,
+        "max_over_triples": 3.9783371982882025,
+        "replicator_best_over_measures": 3.9783371968744263
+      },
+      {
+        "N": 25,
+        "r": 6.0,
+        "conjectured_value": 31.623026981385685,
+        "max_over_triples": 31.623026981385713,
+        "replicator_best_over_measures": 31.623026608317126
+      },
+      {
+        "N": 25,
+        "r": 15.0,
+        "conjectured_value": 15905.690420819696,
+        "max_over_triples": 15905.690420819723,
+        "replicator_best_over_measures": 15905.690420819725
+      },
+      {
+        "N": 27,
+        "r": 2.5,
+        "conjectured_value": 2.8197300476767424,
+        "max_over_triples": 2.8197300476767437,
+        "replicator_best_over_measures": 2.819730047676665
+      },
+      {
+        "N": 27,
+        "r": 3.0,
+        "conjectured_value": 3.9812974929796066,
+        "max_over_triples": 3.9812974929796088,
+        "replicator_best_over_measures": 3.981297492785928
+      },
+      {
+        "N": 27,
+        "r": 6.0,
+        "conjectured_value": 31.676556795437133,
+        "max_over_triples": 31.676556795437154,
+        "replicator_best_over_measures": 31.67655676439017
+      },
+      {
+        "N": 27,
+        "r": 15.0,
+        "conjectured_value": 15973.101179871212,
+        "max_over_triples": 15973.101179871239,
+        "replicator_best_over_measures": 15973.101179871235
+      },
+      {
+        "N": 29,
+        "r": 2.5,
+        "conjectured_value": 2.820788764819765,
+        "max_over_triples": 2.820788764819766,
+        "replicator_best_over_measures": 2.820788764718052
+      },
+      {
+        "N": 29,
+        "r": 3.0,
+        "conjectured_value": 3.983691046617378,
+        "max_over_triples": 3.9836910466173805,
+        "replicator_best_over_measures": 3.9836910458978085
+      },
+      {
+        "N": 29,
+        "r": 6.0,
+        "conjectured_value": 31.719458641931055,
+        "max_over_triples": 31.71945864193109,
+        "replicator_best_over_measures": 31.71945858767885
+      },
+      {
+        "N": 29,
+        "r": 15.0,
+        "conjectured_value": 16027.24856885265,
+        "max_over_triples": 16027.248568852698,
+        "replicator_best_over_measures": 16027.24856885269
+      },
+      {
+        "N": 31,
+        "r": 2.5,
+        "conjectured_value": 2.821664028054222,
+        "max_over_triples": 2.8216640280542222,
+        "replicator_best_over_measures": 2.821664027849049
+      },
+      {
+        "N": 31,
+        "r": 3.0,
+        "conjectured_value": 3.9856535757379414,
+        "max_over_triples": 3.9856535757379428,
+        "replicator_best_over_measures": 3.9856534847185023
+      },
+      {
+        "N": 31,
+        "r": 6.0,
+        "conjectured_value": 31.75436733222742,
+        "max_over_triples": 31.754367332227446,
+        "replicator_best_over_measures": 31.754367318432003
+      },
+      {
+        "N": 31,
+        "r": 15.0,
+        "conjectured_value": 16071.387076626823,
+        "max_over_triples": 16071.387076626872,
+        "replicator_best_over_measures": 16071.387076626866
+      }
+    ]
+  },
+  "E_reversed_regime_r_lt_2": {
+    "comparisons": 3960,
+    "max_relative_excess_of_endpoint": 3.863669291835207e-16
+  },
+  "status": "PASS",
+  "note": "Floating-point regression checks only; the proof in the paper is analytic."
+}

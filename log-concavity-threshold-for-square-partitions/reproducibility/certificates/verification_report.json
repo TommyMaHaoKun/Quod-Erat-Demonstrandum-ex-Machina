@@ -1,0 +1,40 @@
+{
+  "scope": "Executed exact arithmetic checks; analytic arguments are in the paper",
+  "python_version": "3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)]",
+  "checks": [
+    {
+      "check": "global_constants",
+      "passed": true,
+      "seconds": 1.141
+    },
+    {
+      "check": "major_arc",
+      "passed": true,
+      "seconds": 0.078
+    },
+    {
+      "check": "minor_arcs",
+      "passed": true,
+      "seconds": 1.235
+    },
+    {
+      "check": "minor_constants",
+      "passed": true,
+      "seconds": 0.093
+    },
+    {
+      "check": "finite_independent_audit",
+      "passed": true,
+      "seconds": 47.735
+    }
+  ],
+  "finite_D_domain": [
+    1,
+    1200000
+  ],
+  "analytic_coefficient_domain": "m >= 1200000",
+  "analytic_D_domain": "n >= 1200001",
+  "uncovered_positive_indices": [],
+  "formal_proof_assistant": false,
+  "all_passed": true
+}

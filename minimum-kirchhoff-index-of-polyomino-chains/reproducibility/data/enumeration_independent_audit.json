@@ -1,0 +1,149 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "n": 1,
+      "all_free_polyominoes": 1,
+      "geometric_chains": 1,
+      "exact_pseudoinverse_checks": 1,
+      "admissible_oriented_abstract_words": 1,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 2,
+      "all_free_polyominoes": 1,
+      "geometric_chains": 1,
+      "exact_pseudoinverse_checks": 1,
+      "admissible_oriented_abstract_words": 1,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 3,
+      "all_free_polyominoes": 2,
+      "geometric_chains": 2,
+      "exact_pseudoinverse_checks": 2,
+      "admissible_oriented_abstract_words": 3,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 4,
+      "all_free_polyominoes": 5,
+      "geometric_chains": 3,
+      "exact_pseudoinverse_checks": 3,
+      "admissible_oriented_abstract_words": 7,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 5,
+      "all_free_polyominoes": 12,
+      "geometric_chains": 7,
+      "exact_pseudoinverse_checks": 7,
+      "admissible_oriented_abstract_words": 17,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 6,
+      "all_free_polyominoes": 35,
+      "geometric_chains": 13,
+      "exact_pseudoinverse_checks": 0,
+      "admissible_oriented_abstract_words": 41,
+      "geometrically_invalid_abstract_words": []
+    },
+    {
+      "n": 7,
+      "all_free_polyominoes": 108,
+      "geometric_chains": 30,
+      "exact_pseudoinverse_checks": 0,
+      "admissible_oriented_abstract_words": 99,
+      "geometrically_invalid_abstract_words": [
+        [
+          -1,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 8,
+      "all_free_polyominoes": 369,
+      "geometric_chains": 64,
+      "exact_pseudoinverse_checks": 0,
+      "admissible_oriented_abstract_words": 239,
+      "geometrically_invalid_abstract_words": [
+        [
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "k": 4,
+  "coefficient_range": [
+    0,
+    10001
+  ],
+  "checks": [
+    "resume a noninitial coin",
+    "restore an uncommitted write from undo",
+    "retain a committed write with an outstanding intent",
+    "reject corrupt committed data",
+    "all coefficients equal independent Python arbitrary precision"
+  ],
+  "inplace_source_sha256": "9723c4f1d2f4bd503d20e0383f8a7d322f2b1dda83e93303e5ceae42588a6509",
+  "test_source_sha256": "4cf082363ebb909506bf6bdbcf491df04c12f746d42fcd496f134c1f1302b555",
+  "test_directory": "finite_inplace_test_34ypftas"
+}

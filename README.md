@@ -1,0 +1,39 @@
+# Quod Erat Demonstrandum ex Machina
+
+Complete solutions of open or conjectured problems in mathematics, found and written by AI systems. Each folder holds one problem: the paper as a PDF and the programs and certificates needed to re-check every computational step.
+
+| # | Problem | Result | Author | Paper |
+|---|---|---|---|---|
+| 1 | [Partitions into cubes: sharp log-concavity threshold](log-concavity-threshold-for-cube-partitions/) | T₃ = 15656 | GPT-6 Astra | [PDF](log-concavity-threshold-for-cube-partitions/paper.pdf) |
+| 2 | [Partitions into squares: sharp log-concavity threshold](log-concavity-threshold-for-square-partitions/) | T₂ = 1042 | GPT-6 Astra | [PDF](log-concavity-threshold-for-square-partitions/paper.pdf) |
+| 3 | [Partitions into 4th, 5th and 6th powers: sharp thresholds](log-concavity-thresholds-for-fourth-fifth-and-sixth-power-partitions/) | T₄ = 637855, T₅ = 2507861, T₆ = 35577569 | GPT-6 Astra | [PDF](log-concavity-thresholds-for-fourth-fifth-and-sixth-power-partitions/paper.pdf) |
+| 4 | [Minimum Kirchhoff index of polyomino chains](minimum-kirchhoff-index-of-polyomino-chains/) | Unique minimizer: the zigzag chain | GPT-6 Astra | [PDF](minimum-kirchhoff-index-of-polyomino-chains/paper.pdf) |
+| 5 | [Minimum maximal domino packings of 4 × n](minimum-maximal-domino-packings-of-the-4xn-rectangle/) | Exact counts A(n) for all n | GPT-6 Astra | [PDF](minimum-maximal-domino-packings-of-the-4xn-rectangle/paper.pdf) |
+| 6 | [Subtraction games with moves {a, 4a, c}](subtraction-games-with-moves-a-4a-c/) | Full classification; p ∈ {5, 5a, c+a, c+4a} | GPT-6 Astra | [PDF](subtraction-games-with-moves-a-4a-c/paper.pdf) |
+| 7 | [OEIS A181280: binary matrices with reverse-ordered Gram rows](binary-matrices-with-reverse-ordered-gram-rows-a181280/) | Six-term formula proved | GPT-6 Astra | [PDF](binary-matrices-with-reverse-ordered-gram-rows-a181280/paper.pdf) |
+| 8 | [OEIS A181198: four-row arrays increasing in four directions](four-row-arrays-increasing-in-four-directions-a181198/) | Second-order recurrence proved | GPT-6 Astra | [PDF](four-row-arrays-increasing-in-four-directions-a181198/paper.pdf) |
+| 9 | [Six-variable cyclic quartic inequality](six-variable-cyclic-quartic-inequality/) | Proved with equality only at x₁ = … = x₆ | GPT-6 Astra | [PDF](six-variable-cyclic-quartic-inequality/paper.pdf) |
+| 10 | [Real zeros of the squared Delannoy triangle](real-and-simple-zeros-of-the-squared-delannoy-triangle/) | All zeros real, simple and enclosed | GPT-6 Astra | [PDF](real-and-simple-zeros-of-the-squared-delannoy-triangle/paper.pdf) |
+| 11 | [OEIS A195806: five-row triangular arrays](five-row-triangular-arrays-with-equal-line-sums-a195806/) | All six conjectured formulas proved | GPT-6 Astra | [PDF](five-row-triangular-arrays-with-equal-line-sums-a195806/paper.pdf) |
+| 12 | [Sun's harmonic-binomial series for ζ(3)](sun-harmonic-binomial-series-for-zeta-3/) | Series equals 3ζ(3) | GPT-6 Astra | [PDF](sun-harmonic-binomial-series-for-zeta-3/paper.pdf) |
+| 13 | [Monotonicity of a transformed gamma median](monotonicity-of-a-transformed-gamma-median/) | A′(k) < 0 for all k > 0 | GPT-6 Astra | [PDF](monotonicity-of-a-transformed-gamma-median/paper.pdf) |
+| 14 | [Three-point Riesz energy on the circle](three-point-riesz-energy-on-the-circle/) | Fan's Conjecture 5.9 proved | Claude Opus 5.5 | [PDF](three-point-riesz-energy-on-the-circle/paper.pdf) |
+| 15 | [OEIS A172572: binary matrices with prescribed margins](binary-matrices-with-prescribed-margins-a172572/) | Third-order recurrence proved | GPT-6 Astra | [PDF](binary-matrices-with-prescribed-margins-a172572/paper.pdf) |
+| 16 | [Limited augmented Zarankiewicz number z_L(m, 3)](limited-augmented-zarankiewicz-number-m-by-3/) | z_L(m,3) = ⌊(3m+4)/2⌋; z_L(14,3) = 23 | Claude Opus 5.5 | [PDF](limited-augmented-zarankiewicz-number-m-by-3/paper.pdf) |
+
+## Layout
+
+Every problem folder has the same structure:
+
+```
+<problem>/
+├── README.md          statement, result, method and how to reproduce
+├── paper.pdf          the complete paper
+└── reproducibility/   verification programs, certificates and requirements.txt
+```
+
+All verification programs are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Run the commands in each problem README from that problem's `reproducibility/` folder.
+
+## Status
+
+These are AI-generated mathematical results. Each proof was checked by internal review and by the exact computations included here, but none has been externally peer reviewed or formalized in a proof assistant. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.

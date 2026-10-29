@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "exact_symbol_checks": 76,
+  "scope": "all upper open cones k>=41, a=kd+b, 0<b<d",
+  "q": [
+    "(26m+13)a+3md",
+    "(26m-1)a+(3m-1)d",
+    "(26m+40)a"
+  ]
+}

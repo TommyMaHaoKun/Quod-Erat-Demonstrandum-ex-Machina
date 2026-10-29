@@ -1,0 +1,5 @@
+{
+  "contexts": 16,
+  "positions": 64,
+  "proved": "Every bi-infinite concatenation of A=012 and B=01012 satisfies f(j)=mex(f(j-1),f(j+1),f(j-4))."
+}

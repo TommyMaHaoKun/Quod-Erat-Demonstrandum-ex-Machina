@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "identity": "printed_B(n-1)-target_a(n) = 1/48 if n%6==0, else 0",
+  "coefficient_differences_with_denominator_1296": [
+    [
+      27,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "corrected_constant_for_printed_residue_5": 19469,
+  "printed_B_at_5_numerator": 16159851,
+  "printed_B_at_5_denominator": 1296,
+  "target_a_at_6": 12469
+}
+{
+  "status": "PASS",
+  "exact_arithmetic_only": true,
+  "structure": {
+    "constraint_rank": 6,
+    "integral_left_inverse": true,
+    "dimension": 6,
+    "root_pair_absolute_determinants": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2,
+      1,
+      1,
+      1,
+      3
+    ],
+    "maximal_minor_histogram": {
+      "0": 384,
+      "1": 324,
+      "2": 108,
+      "3": 108
+    },
+    "proven_polytope_denominator_divides": 6
+  },
+  "algebra": {
+    "chamber_rational_identity": true,
+    "partial_fractions": true,
+    "six_constituents_as_rational_identity": true,
+    "minimal_period": 6
+  },
+  "count_range": [
+    0,
+    41
+  ],
+  "original_constraint_brute_force": [
+    1,
+    16,
+    105,
+    496
+  ]
+}

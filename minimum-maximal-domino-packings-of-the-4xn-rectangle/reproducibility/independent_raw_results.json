@@ -1,0 +1,77 @@
+{
+  "method": "first-vertex graph matching recursion",
+  "results": [
+    {
+      "n": 1,
+      "m": 1,
+      "A": 1,
+      "evaluated_subproblems": 7,
+      "memoized": false,
+      "seconds": 1.2e-05
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "A": 6,
+      "evaluated_subproblems": 62,
+      "memoized": false,
+      "seconds": 2.5e-05
+    },
+    {
+      "n": 3,
+      "m": 4,
+      "A": 7,
+      "evaluated_subproblems": 354,
+      "memoized": false,
+      "seconds": 0.000103
+    },
+    {
+      "n": 4,
+      "m": 6,
+      "A": 100,
+      "evaluated_subproblems": 1985,
+      "memoized": false,
+      "seconds": 0.000491
+    },
+    {
+      "n": 5,
+      "m": 7,
+      "A": 51,
+      "evaluated_subproblems": 11468,
+      "memoized": false,
+      "seconds": 0.002941
+    },
+    {
+      "n": 6,
+      "m": 8,
+      "A": 10,
+      "evaluated_subproblems": 65407,
+      "memoized": false,
+      "seconds": 0.017284
+    },
+    {
+      "n": 7,
+      "m": 10,
+      "A": 663,
+      "evaluated_subproblems": 374930,
+      "memoized": false,
+      "seconds": 0.09469
+    },
+    {
+      "n": 8,
+      "m": 11,
+      "A": 124,
+      "evaluated_subproblems": 2147211,
+      "memoized": false,
+      "seconds": 0.537188
+    },
+    {
+      "n": 9,
+      "m": 12,
+      "A": 8,
+      "evaluated_subproblems": 12291629,
+      "memoized": false,
+      "seconds": 3.15182
+    }
+  ]
+}

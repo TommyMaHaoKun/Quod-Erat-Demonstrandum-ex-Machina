@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "arithmetic": "exact integers and fractions.Fraction; no floating-point comparisons",
+  "proof_boundary": "These finite checks validate implementations; the paper proves the theorem for all n.",
+  "checks": [
+    {
+      "name": "formula minima and straight-chain maxima against complete geometric enumeration",
+      "source": "data/exhaustive_geometric.json",
+      "checked_n": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "comparisons": 30
+    },
+    {
+      "name": "formula minima against independently derived alternating edge-attachment recurrence",
+      "source": "src/recurrence_check.py",
+      "inclusive_range": [
+        1,
+        100
+      ],
+      "comparisons": 100
+    },
+    {
+      "name": "straight-chain formula against straight edge-attachment recurrence",
+      "source": "src/recurrence_check.py",
+      "inclusive_range": [
+        1,
+        100
+      ],
+      "comparisons": 100
+    },
+    {
+      "name": "exceptional sizes",
+      "exact_values": {
+        "1": "5",
+        "2": "71/5",
+        "3": "233/8"
+      },
+      "comparisons": 3
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Method B (SAT cross-check) needs z3; everything else uses the standard library.
+z3-solver

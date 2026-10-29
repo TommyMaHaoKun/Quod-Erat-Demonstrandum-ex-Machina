@@ -1,0 +1,10 @@
+{
+  "half_strip_checks": 30520,
+  "nonwrap_interface_checks": 150,
+  "uniform_wrap_checks": 23082,
+  "exact_q_boundary_checks": 62,
+  "uniform_threshold": 20,
+  "parameter_residue_period": 20,
+  "coordinate_period": 40,
+  "scope": "all upper seams c=5a+1 with a>=10"
+}

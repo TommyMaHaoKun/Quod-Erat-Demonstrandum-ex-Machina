@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "python": "3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)]",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "code/finite_verify.py",
+        "certificates/finite_10000000.json"
+      ],
+      "status": "PASS",
+      "seconds": 89.79699999999139,
+      "stdout": "{\n  \"result\": \"PASS\",\n  \"certificate\": \"finite_10000000.json\",\n  \"coin_change_coefficient_range\": [\n    0,\n    10000001\n  ],\n  \"independent_recurrence_coefficient_range\": [\n    0,\n    15657\n  ],\n  \"exact_determinant_range\": [\n    1,\n    10000000\n  ],\n  \"negative_count\": 5505,\n  \"equality_count\": 41,\n  \"largest_negative_index\": 15655,\n  \"largest_equality_index\": 100,\n  \"elapsed_seconds\": 89.4631073,\n  \"python\": \"3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)]\",\n  \"verifier_sha256\": \"cdb1b1edd4061c59e274bef4f5f2490bfccd3d991e01d7125edb8db35d6ea8e5\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "code/major_bounds.py"
+      ],
+      "status": "PASS",
+      "seconds": 0.39100000000325963,
+      "stdout": "{\"status\": \"PASS\", \"diagnostic_floats\": {\"local_times_X7\": 2.9167307338949453e-06, \"gaussian_times_X7\": 1.5068358187218108e-07, \"horizontal_times_X7\": 2.2363426410542138e-07, \"curvature_error\": 0.002945999524071484}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "code/analytic_arcs.py"
+      ],
+      "status": "PASS",
+      "seconds": 11.60899999999674,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"constants\": {\n    \"A_lower\": \"321/100\",\n    \"A_upper\": \"161/50\",\n    \"gamma_lower_float\": 0.8929535142938763,\n    \"gamma_upper_float\": 0.8929814695128682,\n    \"zeta_lower_float\": 3.600887805961107,\n    \"zeta_upper_float\": 3.6009877393483847\n  },\n  \"elementary_inequalities\": {\n    \"minor_normalized_upper_bound\": \"1/16 X^-7\",\n    \"minor_endpoint_rational_upper_float\": 0.06005516306823807,\n    \"transform_normalized_upper_bound\": \"1/500 X^-7\",\n    \"transform_endpoint_rational_upper_float\": 0.001624279309447589,\n    \"domain\": \"x=t^(-1/3) >= 50; X=(A/3)x\"\n  },\n  \"far_arcs\": {\n    \"grid\": 1000000,\n    \"first\": 159,\n    \"last_exclusive\": 500000,\n    \"j_max\": 50,\n    \"t0\": \"1/125000\",\n    \"product_claim\": \"10^48\",\n    \"count_claim\": 16,\n    \"minimum_product\": \"14872100691592956718938800018641871541521940480000\",\n    \"minimum_product_interval\": 125000,\n    \"minimum_count\": 18,\n    \"minimum_count_interval\": 125000,\n    \"seconds\": 10.84299999999348\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "code/exception_table.py"
+      ],
+      "status": "PASS",
+      "seconds": 0.07800000000861473,
+      "stdout": "PASS: both run encodings and all 118 manuscript progressions checked.\n",
+      "stderr": ""
+    }
+  ],
+  "elapsed_seconds": 101.89099999997416,
+  "coverage": {
+    "finite_determinants": [
+      1,
+      10000000
+    ],
+    "analytic_coefficients_begin": 10000000,
+    "analytic_determinants_begin": 10000001
+  },
+  "scope": "Executable certificates; analytic arguments require reading the accompanying proof."
+}

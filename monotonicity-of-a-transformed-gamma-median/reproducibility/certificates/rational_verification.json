@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integers with outward-rounded dyadic intervals",
+  "bits": 192,
+  "median_nodes": 1483,
+  "median_bracket_endpoint_checks": 2966,
+  "cover_intervals": 1052,
+  "covered_closed_interval": [
+    "1/10",
+    "7"
+  ],
+  "verified_product_threshold": "999973/1000000",
+  "minimum_cdf_distance_from_half_lower_bound": "55244262547277943761317947814861/6277101735386680763835789423207666416102355444464034512896",
+  "minimum_B_lower_bound": "5554810303528062559927364756190763840235739824041801087/6277101735386680763835789423207666416102355444464034512896",
+  "maximum_secant_product_upper_bound": "6276932188385360871338695959802739897332214178052073510253/6277101735386680763835789423207666416102355444464034512896",
+  "uniform_negative_derivative_margin_lower_bound": "169547001319892497093463404926518770141266411961002643/6277101735386680763835789423207666416102355444464034512896",
+  "maximum_secant_product_approximation": 0.9999729896043641,
+  "maximum_cell": [
+    "6653/5120",
+    "3361/2560",
+    "16933/12800"
+  ],
+  "certificate_sha256": {
+    "median_brackets.csv": "086b5b33877e858d8b5a405bec303b70a629ffbd0b6fd28bd4feab3421b815cb",
+    "intervals.csv": "e4c58683639631654f9aee1fe906f3090d9e81edb3f83ec900dd5d35363bf634"
+  },
+  "verifier_sha256": "49fb30ed16008fb3a6de54ef3163bd0db74c3e83039bb2c50d90ee763deb0788",
+  "elapsed_seconds": 9.326
+}

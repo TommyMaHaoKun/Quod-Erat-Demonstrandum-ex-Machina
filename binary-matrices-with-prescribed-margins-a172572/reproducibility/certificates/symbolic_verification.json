@@ -1,0 +1,13 @@
+{
+  "status": "EXACT_SYMBOLIC_IDENTITIES_PASSED",
+  "arithmetic": "rational functions in a formal variable over Q",
+  "external_dependencies": [],
+  "verified": [
+    "integration-by-parts moment reduction to explicit matrix",
+    "normalization and change of moment basis",
+    "two polynomial identities eliminating the auxiliary moment",
+    "all target coefficient polynomials",
+    "conversion to the published unnormalized recurrence"
+  ],
+  "scope": "The analytic and combinatorial bridges are proved in the paper; these symbolic identities are its finite algebraic certificate."
+}

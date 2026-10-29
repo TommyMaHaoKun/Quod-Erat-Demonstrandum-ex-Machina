@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction; exact rational coefficients",
+  "identities": [
+    "zero centered sum",
+    "orthogonal opposite-pair split",
+    "centered norm",
+    "variance",
+    "centering the cubic",
+    "centering the quartic",
+    "quadratic remainder",
+    "cubic matrix decomposition",
+    "matrix trace zero",
+    "matrix square trace",
+    "final completion of square"
+  ],
+  "regression_vectors": 729,
+  "note": "The finite examples are not the proof. Matrix norm and Cauchy-Schwarz bounds are proved analytically in paper/main.tex."
+}

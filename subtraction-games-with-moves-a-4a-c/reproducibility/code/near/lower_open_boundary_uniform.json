@@ -1,0 +1,74 @@
+[
+  {
+    "s": 0,
+    "delta": 0,
+    "m_min": 13,
+    "K": 16,
+    "lo": -4,
+    "hi": 80,
+    "slope_gap": 8,
+    "max_m": 35,
+    "cells": 14720,
+    "passed": true
+  },
+  {
+    "s": 0,
+    "delta": 1,
+    "m_min": 13,
+    "K": 16,
+    "lo": 0,
+    "hi": 86,
+    "slope_gap": 8,
+    "max_m": 35,
+    "cells": 14858,
+    "passed": true
+  },
+  {
+    "s": 1,
+    "delta": 0,
+    "m_min": 13,
+    "K": 16,
+    "lo": 0,
+    "hi": 86,
+    "slope_gap": 8,
+    "max_m": 35,
+    "cells": 14674,
+    "passed": true
+  },
+  {
+    "s": 1,
+    "delta": 1,
+    "m_min": 13,
+    "K": 18,
+    "lo": 0,
+    "hi": 100,
+    "slope_gap": 8,
+    "max_m": 37,
+    "cells": 16750,
+    "passed": true
+  },
+  {
+    "s": 2,
+    "delta": 0,
+    "m_min": 13,
+    "K": 18,
+    "lo": 0,
+    "hi": 100,
+    "slope_gap": 8,
+    "max_m": 37,
+    "cells": 21750,
+    "passed": true
+  },
+  {
+    "s": 2,
+    "delta": 1,
+    "m_min": 13,
+    "K": 19,
+    "lo": 0,
+    "hi": 106,
+    "slope_gap": 8,
+    "max_m": 38,
+    "cells": 23218,
+    "passed": true
+  }
+]

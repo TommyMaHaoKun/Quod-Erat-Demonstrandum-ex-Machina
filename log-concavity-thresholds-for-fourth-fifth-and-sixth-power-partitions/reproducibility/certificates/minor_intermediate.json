@@ -1,0 +1,271 @@
+{
+  "claim": "For x >= minimum_x, t=x^(-k), delta=6^(-k), x^2 J_m <= bound; J_m=t^(-m-1) integral_(3t)^delta theta^m rho(t,theta) dtheta.",
+  "scope": "Rigorous intermediate-arc bound only; far arcs and coefficient positivity are separate obligations.",
+  "method": "Exact rational series bounds, a one-variable maximum, and an infinite geometric tail.",
+  "rows": [
+    {
+      "k": 4,
+      "minimum_x": 14,
+      "delta": "1/1296",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "119213/25000000",
+          "decimal_display": 0.00476852
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "235619/12500000",
+          "decimal_display": 0.01884952
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "970977/10000000",
+          "decimal_display": 0.0970977
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "minimum_x": 15,
+      "delta": "1/1296",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "5307/2500000",
+          "decimal_display": 0.0021228
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "831407/100000000",
+          "decimal_display": 0.00831407
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "2232609/50000000",
+          "decimal_display": 0.04465218
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "minimum_x": 18,
+      "delta": "1/1296",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "11563/50000000",
+          "decimal_display": 0.00023126
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "42071/50000000",
+          "decimal_display": 0.00084142
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "501233/100000000",
+          "decimal_display": 0.00501233
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "minimum_x": 20,
+      "delta": "1/1296",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "1233/25000000",
+          "decimal_display": 4.932e-05
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "2207/12500000",
+          "decimal_display": 0.00017656
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "25639/20000000",
+          "decimal_display": 0.00128195
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "minimum_x": 14,
+      "delta": "1/7776",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "26759/12500000",
+          "decimal_display": 0.00214072
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "6033/781250",
+          "decimal_display": 0.00772224
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "1603889/50000000",
+          "decimal_display": 0.03207778
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "minimum_x": 15,
+      "delta": "1/7776",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "111779/100000000",
+          "decimal_display": 0.00111779
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "96559/25000000",
+          "decimal_display": 0.00386236
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "301361/20000000",
+          "decimal_display": 0.01506805
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "minimum_x": 18,
+      "delta": "1/7776",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "8659/100000000",
+          "decimal_display": 8.659e-05
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "14653/50000000",
+          "decimal_display": 0.00029306
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "112361/100000000",
+          "decimal_display": 0.00112361
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "minimum_x": 20,
+      "delta": "1/7776",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "2033/100000000",
+          "decimal_display": 2.033e-05
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "6689/100000000",
+          "decimal_display": 6.689e-05
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "1251/5000000",
+          "decimal_display": 0.0002502
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "minimum_x": 14,
+      "delta": "1/46656",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "145353/100000000",
+          "decimal_display": 0.00145353
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "621/125000",
+          "decimal_display": 0.004968
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "895701/50000000",
+          "decimal_display": 0.01791402
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "minimum_x": 15,
+      "delta": "1/46656",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "57447/100000000",
+          "decimal_display": 0.00057447
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "1529/781250",
+          "decimal_display": 0.00195712
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "139379/20000000",
+          "decimal_display": 0.00696895
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "minimum_x": 18,
+      "delta": "1/46656",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "1429/20000000",
+          "decimal_display": 7.145e-05
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "11641/50000000",
+          "decimal_display": 0.00023282
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "77299/100000000",
+          "decimal_display": 0.00077299
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "minimum_x": 20,
+      "delta": "1/46656",
+      "bounds": [
+        {
+          "moment": 0,
+          "upper_x_squared_J": "253/25000000",
+          "decimal_display": 1.012e-05
+        },
+        {
+          "moment": 1,
+          "upper_x_squared_J": "3289/100000000",
+          "decimal_display": 3.289e-05
+        },
+        {
+          "moment": 2,
+          "upper_x_squared_J": "5451/50000000",
+          "decimal_display": 0.00010902
+        }
+      ]
+    }
+  ]
+}

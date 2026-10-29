@@ -1,0 +1,34 @@
+PASS whole convolution antiderivative
+PASS change of variables to quadratic H
+PASS whole quadratic integral certificate
+PASS whole moment integration by parts
+PASS rational source integration by parts
+PASS moment d
+PASS moment e
+PASS direct a(n) moment cancellation
+PASS direct a(n) inhomogeneous source
+PASS original recurrence middle coefficient independently
+PASS original recurrence last coefficient independently
+PASS exceptional n=1
+PASS ODE coefficient identity in n,j
+PASS contiguous coefficient identity in n,j
+Independent all-parameter algebra checks passed.
+PASS manuscript S certificate
+PASS manuscript S bracket
+PASS manuscript S rational decomposition
+PASS manuscript H total derivative
+PASS manuscript beta integration
+PASS manuscript moment r
+PASS manuscript moment f
+PASS manuscript c_n coefficient U
+PASS manuscript c_n constant V
+PASS manuscript T recurrence coefficient
+PASS manuscript T recurrence source
+PASS manuscript c recurrence cancellation
+PASS manuscript c recurrence source
+PASS manuscript G ratio
+PASS manuscript q ratio
+PASS manuscript target leading coefficient
+PASS manuscript target middle coefficient
+PASS manuscript target last coefficient
+Final manuscript transcription checks passed.

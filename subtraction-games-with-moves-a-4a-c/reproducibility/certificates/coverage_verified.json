@@ -1,0 +1,17 @@
+{
+  "outer_cones": 89,
+  "outer_seams": 89,
+  "interval_partition": true,
+  "seam_inventory": {
+    "identifiers": 89,
+    "pairs": 89,
+    "association": true,
+    "unique": true,
+    "complete": true
+  },
+  "all_outer_periods_in_proved_set": true,
+  "uniform_open_range": "k>=41, 0<b<d, gcd(b,d)=1",
+  "uniform_integer_seams": "d=1, a>=42",
+  "uncovered_admissible_parameters": 0,
+  "proof": "The paper coverage theorem proves the algebraic infinite-domain partition."
+}

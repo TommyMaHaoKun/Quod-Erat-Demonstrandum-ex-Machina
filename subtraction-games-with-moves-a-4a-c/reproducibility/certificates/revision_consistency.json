@@ -1,0 +1,8 @@
+{
+  "baseline": "local release v1.1.0",
+  "public_release": "v1.1.1",
+  "mathematical_statements_unchanged": 27,
+  "python_files_byte_identical": 29,
+  "defining_tables_byte_identical": true,
+  "changed": "Publication access, provenance, title-page placeholder and reader-facing documentation only."
+}

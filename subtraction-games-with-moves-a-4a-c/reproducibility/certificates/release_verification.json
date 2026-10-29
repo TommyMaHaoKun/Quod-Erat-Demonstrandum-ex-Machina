@@ -1,0 +1,128 @@
+[
+  {
+    "script": "test_seam_inventory.py",
+    "exit_code": 0,
+    "seconds": 0.75,
+    "output": "Accepted 89 valid seams; rejected all 7 corrupt inventories.\n"
+  },
+  {
+    "script": "verify_atlas.py",
+    "exit_code": 0,
+    "seconds": 37.047000000000025,
+    "output": "All 89 open cones proved; 350750 position cells.\n"
+  },
+  {
+    "script": "verify_seams.py",
+    "exit_code": 0,
+    "seconds": 1.1099999999999,
+    "output": "Verified 89 seams and 419798 recurrence positions.\n"
+  },
+  {
+    "script": "pure_obstruction_certificate.py",
+    "exit_code": 0,
+    "seconds": 0.7650000000001,
+    "output": "{'t': '1/2', 'band': 4, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-1'], ['-6', '0']], 'valid': ('1/2', '1/2'), 'point': True, 'comparisons': 351, 'cells': 17}\n{'t': '7/12', 'band': 4, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-1'], ['-5', '-2']], 'valid': ('1/2', '2/3'), 'point': False, 'comparisons': 350, 'cells': 17}\n{'t': '2/3', 'band': 4, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-1'], ['-5', '-2']], 'valid': ('2/3', '2/3'), 'point': True, 'comparisons': 350, 'cells': 17}\n{'t': '5/6', 'band': 4, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-1'], ['-5', '-2']], 'valid': ('2/3', '1'), 'point': False, 'comparisons': 350, 'cells': 17}\n{'t': '1/6', 'band': 5, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-2'], ['-6', '-1']], 'valid': ('0', '1/3'), 'point': False, 'comparisons': 397, 'cells': 18}\n{'t': '1/3', 'band': 5, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-2'], ['-6', '-1']], 'valid': ('1/3', '1/3'), 'point': True, 'comparisons': 397, 'cells': 18}\n{'t': '5/12', 'band': 5, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-6', '-2'], ['-7', '1']], 'valid': ('1/3', '1/2'), 'point': False, 'comparisons': 421, 'cells': 20}\n{'t': '1/2', 'band': 5, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-7', '0'], ['-6', '-1']], 'valid': ('1/2', '1/2'), 'point': True, 'comparisons': 390, 'cells': 18}\n{'t': '7/12', 'band': 5, 'window': 8, 'proved': True, 'passes': 2, 'relation': 'mex', 'contradiction': [['-7', '0'], ['-5', '-3']], 'valid': ('1/2', '2/3'), 'point': False, 'comparisons': 489, 'cells': 27}\n{'t': '2/3', 'band': 5, 'window': 8, 'proved': True, 'passes': 3, 'relation': 'fer', 'contradiction': [['-4', '-1'], ['-5', '1']], 'valid': ('2/3', '2/3'), 'point': True, 'comparisons': 551, 'cells': 29}\n{'t': '5/6', 'band': 5, 'window': 8, 'proved': True, 'passes': 3, 'relation': 'fer', 'contradiction': [['-4', '-1'], ['-3', '-2']], 'valid': ('2/3', '1'), 'point': False, 'comparisons': 564, 'cells': 33}\nAll 11 affine contradiction certificates passed.\n"
+  },
+  {
+    "script": "uniform_certificate.py",
+    "exit_code": 0,
+    "seconds": 3.1879999999998745,
+    "output": "0l K= 4 bounds= (0, 15) cells= 588\n0m K= 4 bounds= (0, 13) cells= 486\n0h K= 5 bounds= (0, 19) cells= 1212\n2ll K= 5 bounds= (0, 20) cells= 1010\n2ls K= 6 bounds= (0, 22) cells= 2232\n2us K= 8 bounds= (0, 34) cells= 4168\n2ul K= 9 bounds= (0, 38) cells= 3339\n3l K= 7 bounds= (0, 26) cells= 1029\n3h K= 5 bounds= (0, 20) cells= 765\nAll exact uniform-family certificates passed.\n"
+  },
+  {
+    "script": "a2_certificate.py",
+    "exit_code": 0,
+    "seconds": 0.375,
+    "output": "1 intercepts 0 24 terms 952 option sets {0: {(1, 2), (1, 2, 3), (1,), (), (1, 3)}, 1: {(0,), (0, 2), (0, 3), (0, 2, 3)}, 2: {(0, 1), (0, 1, 3)}, 3: {(0, 1, 2)}}\n3 intercepts -10 15 terms 609 option sets {0: {(1,), (1, 2), ()}, 1: {(0,), (0, 2)}, 2: {(0, 1)}}\n5 intercepts 0 34 terms 742 option sets {0: {(1,), (1, 2), (), (1, 3)}, 1: {(0,), (0, 2)}, 2: {(0, 1), (0, 1, 3)}, 3: {(0, 1, 2)}}\n7 intercepts 0 32 terms 728 option sets {0: {(1,), (1, 2), (), (1, 3)}, 1: {(0,), (0, 2)}, 2: {(0, 1), (0, 1, 3)}, 3: {(0, 1, 2)}}\n9 intercepts 0 50 terms 1168 option sets {0: {(1, 2), (1, 2, 3), (1,), (), (1, 3)}, 1: {(0,), (0, 2), (0, 3), (0, 2, 3)}, 2: {(0, 1), (0, 1, 3)}, 3: {(0, 1, 2)}}\nVerified 4199 recurrence positions; the affine-boundary lemma extends this to all k.\n"
+  },
+  {
+    "script": "band4_tables.py",
+    "exit_code": 0,
+    "seconds": 0.42200000000002547,
+    "output": "{'Transient': 11, 'Early tail': 6, 'Late tail': 11}\n"
+  },
+  {
+    "script": "verify_coverage.py",
+    "exit_code": 0,
+    "seconds": 0.625,
+    "output": "{\"outer_cones\": 89, \"outer_seams\": 89, \"interval_partition\": true, \"seam_inventory\": {\"identifiers\": 89, \"pairs\": 89, \"association\": true, \"unique\": true, \"complete\": true}, \"all_outer_periods_in_proved_set\": true, \"uniform_open_range\": \"k>=41, 0<b<d, gcd(b,d)=1\", \"uniform_integer_seams\": \"d=1, a>=42\", \"uncovered_admissible_parameters\": 0, \"proof\": \"The paper coverage theorem proves the algebraic infinite-domain partition.\"}\n"
+  },
+  {
+    "script": "near/tail_stationarity_check.py",
+    "exit_code": 0,
+    "seconds": 0.40599999999994907,
+    "output": "All 64 universal local obligations passed.\n"
+  },
+  {
+    "script": "near/upper_splice_certificate.py",
+    "exit_code": 0,
+    "seconds": 1.109000000000151,
+    "output": "{\n  \"half_strip_checks\": 30520,\n  \"nonwrap_interface_checks\": 150,\n  \"uniform_wrap_checks\": 23082,\n  \"exact_q_boundary_checks\": 62,\n  \"uniform_threshold\": 20,\n  \"parameter_residue_period\": 20,\n  \"coordinate_period\": 40,\n  \"scope\": \"all upper seams c=5a+1 with a>=10\"\n}\n"
+  },
+  {
+    "script": "near/upper_boundary_uniform.py",
+    "exit_code": 0,
+    "seconds": 0.48499999999989996,
+    "output": "{'s': 0, 'delta': 0, 'm_min': 13, 'K': 18, 'lo': -10, 'hi': 92, 'slope_gap': 8, 'max_m': 37, 'cells': 16950, 'passed': True}\n{'s': 0, 'delta': 1, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 98, 'slope_gap': 8, 'max_m': 37, 'cells': 17100, 'passed': True}\n{'s': 1, 'delta': 0, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 98, 'slope_gap': 8, 'max_m': 37, 'cells': 16900, 'passed': True}\n{'s': 1, 'delta': 1, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 104, 'slope_gap': 8, 'max_m': 37, 'cells': 17050, 'passed': True}\n{'s': 2, 'delta': 0, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 104, 'slope_gap': 8, 'max_m': 37, 'cells': 21850, 'passed': True}\n{'s': 2, 'delta': 1, 'm_min': 13, 'K': 20, 'lo': 0, 'hi': 118, 'slope_gap': 8, 'max_m': 39, 'cells': 24678, 'passed': True}\nAll six uniform boundary families proved; 114528 positions.\n"
+  },
+  {
+    "script": "near/upper_minimality.py",
+    "exit_code": 0,
+    "seconds": 0.39000000000010004,
+    "output": "{\n  \"passed\": true,\n  \"exact_symbol_checks\": 76,\n  \"scope\": \"all upper open cones k>=41, a=kd+b, 0<b<d\",\n  \"q\": [\n    \"(26m+13)a+3md\",\n    \"(26m-1)a+(3m-1)d\",\n    \"(26m+40)a\"\n  ]\n}\n"
+  },
+  {
+    "script": "near/halfstrip_certificate.py",
+    "exit_code": 0,
+    "seconds": 0.4379999999998745,
+    "output": "Uniform lower half-strip proved: 28424 positions; [{'residue': 0, 'minimum_intercept': -3, 'maximum_intercept': 10, 'slope_gap': 10, 'K': 6, 'modulus': 20, 'm_checked': [0, 25], 'positions': 8714}, {'residue': 1, 'minimum_intercept': 0, 'maximum_intercept': 24, 'slope_gap': 10, 'K': 7, 'modulus': 20, 'm_checked': [0, 26], 'positions': 9774}, {'residue': 2, 'minimum_intercept': 0, 'maximum_intercept': 30, 'slope_gap': 10, 'K': 7, 'modulus': 20, 'm_checked': [0, 26], 'positions': 9936}]\n"
+  },
+  {
+    "script": "near/lower_seam_uniform_certificate.py",
+    "exit_code": 0,
+    "seconds": 0.9529999999999745,
+    "output": "Uniform lower seam obligations passed: 304624 positions; [{'kind': 'wrap_and_splice', 'residue': 0, 'L': -8, 'U': 25, 'slope_gap': 2, 'K': 37, 'h_checked': [3, 56], 'positions': 54864}, {'kind': 'wrap_and_splice', 'residue': 1, 'L': -10, 'U': 39, 'slope_gap': 2, 'K': 45, 'h_checked': [3, 64], 'positions': 72292}, {'kind': 'wrap_and_splice', 'residue': 2, 'L': -28, 'U': 75, 'slope_gap': 2, 'K': 72, 'h_checked': [3, 91], 'positions': 145426}, {'kind': 'interior_last_mismatch', 'residue': 0, 'L': -6, 'U': 24, 'slope_gap': 10, 'K': 7, 'm_checked': [0, 26], 'positions': 9774}, {'kind': 'interior_last_mismatch', 'residue': 1, 'L': -6, 'U': 30, 'slope_gap': 10, 'K': 8, 'm_checked': [0, 27], 'positions': 10668}, {'kind': 'interior_last_mismatch', 'residue': 2, 'L': -6, 'U': 36, 'slope_gap': 10, 'K': 9, 'm_checked': [0, 28], 'positions': 11600}]\n"
+  },
+  {
+    "script": "near/lower_open_boundary_uniform.py",
+    "exit_code": 0,
+    "seconds": 0.5470000000000255,
+    "output": "{'s': 0, 'delta': 0, 'm_min': 13, 'K': 16, 'lo': -4, 'hi': 80, 'slope_gap': 8, 'max_m': 35, 'cells': 14720, 'passed': True}\n{'s': 0, 'delta': 1, 'm_min': 13, 'K': 16, 'lo': 0, 'hi': 86, 'slope_gap': 8, 'max_m': 35, 'cells': 14858, 'passed': True}\n{'s': 1, 'delta': 0, 'm_min': 13, 'K': 16, 'lo': 0, 'hi': 86, 'slope_gap': 8, 'max_m': 35, 'cells': 14674, 'passed': True}\n{'s': 1, 'delta': 1, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 100, 'slope_gap': 8, 'max_m': 37, 'cells': 16750, 'passed': True}\n{'s': 2, 'delta': 0, 'm_min': 13, 'K': 18, 'lo': 0, 'hi': 100, 'slope_gap': 8, 'max_m': 37, 'cells': 21750, 'passed': True}\n{'s': 2, 'delta': 1, 'm_min': 13, 'K': 19, 'lo': 0, 'hi': 106, 'slope_gap': 8, 'max_m': 38, 'cells': 23218, 'passed': True}\nAll six lower boundary families proved; 105970 positions.\n"
+  },
+  {
+    "script": "near/lower_open_minimality.py",
+    "exit_code": 0,
+    "seconds": 0.42200000000002547,
+    "output": "{'exact_fixed_word_checks': 44, 'scope': 'all lower open cones k>=41, 0<b<d'}\n"
+  },
+  {
+    "script": "near/crosscheck_uniform.py",
+    "exit_code": 0,
+    "seconds": 7.6400000000001,
+    "output": "{'a': 42, 'c': 209, 'p': 251, 'q': 15415, 'terms': 15875}\n{'a': 42, 'c': 211, 'p': 253, 'q': 15876, 'terms': 16340}\n{'a': 43, 'c': 214, 'p': 257, 'q': 15182, 'terms': 15653}\n{'a': 43, 'c': 216, 'p': 259, 'q': 15650, 'terms': 16125}\n{'a': 44, 'c': 219, 'p': 263, 'q': 15536, 'terms': 16018}\n{'a': 44, 'c': 221, 'p': 265, 'q': 16013, 'terms': 16499}\n{'a': 75, 'c': 374, 'p': 449, 'q': 48976, 'terms': 49799}\n{'a': 75, 'c': 376, 'p': 451, 'q': 49800, 'terms': 50627}\n{'a': 100, 'c': 499, 'p': 599, 'q': 84703, 'terms': 85801}\n{'a': 100, 'c': 501, 'p': 601, 'q': 85798, 'terms': 86900}\n{'a': 101, 'c': 504, 'p': 605, 'q': 85551, 'terms': 86660}\n{'a': 101, 'c': 506, 'p': 607, 'q': 86655, 'terms': 87768}\n{'a': 200, 'c': 999, 'p': 1199, 'q': 341004, 'terms': 343202}\n{'a': 200, 'c': 1001, 'p': 1201, 'q': 343197, 'terms': 345399}\n{'a': 201, 'c': 1004, 'p': 1205, 'q': 350746, 'terms': 352955}\n{'a': 201, 'c': 1006, 'p': 1207, 'q': 352956, 'terms': 355169}\n{'a': 202, 'c': 1009, 'p': 1211, 'q': 349665, 'terms': 351885}\n{'a': 202, 'c': 1011, 'p': 1213, 'q': 351882, 'terms': 354106}\n{'a': 83, 'c': 413, 'p': 496, 'q': 30462, 'terms': 31371}\n{'a': 83, 'c': 417, 'p': 500, 'q': 31374, 'terms': 32291}\n{'a': 85, 'c': 423, 'p': 508, 'q': 31197, 'terms': 32128}\n{'a': 85, 'c': 427, 'p': 512, 'q': 32129, 'terms': 33068}\n{'a': 87, 'c': 433, 'p': 520, 'q': 30718, 'terms': 31671}\n{'a': 87, 'c': 437, 'p': 524, 'q': 31663, 'terms': 32624}\n{'a': 133, 'c': 662, 'p': 795, 'q': 52270, 'terms': 53727}\n{'a': 133, 'c': 668, 'p': 801, 'q': 53732, 'terms': 55201}\n{'a': 137, 'c': 682, 'p': 819, 'q': 53844, 'terms': 55345}\n{'a': 137, 'c': 688, 'p': 825, 'q': 55346, 'terms': 56859}\n{'a': 231, 'c': 1150, 'p': 1381, 'q': 87565, 'terms': 90096}\n{'a': 231, 'c': 1160, 'p': 1391, 'q': 90079, 'terms': 92630}\n{'a': 239, 'c': 1190, 'p': 1429, 'q': 100145, 'terms': 102764}\n{'a': 239, 'c': 1200, 'p': 1439, 'q': 102770, 'terms': 105409}\n{'a': 423, 'c': 2108, 'p': 2531, 'q': 221236, 'terms': 225875}\n{'a': 423, 'c': 2122, 'p': 2545, 'q': 225879, 'terms': 230546}\n{'a': 203, 'c': 1013, 'p': 1216, 'q': 180062, 'terms': 182291}\n{'a': 203, 'c': 1017, 'p': 1220, 'q': 182294, 'terms': 184531}\n{'a': 403, 'c': 2013, 'p': 2416, 'q': 703237, 'terms': 707666}\n{'a': 403, 'c': 2017, 'p': 2420, 'q': 707667, 'terms': 712104}\nAll independent comparisons passed: 38 games, 5694978 terms.\n"
+  },
+  {
+    "script": "crosscheck_atlas.py",
+    "exit_code": 0,
+    "seconds": 19.296999999999798,
+    "output": "All 178 integer comparisons passed; 15164928 recurrence terms.\n"
+  },
+  {
+    "script": "near/lower_open_crosscheck.py",
+    "exit_code": 0,
+    "seconds": 14.202999999999975,
+    "output": "All 54 complete constructions passed mex and exact q: 11229686 positions.\n"
+  },
+  {
+    "script": "near/lower_seam_crosscheck.py",
+    "exit_code": 0,
+    "seconds": 2.7970000000000255,
+    "output": "All lower seam splice candidates a10..80 satisfy mex and predicted q: 2002430 positions.\n"
+  },
+  {
+    "script": "check_examples.py",
+    "exit_code": 0,
+    "seconds": 0.9059999999999491,
+    "output": "Printed examples agree; 413 fresh recurrence comparisons passed (165031 positions).\n"
+  }
+]

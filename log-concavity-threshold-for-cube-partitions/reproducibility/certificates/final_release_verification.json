@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "date": "2026-10-24 Asia/Shanghai",
+  "manifest_files_checked": 52,
+  "tested_core_files_identical": 7,
+  "portable_pdf_pages": 16,
+  "portable_pdf_pixel_differences": 0,
+  "clean_full_verifier_seconds": 101.89,
+  "starting_records_preserved": 4
+}

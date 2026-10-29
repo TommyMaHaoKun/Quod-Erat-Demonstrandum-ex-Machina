@@ -1,0 +1,14 @@
+{
+  "scope": "Uniform far-arc bound for square-partition generating product",
+  "grid_denominator": 100000,
+  "grid_start_numerator": 158,
+  "grid_end_numerator": 50000,
+  "factors": 40,
+  "t0": "1/10000",
+  "verified_product_lower_bound": "100000000000000000000000000000000000000000000000000",
+  "observed_minimum_product": "11491637428666055447336589101896143189052293120000000",
+  "minimum_product_interval_numerator": 24995,
+  "verified_strong_factors_lower_bound": 16,
+  "observed_minimum_strong_factors": 20,
+  "conclusion": "|F(exp(-t+i theta))|/F(exp(-t)) <= 10^-25 (10000 t)^8 for 1/100 <= |theta| <= pi and 0<t<=1/10000"
+}

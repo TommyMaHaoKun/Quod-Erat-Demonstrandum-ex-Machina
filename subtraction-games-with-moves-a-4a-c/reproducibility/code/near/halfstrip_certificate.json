@@ -1,0 +1,41 @@
+[
+  {
+    "residue": 0,
+    "minimum_intercept": -3,
+    "maximum_intercept": 10,
+    "slope_gap": 10,
+    "K": 6,
+    "modulus": 20,
+    "m_checked": [
+      0,
+      25
+    ],
+    "positions": 8714
+  },
+  {
+    "residue": 1,
+    "minimum_intercept": 0,
+    "maximum_intercept": 24,
+    "slope_gap": 10,
+    "K": 7,
+    "modulus": 20,
+    "m_checked": [
+      0,
+      26
+    ],
+    "positions": 9774
+  },
+  {
+    "residue": 2,
+    "minimum_intercept": 0,
+    "maximum_intercept": 30,
+    "slope_gap": 10,
+    "K": 7,
+    "modulus": 20,
+    "m_checked": [
+      0,
+      26
+    ],
+    "positions": 9936
+  }
+]

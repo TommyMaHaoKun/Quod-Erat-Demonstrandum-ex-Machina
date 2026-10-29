@@ -1,0 +1,28 @@
+Processed cubes through 20^3
+Processed cubes through 40^3
+Processed cubes through 60^3
+Processed cubes through 80^3
+Processed cubes through 100^3
+Processed cubes through 120^3
+Processed cubes through 140^3
+Processed cubes through 160^3
+Processed cubes through 180^3
+Processed cubes through 200^3
+Coin-change calculation complete in 80.487 s
+Independent recurrence agrees through 15657 in 7.107 s
+{
+  "negative_count": 5505,
+  "equality_count": 41,
+  "largest_negative_index": 15655,
+  "largest_equality_index": 100,
+  "boundary_coefficients": {
+    "15654": "37343677726723",
+    "15655": "37368837361134",
+    "15656": "37394013958024",
+    "15657": "37419205227863"
+  },
+  "boundary_determinants": {
+    "15655": "-434145527131309396",
+    "15656": "85549986172343907934"
+  }
+}

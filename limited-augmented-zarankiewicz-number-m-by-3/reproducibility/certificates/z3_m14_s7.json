@@ -1,0 +1,170 @@
+{
+ "method": "B: independent z3 encoding (verify_z3.py)",
+ "z3": "5.3.2",
+ "m": 14,
+ "s_at_least": 7,
+ "bases": [
+  {
+   "base": [
+    6,
+    5,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 347.1,
+   "model_E2": []
+  },
+  {
+   "base": [
+    7,
+    2,
+    2
+   ],
+   "result": "unsat",
+   "seconds": 427.4,
+   "model_E2": []
+  },
+  {
+   "base": [
+    5,
+    5,
+    1
+   ],
+   "result": "unsat",
+   "seconds": 443.9,
+   "model_E2": []
+  },
+  {
+   "base": [
+    6,
+    4,
+    1
+   ],
+   "result": "unsat",
+   "seconds": 497.5,
+   "model_E2": []
+  },
+  {
+   "base": [
+    6,
+    3,
+    2
+   ],
+   "result": "unsat",
+   "seconds": 524.9,
+   "model_E2": []
+  },
+  {
+   "base": [
+    8,
+    2,
+    1
+   ],
+   "result": "unsat",
+   "seconds": 109.5,
+   "model_E2": []
+  },
+  {
+   "base": [
+    5,
+    3,
+    3
+   ],
+   "result": "unsat",
+   "seconds": 555.5,
+   "model_E2": []
+  },
+  {
+   "base": [
+    9,
+    1,
+    1
+   ],
+   "result": "unsat",
+   "seconds": 49.1,
+   "model_E2": []
+  },
+  {
+   "base": [
+    5,
+    4,
+    2
+   ],
+   "result": "unsat",
+   "seconds": 583.4,
+   "model_E2": []
+  },
+  {
+   "base": [
+    7,
+    3,
+    1
+   ],
+   "result": "unsat",
+   "seconds": 249.5,
+   "model_E2": []
+  },
+  {
+   "base": [
+    8,
+    3,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 108.9,
+   "model_E2": []
+  },
+  {
+   "base": [
+    9,
+    2,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 56.5,
+   "model_E2": []
+  },
+  {
+   "base": [
+    7,
+    4,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 201.8,
+   "model_E2": []
+  },
+  {
+   "base": [
+    10,
+    1,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 74.6,
+   "model_E2": []
+  },
+  {
+   "base": [
+    11,
+    0,
+    0
+   ],
+   "result": "unsat",
+   "seconds": 58.8,
+   "model_E2": []
+  },
+  {
+   "base": [
+    4,
+    4,
+    3
+   ],
+   "result": "unsat",
+   "seconds": 710.8,
+   "model_E2": []
+  }
+ ],
+ "complete": true,
+ "any_sat": false
+}

@@ -1,0 +1,1693 @@
+[
+  {
+    "lo": "0",
+    "hi": "1/2",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      10,
+      1
+    ],
+    "cells": 42,
+    "prefix_runs": 14,
+    "period_runs": 6,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "1/2",
+    "hi": "3/5",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      23,
+      2
+    ],
+    "cells": 132,
+    "prefix_runs": 59,
+    "period_runs": 24,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "3/5",
+    "hi": "5/8",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      46,
+      5
+    ],
+    "cells": 309,
+    "prefix_runs": 166,
+    "period_runs": 28,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "5/8",
+    "hi": "2/3",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      46,
+      5
+    ],
+    "cells": 299,
+    "prefix_runs": 166,
+    "period_runs": 25,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "2/3",
+    "hi": "5/7",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      25,
+      6
+    ],
+    "cells": 177,
+    "prefix_runs": 81,
+    "period_runs": 21,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "5/7",
+    "hi": "3/4",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      30,
+      -1
+    ],
+    "cells": 187,
+    "prefix_runs": 81,
+    "period_runs": 24,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "3/4",
+    "hi": "4/5",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      23,
+      4
+    ],
+    "cells": 143,
+    "prefix_runs": 70,
+    "period_runs": 22,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "4/5",
+    "hi": "5/6",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      51,
+      5
+    ],
+    "cells": 441,
+    "prefix_runs": 256,
+    "period_runs": 51,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "5/6",
+    "hi": "6/7",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      56,
+      -1
+    ],
+    "cells": 465,
+    "prefix_runs": 253,
+    "period_runs": 42,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "6/7",
+    "hi": "7/8",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      36,
+      7
+    ],
+    "cells": 292,
+    "prefix_runs": 165,
+    "period_runs": 38,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "7/8",
+    "hi": "8/9",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      74,
+      8
+    ],
+    "cells": 842,
+    "prefix_runs": 538,
+    "period_runs": 73,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "8/9",
+    "hi": "9/10",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      82,
+      -1
+    ],
+    "cells": 867,
+    "prefix_runs": 521,
+    "period_runs": 60,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "9/10",
+    "hi": "10/11",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      61,
+      7
+    ],
+    "cells": 591,
+    "prefix_runs": 385,
+    "period_runs": 54,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "10/11",
+    "hi": "11/12",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      97,
+      11
+    ],
+    "cells": 1368,
+    "prefix_runs": 923,
+    "period_runs": 95,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "11/12",
+    "hi": "12/13",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      108,
+      -1
+    ],
+    "cells": 1395,
+    "prefix_runs": 885,
+    "period_runs": 78,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "12/13",
+    "hi": "13/14",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      84,
+      10
+    ],
+    "cells": 1003,
+    "prefix_runs": 701,
+    "period_runs": 70,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "13/14",
+    "hi": "14/15",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      120,
+      14
+    ],
+    "cells": 2018,
+    "prefix_runs": 1408,
+    "period_runs": 117,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "14/15",
+    "hi": "15/16",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      134,
+      -1
+    ],
+    "cells": 2047,
+    "prefix_runs": 1345,
+    "period_runs": 96,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "15/16",
+    "hi": "16/17",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      107,
+      13
+    ],
+    "cells": 1523,
+    "prefix_runs": 1110,
+    "period_runs": 86,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "16/17",
+    "hi": "17/18",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      143,
+      17
+    ],
+    "cells": 2793,
+    "prefix_runs": 1998,
+    "period_runs": 139,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "17/18",
+    "hi": "18/19",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      160,
+      -1
+    ],
+    "cells": 2823,
+    "prefix_runs": 1901,
+    "period_runs": 114,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "18/19",
+    "hi": "19/20",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      130,
+      16
+    ],
+    "cells": 2151,
+    "prefix_runs": 1611,
+    "period_runs": 102,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "19/20",
+    "hi": "20/21",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      166,
+      20
+    ],
+    "cells": 3693,
+    "prefix_runs": 2691,
+    "period_runs": 161,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "20/21",
+    "hi": "21/22",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      186,
+      -1
+    ],
+    "cells": 3725,
+    "prefix_runs": 2553,
+    "period_runs": 132,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "21/22",
+    "hi": "22/23",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      153,
+      19
+    ],
+    "cells": 2887,
+    "prefix_runs": 2205,
+    "period_runs": 118,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "22/23",
+    "hi": "23/24",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      189,
+      23
+    ],
+    "cells": 4717,
+    "prefix_runs": 3484,
+    "period_runs": 183,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "23/24",
+    "hi": "24/25",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      212,
+      -1
+    ],
+    "cells": 4751,
+    "prefix_runs": 3301,
+    "period_runs": 150,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "24/25",
+    "hi": "25/26",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      176,
+      22
+    ],
+    "cells": 3731,
+    "prefix_runs": 2892,
+    "period_runs": 134,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "25/26",
+    "hi": "26/27",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      212,
+      26
+    ],
+    "cells": 5866,
+    "prefix_runs": 4382,
+    "period_runs": 205,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "26/27",
+    "hi": "27/28",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      238,
+      -1
+    ],
+    "cells": 5901,
+    "prefix_runs": 4145,
+    "period_runs": 168,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "27/28",
+    "hi": "28/29",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      199,
+      25
+    ],
+    "cells": 4683,
+    "prefix_runs": 3671,
+    "period_runs": 150,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "28/29",
+    "hi": "29/30",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      235,
+      29
+    ],
+    "cells": 7140,
+    "prefix_runs": 5383,
+    "period_runs": 227,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "29/30",
+    "hi": "30/31",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      264,
+      -1
+    ],
+    "cells": 7177,
+    "prefix_runs": 5085,
+    "period_runs": 186,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "30/31",
+    "hi": "31/32",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      222,
+      28
+    ],
+    "cells": 5743,
+    "prefix_runs": 4543,
+    "period_runs": 166,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "31/32",
+    "hi": "32/33",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      258,
+      32
+    ],
+    "cells": 8538,
+    "prefix_runs": 6484,
+    "period_runs": 249,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "32/33",
+    "hi": "33/34",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      290,
+      -1
+    ],
+    "cells": 8577,
+    "prefix_runs": 6121,
+    "period_runs": 204,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "33/34",
+    "hi": "34/35",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      245,
+      31
+    ],
+    "cells": 6911,
+    "prefix_runs": 5508,
+    "period_runs": 182,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "34/35",
+    "hi": "35/36",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      281,
+      35
+    ],
+    "cells": 10061,
+    "prefix_runs": 7690,
+    "period_runs": 271,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "35/36",
+    "hi": "36/37",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      316,
+      -1
+    ],
+    "cells": 10101,
+    "prefix_runs": 7253,
+    "period_runs": 222,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "36/37",
+    "hi": "37/38",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      268,
+      34
+    ],
+    "cells": 8187,
+    "prefix_runs": 6565,
+    "period_runs": 198,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "37/38",
+    "hi": "38/39",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      304,
+      38
+    ],
+    "cells": 11709,
+    "prefix_runs": 8999,
+    "period_runs": 293,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "38/39",
+    "hi": "39/40",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      342,
+      -1
+    ],
+    "cells": 11751,
+    "prefix_runs": 8481,
+    "period_runs": 240,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "39/40",
+    "hi": "40/41",
+    "p": [
+      5,
+      1
+    ],
+    "q": [
+      291,
+      37
+    ],
+    "cells": 9571,
+    "prefix_runs": 7715,
+    "period_runs": 214,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 4
+  },
+  {
+    "lo": "1/41",
+    "hi": "1/40",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      337,
+      38
+    ],
+    "cells": 10018,
+    "prefix_runs": 8188,
+    "period_runs": 218,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/40",
+    "hi": "1/39",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      351,
+      39
+    ],
+    "cells": 12415,
+    "prefix_runs": 9000,
+    "period_runs": 247,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/39",
+    "hi": "1/38",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      352,
+      0
+    ],
+    "cells": 12376,
+    "prefix_runs": 9594,
+    "period_runs": 303,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/38",
+    "hi": "1/37",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      311,
+      35
+    ],
+    "cells": 8601,
+    "prefix_runs": 7002,
+    "period_runs": 202,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/37",
+    "hi": "1/36",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      325,
+      36
+    ],
+    "cells": 10718,
+    "prefix_runs": 7733,
+    "period_runs": 229,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/36",
+    "hi": "1/35",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      326,
+      0
+    ],
+    "cells": 10681,
+    "prefix_runs": 8242,
+    "period_runs": 281,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/35",
+    "hi": "1/34",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      285,
+      32
+    ],
+    "cells": 7292,
+    "prefix_runs": 5908,
+    "period_runs": 186,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/34",
+    "hi": "1/33",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      299,
+      33
+    ],
+    "cells": 9145,
+    "prefix_runs": 6562,
+    "period_runs": 211,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/33",
+    "hi": "1/32",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      300,
+      0
+    ],
+    "cells": 9110,
+    "prefix_runs": 6992,
+    "period_runs": 259,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/32",
+    "hi": "1/31",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      259,
+      29
+    ],
+    "cells": 6091,
+    "prefix_runs": 4908,
+    "period_runs": 170,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/31",
+    "hi": "1/30",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      273,
+      30
+    ],
+    "cells": 7697,
+    "prefix_runs": 5487,
+    "period_runs": 193,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/30",
+    "hi": "1/29",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      274,
+      0
+    ],
+    "cells": 7663,
+    "prefix_runs": 5843,
+    "period_runs": 237,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/29",
+    "hi": "1/28",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      233,
+      26
+    ],
+    "cells": 4998,
+    "prefix_runs": 4000,
+    "period_runs": 154,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/28",
+    "hi": "1/27",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      247,
+      27
+    ],
+    "cells": 6374,
+    "prefix_runs": 4508,
+    "period_runs": 175,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/27",
+    "hi": "1/26",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      248,
+      0
+    ],
+    "cells": 6342,
+    "prefix_runs": 4799,
+    "period_runs": 215,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/26",
+    "hi": "1/25",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      207,
+      23
+    ],
+    "cells": 4013,
+    "prefix_runs": 3184,
+    "period_runs": 138,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/25",
+    "hi": "1/24",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      221,
+      24
+    ],
+    "cells": 5175,
+    "prefix_runs": 3625,
+    "period_runs": 157,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/24",
+    "hi": "1/23",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      222,
+      0
+    ],
+    "cells": 5145,
+    "prefix_runs": 3857,
+    "period_runs": 193,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/23",
+    "hi": "1/22",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      181,
+      20
+    ],
+    "cells": 3136,
+    "prefix_runs": 2462,
+    "period_runs": 122,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/22",
+    "hi": "1/21",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      195,
+      21
+    ],
+    "cells": 4101,
+    "prefix_runs": 2838,
+    "period_runs": 139,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/21",
+    "hi": "1/20",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      196,
+      0
+    ],
+    "cells": 4072,
+    "prefix_runs": 3016,
+    "period_runs": 171,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/20",
+    "hi": "1/19",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      155,
+      17
+    ],
+    "cells": 2367,
+    "prefix_runs": 1832,
+    "period_runs": 106,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/19",
+    "hi": "1/18",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      169,
+      18
+    ],
+    "cells": 3152,
+    "prefix_runs": 2147,
+    "period_runs": 121,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/18",
+    "hi": "1/17",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      170,
+      0
+    ],
+    "cells": 3125,
+    "prefix_runs": 2280,
+    "period_runs": 149,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/17",
+    "hi": "1/16",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      129,
+      14
+    ],
+    "cells": 1706,
+    "prefix_runs": 1294,
+    "period_runs": 90,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/16",
+    "hi": "1/15",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      143,
+      15
+    ],
+    "cells": 2327,
+    "prefix_runs": 1552,
+    "period_runs": 103,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/15",
+    "hi": "1/14",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      144,
+      0
+    ],
+    "cells": 2302,
+    "prefix_runs": 1646,
+    "period_runs": 127,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/14",
+    "hi": "1/13",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      103,
+      11
+    ],
+    "cells": 1153,
+    "prefix_runs": 850,
+    "period_runs": 74,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/13",
+    "hi": "1/12",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      117,
+      12
+    ],
+    "cells": 1627,
+    "prefix_runs": 1053,
+    "period_runs": 85,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/12",
+    "hi": "1/11",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      118,
+      0
+    ],
+    "cells": 1603,
+    "prefix_runs": 1113,
+    "period_runs": 105,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/11",
+    "hi": "1/10",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      77,
+      8
+    ],
+    "cells": 708,
+    "prefix_runs": 498,
+    "period_runs": 58,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/10",
+    "hi": "1/9",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      91,
+      9
+    ],
+    "cells": 1052,
+    "prefix_runs": 650,
+    "period_runs": 67,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/9",
+    "hi": "1/8",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      92,
+      0
+    ],
+    "cells": 1030,
+    "prefix_runs": 685,
+    "period_runs": 83,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/8",
+    "hi": "1/7",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      51,
+      5
+    ],
+    "cells": 371,
+    "prefix_runs": 238,
+    "period_runs": 42,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/7",
+    "hi": "2/13",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      65,
+      6
+    ],
+    "cells": 601,
+    "prefix_runs": 343,
+    "period_runs": 49,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "2/13",
+    "hi": "1/6",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      65,
+      6
+    ],
+    "cells": 638,
+    "prefix_runs": 343,
+    "period_runs": 40,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/6",
+    "hi": "3/17",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      123,
+      17
+    ],
+    "cells": 1455,
+    "prefix_runs": 919,
+    "period_runs": 51,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "3/17",
+    "hi": "2/11",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      126,
+      0
+    ],
+    "cells": 1408,
+    "prefix_runs": 919,
+    "period_runs": 63,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "2/11",
+    "hi": "1/5",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      61,
+      0
+    ],
+    "cells": 515,
+    "prefix_runs": 314,
+    "period_runs": 56,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/5",
+    "hi": "1/4",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      27,
+      0
+    ],
+    "cells": 151,
+    "prefix_runs": 78,
+    "period_runs": 27,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/4",
+    "hi": "1/3",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      25,
+      2
+    ],
+    "cells": 171,
+    "prefix_runs": 69,
+    "period_runs": 22,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/3",
+    "hi": "2/5",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      19,
+      4
+    ],
+    "cells": 133,
+    "prefix_runs": 48,
+    "period_runs": 19,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "2/5",
+    "hi": "3/7",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      37,
+      7
+    ],
+    "cells": 266,
+    "prefix_runs": 122,
+    "period_runs": 21,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "3/7",
+    "hi": "1/2",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      40,
+      0
+    ],
+    "cells": 249,
+    "prefix_runs": 122,
+    "period_runs": 27,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "1/2",
+    "hi": "2/3",
+    "p": [
+      6,
+      1
+    ],
+    "q": [
+      14,
+      1
+    ],
+    "cells": 71,
+    "prefix_runs": 22,
+    "period_runs": 13,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  },
+  {
+    "lo": "2/3",
+    "hi": "1",
+    "p": [
+      5,
+      0
+    ],
+    "q": [
+      14,
+      1
+    ],
+    "cells": 78,
+    "prefix_runs": 22,
+    "period_runs": 10,
+    "recurrence": true,
+    "primitive": true,
+    "earliest": true,
+    "base": 5
+  }
+]

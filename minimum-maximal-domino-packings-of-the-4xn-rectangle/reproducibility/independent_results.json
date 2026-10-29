@@ -1,0 +1,365 @@
+{
+  "method": "first-vertex graph matching recursion",
+  "results": [
+    {
+      "n": 1,
+      "m": 1,
+      "A": 1,
+      "evaluated_subproblems": 6,
+      "memoized": true,
+      "cache_hits": 1,
+      "seconds": 2.1e-05
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "A": 6,
+      "evaluated_subproblems": 40,
+      "memoized": true,
+      "cache_hits": 18,
+      "seconds": 3.7e-05
+    },
+    {
+      "n": 3,
+      "m": 4,
+      "A": 7,
+      "evaluated_subproblems": 137,
+      "memoized": true,
+      "cache_hits": 82,
+      "seconds": 9.3e-05
+    },
+    {
+      "n": 4,
+      "m": 6,
+      "A": 100,
+      "evaluated_subproblems": 276,
+      "memoized": true,
+      "cache_hits": 199,
+      "seconds": 0.000165
+    },
+    {
+      "n": 5,
+      "m": 7,
+      "A": 51,
+      "evaluated_subproblems": 424,
+      "memoized": true,
+      "cache_hits": 336,
+      "seconds": 0.000251
+    },
+    {
+      "n": 6,
+      "m": 8,
+      "A": 10,
+      "evaluated_subproblems": 572,
+      "memoized": true,
+      "cache_hits": 473,
+      "seconds": 0.000292
+    },
+    {
+      "n": 7,
+      "m": 10,
+      "A": 663,
+      "evaluated_subproblems": 720,
+      "memoized": true,
+      "cache_hits": 610,
+      "seconds": 0.00042
+    },
+    {
+      "n": 8,
+      "m": 11,
+      "A": 124,
+      "evaluated_subproblems": 868,
+      "memoized": true,
+      "cache_hits": 747,
+      "seconds": 0.00079
+    },
+    {
+      "n": 9,
+      "m": 12,
+      "A": 8,
+      "evaluated_subproblems": 1016,
+      "memoized": true,
+      "cache_hits": 884,
+      "seconds": 0.00065
+    },
+    {
+      "n": 10,
+      "m": 14,
+      "A": 1892,
+      "evaluated_subproblems": 1164,
+      "memoized": true,
+      "cache_hits": 1021,
+      "seconds": 0.000792
+    },
+    {
+      "n": 11,
+      "m": 15,
+      "A": 178,
+      "evaluated_subproblems": 1312,
+      "memoized": true,
+      "cache_hits": 1158,
+      "seconds": 0.000891
+    },
+    {
+      "n": 12,
+      "m": 16,
+      "A": 8,
+      "evaluated_subproblems": 1460,
+      "memoized": true,
+      "cache_hits": 1295,
+      "seconds": 0.001099
+    },
+    {
+      "n": 13,
+      "m": 18,
+      "A": 3652,
+      "evaluated_subproblems": 1608,
+      "memoized": true,
+      "cache_hits": 1432,
+      "seconds": 0.001088
+    },
+    {
+      "n": 14,
+      "m": 19,
+      "A": 224,
+      "evaluated_subproblems": 1756,
+      "memoized": true,
+      "cache_hits": 1569,
+      "seconds": 0.00123
+    },
+    {
+      "n": 15,
+      "m": 20,
+      "A": 8,
+      "evaluated_subproblems": 1904,
+      "memoized": true,
+      "cache_hits": 1706,
+      "seconds": 0.001466
+    },
+    {
+      "n": 16,
+      "m": 22,
+      "A": 5796,
+      "evaluated_subproblems": 2052,
+      "memoized": true,
+      "cache_hits": 1843,
+      "seconds": 0.001462
+    },
+    {
+      "n": 17,
+      "m": 23,
+      "A": 274,
+      "evaluated_subproblems": 2200,
+      "memoized": true,
+      "cache_hits": 1980,
+      "seconds": 0.00183
+    },
+    {
+      "n": 18,
+      "m": 24,
+      "A": 8,
+      "evaluated_subproblems": 2348,
+      "memoized": true,
+      "cache_hits": 2117,
+      "seconds": 0.001972
+    },
+    {
+      "n": 19,
+      "m": 26,
+      "A": 8380,
+      "evaluated_subproblems": 2496,
+      "memoized": true,
+      "cache_hits": 2254,
+      "seconds": 0.001728
+    },
+    {
+      "n": 20,
+      "m": 27,
+      "A": 324,
+      "evaluated_subproblems": 2644,
+      "memoized": true,
+      "cache_hits": 2391,
+      "seconds": 0.001751
+    },
+    {
+      "n": 21,
+      "m": 28,
+      "A": 8,
+      "evaluated_subproblems": 2792,
+      "memoized": true,
+      "cache_hits": 2528,
+      "seconds": 0.001716
+    },
+    {
+      "n": 22,
+      "m": 30,
+      "A": 11424,
+      "evaluated_subproblems": 2940,
+      "memoized": true,
+      "cache_hits": 2665,
+      "seconds": 0.001934
+    },
+    {
+      "n": 23,
+      "m": 31,
+      "A": 374,
+      "evaluated_subproblems": 3088,
+      "memoized": true,
+      "cache_hits": 2802,
+      "seconds": 0.00192
+    },
+    {
+      "n": 24,
+      "m": 32,
+      "A": 8,
+      "evaluated_subproblems": 3236,
+      "memoized": true,
+      "cache_hits": 2939,
+      "seconds": 0.002113
+    },
+    {
+      "n": 25,
+      "m": 34,
+      "A": 14920,
+      "evaluated_subproblems": 3384,
+      "memoized": true,
+      "cache_hits": 3076,
+      "seconds": 0.002593
+    },
+    {
+      "n": 26,
+      "m": 35,
+      "A": 424,
+      "evaluated_subproblems": 3532,
+      "memoized": true,
+      "cache_hits": 3213,
+      "seconds": 0.002396
+    },
+    {
+      "n": 27,
+      "m": 36,
+      "A": 8,
+      "evaluated_subproblems": 3680,
+      "memoized": true,
+      "cache_hits": 3350,
+      "seconds": 0.00562
+    },
+    {
+      "n": 28,
+      "m": 38,
+      "A": 18868,
+      "evaluated_subproblems": 3828,
+      "memoized": true,
+      "cache_hits": 3487,
+      "seconds": 0.002792
+    },
+    {
+      "n": 29,
+      "m": 39,
+      "A": 474,
+      "evaluated_subproblems": 3976,
+      "memoized": true,
+      "cache_hits": 3624,
+      "seconds": 0.002639
+    },
+    {
+      "n": 30,
+      "m": 40,
+      "A": 8,
+      "evaluated_subproblems": 4124,
+      "memoized": true,
+      "cache_hits": 3761,
+      "seconds": 0.003195
+    },
+    {
+      "n": 31,
+      "m": 42,
+      "A": 23268,
+      "evaluated_subproblems": 4272,
+      "memoized": true,
+      "cache_hits": 3898,
+      "seconds": 0.003204
+    },
+    {
+      "n": 32,
+      "m": 43,
+      "A": 524,
+      "evaluated_subproblems": 4420,
+      "memoized": true,
+      "cache_hits": 4035,
+      "seconds": 0.003305
+    },
+    {
+      "n": 33,
+      "m": 44,
+      "A": 8,
+      "evaluated_subproblems": 4568,
+      "memoized": true,
+      "cache_hits": 4172,
+      "seconds": 0.00343
+    },
+    {
+      "n": 34,
+      "m": 46,
+      "A": 28120,
+      "evaluated_subproblems": 4716,
+      "memoized": true,
+      "cache_hits": 4309,
+      "seconds": 0.003331
+    },
+    {
+      "n": 35,
+      "m": 47,
+      "A": 574,
+      "evaluated_subproblems": 4864,
+      "memoized": true,
+      "cache_hits": 4446,
+      "seconds": 0.00324
+    },
+    {
+      "n": 36,
+      "m": 48,
+      "A": 8,
+      "evaluated_subproblems": 5012,
+      "memoized": true,
+      "cache_hits": 4583,
+      "seconds": 0.00403
+    },
+    {
+      "n": 37,
+      "m": 50,
+      "A": 33424,
+      "evaluated_subproblems": 5160,
+      "memoized": true,
+      "cache_hits": 4720,
+      "seconds": 0.003799
+    },
+    {
+      "n": 38,
+      "m": 51,
+      "A": 624,
+      "evaluated_subproblems": 5308,
+      "memoized": true,
+      "cache_hits": 4857,
+      "seconds": 0.00345
+    },
+    {
+      "n": 39,
+      "m": 52,
+      "A": 8,
+      "evaluated_subproblems": 5456,
+      "memoized": true,
+      "cache_hits": 4994,
+      "seconds": 0.003276
+    },
+    {
+      "n": 40,
+      "m": 54,
+      "A": 39180,
+      "evaluated_subproblems": 5604,
+      "memoized": true,
+      "cache_hits": 5131,
+      "seconds": 0.00433
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Python 3.9 or later; the checks use only the standard library.
+# Optional: src/derive_moments.py (independent symbolic derivation) uses SymPy.
+sympy>=1.12,<2

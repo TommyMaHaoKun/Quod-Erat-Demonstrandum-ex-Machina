@@ -1,0 +1,17 @@
+{
+  "schema": "power-partition-post-verification-edits-v1",
+  "date": "2026-10-29",
+  "verified_manifest_sha256": "c901a4eaa7fbf0f7a361687f535470bcf3fa15bc825d7d90574a46f5cf6546d8",
+  "current_manifest_sha256": "a360d5c95d1fdb935c4244e6102584dcb493d96ad3f17bc6bf648f8587f0147e",
+  "changed_inputs": {
+    "paper/main.tex": {
+      "verified_sha256": "faf7d7ca2403e4b01d0a83c052ddc87d1412c9b1573535b1c07587fadc5cb9cd",
+      "current_sha256": "c139606051789ea4d28e899cbf2bc1b7694164c3307fb9bdbc92fb81111d5e87"
+    },
+    "src/build_package.py": {
+      "verified_sha256": "ea74f354299d7d379d213f76d01f46eacc6593cae0f9c16c35ea99b2170b8137",
+      "current_sha256": "9e1214d997fa080afbcda7807c82e3f631593aec910d82f2a556ff637afa4bb1"
+    }
+  },
+  "nature_of_changes": "Editorial only: manuscript author line, removal of a repository citation and process wording, and the packaging file list. No theorem, proof step, constant, program logic or certificate changed; the complete verification was not rerun after these edits."
+}

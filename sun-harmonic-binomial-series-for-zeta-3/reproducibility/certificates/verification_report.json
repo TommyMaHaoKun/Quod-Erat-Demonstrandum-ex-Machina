@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "python": "3.9.9",
+  "sympy": "1.14.0",
+  "checks": [
+    {
+      "script": "verify_wz.py",
+      "exit_code": 0,
+      "output": "Exact harmonic WZ identity: PASS\nExact target boundary correction: PASS\n"
+    },
+    {
+      "script": "verify_independent.py",
+      "exit_code": 0,
+      "output": "coefficient_of_harmonics : exact zero\nrational_constant : exact zero\ntarget_boundary: exact zero\n64 exact local harmonic-pair checks: passed\n64 exact finite telescoping rectangles: passed\n"
+    },
+    {
+      "script": "numerical_checks.py",
+      "exit_code": 0,
+      "output": "3.606170709478782856199214484534349972294958877021496645376814666025514617358939270559367620828005774438597473385782158255\nPASS: independent rational enclosures agree through 120 decimal places.\nThis check alone does not prove the identity.\n"
+    }
+  ],
+  "scope": "Exact rational identities and independent numerical enclosures; analytic proofs are in the paper."
+}

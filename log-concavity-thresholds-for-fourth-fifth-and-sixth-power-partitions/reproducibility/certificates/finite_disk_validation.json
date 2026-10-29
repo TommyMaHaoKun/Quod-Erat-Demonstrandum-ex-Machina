@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "k": 4,
+  "coefficient_range": [
+    0,
+    100001
+  ],
+  "determinant_range": [
+    1,
+    100000
+  ],
+  "checks": [
+    "bytewise coefficients against Python arbitrary precision",
+    "bytewise determinants against Python arbitrary precision",
+    "ascending 64-bit and descending 32-bit limb calculations",
+    "resume during a noninitial coin in both modes",
+    "discard uncommitted data and journal suffix",
+    "reject damaged committed block, restore and resume"
+  ],
+  "disk_source_sha256": "be41cbdb8c676c65ce7ddcecc07831709f08de60b49ccfbbba4aeb4626f949a6",
+  "test_source_sha256": "242e310acfb9d4a388e8de1d6e0d29c31f8bbe66e999234ba3ef3c759e33d583"
+}

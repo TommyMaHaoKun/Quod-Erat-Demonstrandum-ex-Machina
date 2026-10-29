@@ -1,0 +1,5 @@
+Fresh coin-change computation complete in 43.66s
+PASS: D(1)..D(1200000), all signs, all boundary values, both checksums,
+and independent recurrence for s(0)..s(10001).
+No statement about n > 1200000 was checked.
+Elapsed 47.64s

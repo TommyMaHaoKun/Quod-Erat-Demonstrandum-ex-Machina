@@ -1,0 +1,41 @@
+{
+  "python": "3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)]",
+  "results": [
+    {
+      "algorithm": "cube_coin_change",
+      "coefficient_limit": 20000,
+      "seconds": 0.0222334,
+      "last_coefficient_digits": 15
+    },
+    {
+      "algorithm": "cube_coin_change",
+      "coefficient_limit": 100000,
+      "seconds": 0.1510909,
+      "last_coefficient_digits": 25
+    },
+    {
+      "algorithm": "cube_coin_change",
+      "coefficient_limit": 200000,
+      "seconds": 0.36327810000000005,
+      "last_coefficient_digits": 31
+    },
+    {
+      "algorithm": "divisor_recurrence",
+      "coefficient_limit": 1000,
+      "seconds": 0.028090300000000012,
+      "last_coefficient_digits": 5
+    },
+    {
+      "algorithm": "divisor_recurrence",
+      "coefficient_limit": 3000,
+      "seconds": 0.2342284,
+      "last_coefficient_digits": 8
+    },
+    {
+      "algorithm": "divisor_recurrence",
+      "coefficient_limit": 6000,
+      "seconds": 0.8700827999999999,
+      "last_coefficient_digits": 10
+    }
+  ]
+}

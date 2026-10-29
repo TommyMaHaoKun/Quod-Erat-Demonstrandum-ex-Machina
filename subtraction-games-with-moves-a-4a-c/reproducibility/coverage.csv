@@ -1,0 +1,8 @@
+case,parameter_condition,construction,least_period,least_preperiod
+small,a=2 and c>8 odd,large_classification.py,explicit theorem,explicit theorem
+large,a>=3 and c>6a,large_classification.py,explicit theorem,explicit theorem
+outer,a>=3 and 4a<c<6a and 41abs(c-5a)>=a,atlas.json and seams.json,certified primitive,certified last mismatch
+upper_open,c=5a+d and 0<41d<a and d>1,near/uniform_classification.py,6a+d,three quotient formulas
+lower_open,c=5a-d and 0<41d<a and d>1,near/uniform_classification.py,6a-d,three quotient formulas
+upper_seam,c=5a+1 and a>=42,near/uniform_classification.py,6a+1,three quadratic formulas
+lower_seam,c=5a-1 and a>=42,near/uniform_classification.py,6a-1,three quadratic formulas
