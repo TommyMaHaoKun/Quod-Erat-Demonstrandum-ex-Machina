@@ -1,0 +1,26 @@
+{
+  "rational_identity_residual": "0",
+  "polynomial_identity_residual": "0",
+  "degrees_in_n_k_a_lhs": [
+    6,
+    5,
+    4
+  ],
+  "degrees_in_n_k_a_rhs": [
+    6,
+    5,
+    4
+  ],
+  "quadratic_ansatz_solutions": [
+    {
+      "c0": "22/9",
+      "c1": "7",
+      "c2": "4",
+      "c3": "5",
+      "c4": "6",
+      "c5": "2",
+      "c6": "-2"
+    }
+  ],
+  "status": "PASS"
+}

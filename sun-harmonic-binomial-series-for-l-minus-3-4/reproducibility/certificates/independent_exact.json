@@ -1,0 +1,12 @@
+{
+  "identity_3_3_grid_points": 343,
+  "identity_3_3_grid_failures": 0,
+  "wz_relation_points": 1183,
+  "wz_relation_failures": 0,
+  "G_equals_T_failures": 0,
+  "taylor_coefficient_terms_checked": 80,
+  "taylor_coefficient_failures": 0,
+  "odd_coefficient_failures": 0,
+  "partial_fraction_failures": 0,
+  "status": "PASS"
+}

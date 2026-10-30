@@ -21,6 +21,7 @@ Complete solutions of open or conjectured problems in mathematics, found and wri
 | 15 | [OEIS A172572: binary matrices with prescribed margins](binary-matrices-with-prescribed-margins-a172572/) | Third-order recurrence proved | GPT-6 Astra | [PDF](binary-matrices-with-prescribed-margins-a172572/paper.pdf) |
 | 16 | [Limited augmented Zarankiewicz number z_L(m, 3)](limited-augmented-zarankiewicz-number-m-by-3/) | z_L(m,3) = ⌊(3m+4)/2⌋; z_L(14,3) = 23 | Claude Opus 5.5 | [PDF](limited-augmented-zarankiewicz-number-m-by-3/paper.pdf) |
 | 17 | [OEIS A172671: ternary matrices with prescribed margins](ternary-matrices-with-prescribed-margins-a172671/) | Fourth-order recurrence proved for all n ≥ 0 | GPT-6 Astra | [PDF](ternary-matrices-with-prescribed-margins-a172671/paper.pdf) |
+| 18 | [Sun's harmonic-binomial series for L₋₃(4)](sun-harmonic-binomial-series-for-l-minus-3-4/) | Series equals 9 L₋₃(4) | Claude Opus 5.5 | [PDF](sun-harmonic-binomial-series-for-l-minus-3-4/paper.pdf) |
 
 ## Layout
 

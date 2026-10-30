@@ -1,0 +1,2 @@
+sympy>=1.9
+mpmath>=1.2
