@@ -26,7 +26,7 @@ Runs all four verification routes and checks that the independent counters agree
 
 ## Status
 
-Computer-assisted proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+The six-term counting formula and the exceptional initial values have been formalized in Lean 4.19.0 for the original binary matrices; see the [standalone Lean project](lean/) and its [verification record](lean/VERIFICATION.md). The formalization proves the matrix/automaton correspondence and checks a full-state degree-16 certificate. It does not formalize the paper's Fourier derivation, generating-function claims, or minimality of the eventual recurrence. The paper and programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. The work has not been externally peer reviewed.
 
 ## License
 
