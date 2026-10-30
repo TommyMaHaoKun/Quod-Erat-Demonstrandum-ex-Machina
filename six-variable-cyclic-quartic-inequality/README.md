@@ -26,9 +26,15 @@ python src/verify_certificate.py
 
 The proof itself needs no computer; these scripts check its identities and the supplementary certificate exactly.
 
+## Lean formalization
+
+The original inequality on all real six-tuples and its equality characterization are checked in Lean. The stronger variance-remainder bound in the paper is not yet formalized.
+
+The independent [Lean project](lean/) includes proof sources, pinned dependencies, build instructions, and an axiom audit. See its [README](lean/README.md) for the exact theorem coverage and [verification record](lean/VERIFICATION.md).
+
 ## Status
 
-Analytic proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+Analytic proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed. The Lean-checked scope is stated above; other claims in the paper retain their analytic/internal-verification status.
 
 ## License
 

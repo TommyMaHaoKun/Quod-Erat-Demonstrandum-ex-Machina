@@ -25,9 +25,15 @@ python src/check_package.py
 
 A few minutes. The SAT step is skipped if `z3-solver` is not installed.
 
+## Lean formalization
+
+The exact maximum for every m >= 3 is checked in Lean, including the original admissibility and limitedness definitions, the upper bound, and an attaining construction.
+
+The independent [Lean project](lean/) includes proof sources, pinned dependencies, build instructions, and an axiom audit. See its [README](lean/README.md) for the exact theorem coverage and [verification record](lean/VERIFICATION.md).
+
 ## Status
 
-Analytic proof. The proof and the programs were produced by Claude Opus 5.5, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+Analytic proof. The proof and the programs were produced by Claude Opus 5.5, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed. The Lean-checked scope is stated above; other claims in the paper retain their analytic/internal-verification status.
 
 ## License
 

@@ -29,17 +29,30 @@ Every problem folder has the same structure:
 <problem>/
 ├── README.md          statement, result, method and how to reproduce
 ├── paper.pdf          the complete paper
-└── reproducibility/   verification programs, certificates and requirements.txt
+├── reproducibility/   verification programs, certificates and requirements.txt
+└── lean/              independent Lean project, where available
 ```
 
-All verification programs are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Run the commands in each problem README from that problem's `reproducibility/` folder.
+The verification programs in `reproducibility/` are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Run the commands in each problem README from that problem's `reproducibility/` folder.
+
+## Lean formalizations
+
+The following problem folders include independently buildable Lean 4.19.0 / Mathlib v4.19.0 projects:
+
+| Problem | Lean-checked scope | Project |
+|---|---|---|
+| Six-variable cyclic inequality | Original inequality for all real tuples and equality iff all entries coincide; excludes the stronger variance remainder | [Lean](six-variable-cyclic-quartic-inequality/lean/) |
+| Limited augmented Zarankiewicz number | Exact maximum for all m >= 3 from the original definitions, with an attaining construction | [Lean](limited-augmented-zarankiewicz-number-m-by-3/lean/) |
+| Three-point Riesz energy | Endpoint maximality and attainment for r >= 2 in Fan's Conjecture 5.9; excludes the paper's additional uniqueness and other-exponent claims | [Lean](three-point-riesz-energy-on-the-circle/lean/) |
+
+Build instructions, exact theorem names, and verification records are in each project. A181280 and the domino enumeration do not yet have completed Lean proofs in this repository.
 
 ## Status
 
-These are AI-generated mathematical results. Each proof was checked by internal review and by the exact computations included here, but none has been externally peer reviewed or formalized in a proof assistant. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.
+These are AI-generated mathematical results. Each proof was checked by internal review and by the exact computations included here, and the scopes listed above have additionally been checked in Lean. None has been externally peer reviewed; claims outside those Lean scopes are not presented as formally verified. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.
 
 ## License
 
-- **Code** — all programs in the `reproducibility/` folders — is released under the [MIT License](LICENSE).
+- **Code** — all programs in the `reproducibility/` folders and Lean source/configuration files in the `lean/` folders — is released under the [MIT License](LICENSE).
 - **Papers, READMEs, certificates and data** are released under [Creative Commons Attribution 4.0 International](LICENSE-CC-BY-4.0.txt) (CC BY 4.0). Please credit the paper's author and link to this repository.
 - **Exception:** `four-row-arrays-increasing-in-four-directions-a181198/reproducibility/data/OEIS_b181198.txt` is taken from the [OEIS](https://oeis.org/A181198) and remains under its original CC BY-SA 4.0 license.

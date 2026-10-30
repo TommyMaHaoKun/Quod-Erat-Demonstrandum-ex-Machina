@@ -26,9 +26,15 @@ python src/verify_numeric.py
 
 The proof is analytic; the symbolic script checks its identities and the numeric script is a regression check.
 
+## Lean formalization
+
+Endpoint maximality and attainment in Fan's Conjecture 5.9 for r >= 2 are checked in Lean. The paper's additional uniqueness, other exponent ranges, and Conjecture 5.6 claims are not formalized here.
+
+The independent [Lean project](lean/) includes proof sources, pinned dependencies, build instructions, and an axiom audit. See its [README](lean/README.md) for the exact theorem coverage and [verification record](lean/VERIFICATION.md).
+
 ## Status
 
-Analytic proof. The proof and the programs were produced by Claude Opus 5.5, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+Analytic proof. The proof and the programs were produced by Claude Opus 5.5, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed. The Lean-checked scope is stated above; other claims in the paper retain their analytic/internal-verification status.
 
 ## License
 
