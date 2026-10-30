@@ -46,6 +46,7 @@ The following problem folders include independently buildable Lean 4.19.0 / Math
 | Three-point Riesz energy | Endpoint maximality and attainment for r >= 2 in Fan's Conjecture 5.9; excludes the paper's additional uniqueness and other-exponent claims | [Lean](three-point-riesz-energy-on-the-circle/lean/) |
 | Minimum maximal domino packings of 4 x n | Minimum size and exact count for every positive width, including the physical-packing/path bijection and n = 1 exception | [Lean](minimum-maximal-domino-packings-of-the-4xn-rectangle/lean/) |
 | A181280 binary Gram matrices | Original six-term counting formula for every n >= 4 and zero counts below 4, with the matrix/automaton bijection and full-state certificate | [Lean](binary-matrices-with-reverse-ordered-gram-rows-a181280/lean/) |
+| A195806 five-row triangular arrays | All six original counting formulas for every n >= 0, including the array/parameter bijection and chamber boundary multiplicities | [Lean](five-row-triangular-arrays-with-equal-line-sums-a195806/lean/) |
 
 Build instructions, exact theorem names, and verification records are in each project.
 

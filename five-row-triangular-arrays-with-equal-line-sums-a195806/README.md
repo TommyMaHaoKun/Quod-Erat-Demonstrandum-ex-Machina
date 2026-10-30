@@ -26,7 +26,7 @@ Includes two independent enumerations through n = 41 and the source-index audit.
 
 ## Status
 
-Analytic proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+Analytic proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. All six counting formulas for every n >= 0, starting from the original array definition, have now been checked in Lean 4.19.0 / Mathlib v4.19.0. See the [Lean project](lean/README.md) and [verification record](lean/VERIFICATION.md). The additional generating-function and minimal-period arguments are outside this formalized scope. It has not been externally peer reviewed.
 
 ## License
 
