@@ -44,8 +44,9 @@ The following problem folders include independently buildable Lean 4.19.0 / Math
 | Six-variable cyclic inequality | Original inequality for all real tuples and equality iff all entries coincide; excludes the stronger variance remainder | [Lean](six-variable-cyclic-quartic-inequality/lean/) |
 | Limited augmented Zarankiewicz number | Exact maximum for all m >= 3 from the original definitions, with an attaining construction | [Lean](limited-augmented-zarankiewicz-number-m-by-3/lean/) |
 | Three-point Riesz energy | Endpoint maximality and attainment for r >= 2 in Fan's Conjecture 5.9; excludes the paper's additional uniqueness and other-exponent claims | [Lean](three-point-riesz-energy-on-the-circle/lean/) |
+| Minimum maximal domino packings of 4 x n | Minimum size and exact count for every positive width, including the physical-packing/path bijection and n = 1 exception | [Lean](minimum-maximal-domino-packings-of-the-4xn-rectangle/lean/) |
 
-Build instructions, exact theorem names, and verification records are in each project. A181280 and the domino enumeration do not yet have completed Lean proofs in this repository.
+Build instructions, exact theorem names, and verification records are in each project. A181280 does not yet have a completed Lean proof in this repository.
 
 ## Status
 

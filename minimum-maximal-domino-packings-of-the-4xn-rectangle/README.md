@@ -27,7 +27,7 @@ Do not run Python with `-O`; the checks are assertions.
 
 ## Status
 
-Computer-assisted proof. The proof and the programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. It has not been externally peer reviewed or formalized in a proof assistant.
+The minimum size and exact count for every positive width have been formalized in Lean 4.19.0; see the [standalone Lean project](lean/) and its [verification record](lean/VERIFICATION.md). The formal proof includes the physical-packing/path bijection and the width-one exception. Other structural claims in the paper are outside the stated Lean scope. The paper and programs were produced by GPT-6 Astra, an AI system, and checked by internal review and the exact computations listed here. The work has not been externally peer reviewed.
 
 ## License
 
