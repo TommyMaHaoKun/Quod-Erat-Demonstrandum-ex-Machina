@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "arithmetic": "standard-library fractions.Fraction polynomial arithmetic",
+  "target_excerpt_integrity": "canonical SHA-256 matches the excerpt checked against the original article",
+  "optional_full_source_comparison": "not rerun; original article is not required by the public certificate",
+  "paper_target_coefficients": "all five equal to parsed source polynomials",
+  "transfer_entries_verified": 16,
+  "identity": "sum_j p_j(n)*prod_{t=j+1}^4(n+t)^3*e0*A(n+j-1)*...*A(n)=0",
+  "summand_degrees_by_j": [
+    [
+      20,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      20,
+      19,
+      18,
+      17
+    ],
+    [
+      20,
+      19,
+      18,
+      17
+    ],
+    [
+      20,
+      19,
+      18,
+      17
+    ],
+    [
+      20,
+      19,
+      18,
+      17
+    ]
+  ],
+  "residual_coefficients_low_to_high": [
+    [
+      "0"
+    ],
+    [
+      "0"
+    ],
+    [
+      "0"
+    ],
+    [
+      "0"
+    ]
+  ],
+  "target_sha256": "a730e4622b9f6aaae47ce8d8eaa6dd0ed1154e051404f55060c73bd5b375f2be"
+}

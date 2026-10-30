@@ -1,0 +1,422 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{listings,float}
+\lstset{basicstyle=\ttfamily\footnotesize,columns=fullflexible,keepspaces=true,breaklines=true,frame=single}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Lfun}{\mathcal L}
+\newcommand{\bb}{\boldsymbol}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb Z_{\geq0}}
+\title{A four-moment proof of the conjectured\protect\\recurrence for A172671}
+\author{GPT-6 Astra}
+\date{30 October 2026}
+\hypersetup{pdfauthor={GPT-6 Astra},pdftitle={A four-moment proof of the conjectured recurrence for A172671}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $a_n$ count the $3n\times6$ matrices with entries in $\{0,1,2\}$,
+row sums $2$, and column sums $n$, with $a_0=1$.
+We prove the exact fourth-order recurrence conjectured by Kauers and
+Koutschan for $b_n=(n!)^3a_n/(3n)!$, for every integer $n\geq0$.
+A formal Gaussian moment functional converts the coefficient count into
+the sixth moment of a modified Hermite polynomial. Integration by parts
+closes on four moments and gives an explicit $4\times4$ transfer matrix.
+A finite polynomial identity establishes the conjectured recurrence. Two exact
+arithmetic implementations verify the identity, and the accompanying
+code reproduces the certificate.
+\end{abstract}
+
+\section{Counting problem, prior work, and exact result}
+Rows and columns are labeled. A row of sum $2$ is either $2$ in one
+position, or $1$ in two distinct positions. There are $6+15=21$ choices.
+Consequently, with
+\[
+ h(\bb t)=\sum_{1\leq i\leq j\leq6}t_it_j
+ =\frac12\left(\left(\sum_{i=1}^6t_i\right)^2+\sum_{i=1}^6t_i^2\right),
+\]
+the exact counting formula is
+\begin{equation}\label{eq:count}
+ a_n=[t_1^n\cdots t_6^n]h(\bb t)^{3n},\qquad
+ b_n=\frac{(n!)^3}{(3n)!}a_n.
+\end{equation}
+The convention $a_0=1$ counts the empty matrix. The OEIS entry
+A172671 \cite{OEIS} starts at $n=1$; we explicitly include $n=0$.
+
+Kauers and Koutschan \cite[Section 4.2, Conjecture 7]{KK} give the
+recurrence below, and their Theorem 8 proves D-finiteness without
+establishing this particular recurrence. Their final JIS article labels it a conjecture on page 20.
+Yurkevich \cite[Conjecture 10.60 and equation (10.5), pp.~180--181]{Y}
+also states the conjecture and uses the displayed decomposition of $h$
+to compute terms more efficiently. That quadratic decomposition and the
+recurrence itself are therefore prior work. The additional step here is
+the explicit four-moment closure and its exact elimination certificate.
+
+\newpage
+\begin{theorem}\label{thm:main}
+For every integer $n\geq0$, the sequence defined by \eqref{eq:count}
+satisfies
+\begin{equation}\label{eq:target}
+ \sum_{j=0}^4 p_j(n)b_{n+j}=0,
+\end{equation}
+where the coefficients are exactly
+\begin{align*}
+ p_4(n)={}&3(n+3)(n+4)^3
+ (3784n^4+32164n^3+100749n^2+137862n+69678),\\
+ p_3(n)={}&-(n+3)\bigl(3799136n^7+72183584n^6+579689880n^5\\
+ &\quad+2548427912n^4+6617561702n^3+10141503096n^2\\
+ &\quad+8487349821n+2991586122\bigr),\\
+ p_2(n)={}&-3\bigl(10844944n^8+222321352n^7+1973930222n^6\\
+ &\quad+9916013134n^5+30831383530n^4+60768378830n^3\\
+ &\quad+74160044251n^2+51243135187n+15352797306\bigr),\\
+ p_1(n)={}&(n+2)\bigl(29681696n^7+504588832n^6+3602458816n^5\\
+ &\quad+14001842392n^4+32010306742n^3+43078657918n^2\\
+ &\quad+31639900193n+9799573455\bigr),\\
+ p_0(n)={}&15435(n+1)^3(n+2)
+ \bigl(3784n^4+47300n^3+219945n^2\\
+ &\hspace{42mm}+450988n+344237\bigr).
+\end{align*}
+The initial conditions are
+\begin{equation}\label{eq:initial}
+ b_0=1,\qquad b_1=15,\qquad b_2=2249,\qquad b_3=444975.
+\end{equation}
+Since $p_4(n)>0$ for $n\geq0$, these four values and
+\eqref{eq:target} determine the entire sequence.
+\end{theorem}
+
+\section{An exact Gaussian-moment representation}
+Define a linear functional $\Lfun:\Q[x]\to\Q$ by
+\begin{equation}\label{eq:functional}
+ \Lfun(x^{2m})=(2m-1)!!=\frac{(2m)!}{2^m m!},\qquad
+ \Lfun(x^{2m+1})=0,\qquad (-1)!!=1.
+\end{equation}
+It is the standard normal expectation on polynomials, but the proof
+uses only the following algebraic identities:
+\begin{equation}\label{eq:ibp}
+ \Lfun(f')=\Lfun(xf),\qquad
+ \Lfun(e^{tx})=e^{t^2/2}.
+\end{equation}
+For the first identity it suffices to take $f=x^r$: both sides vanish
+when $r$ is even, while for $r=2m+1$ they are both $(2m+1)!!$.
+The second identity follows coefficient by coefficient from
+\eqref{eq:functional}. Exponential series below are formal series, and
+$\Lfun$ is applied to their polynomial coefficients. No convergence or
+interchange of infinite analytic integrals is required.
+
+Define the modified Hermite polynomials by
+\begin{equation}\label{eq:polynomials}
+ e^{tx+t^2/2}=\sum_{n\geq0}P_n(x)\frac{t^n}{n!},\qquad
+ P_n(x)=n!\sum_{k=0}^{\lfloor n/2\rfloor}
+ \frac{x^{n-2k}}{2^k k!(n-2k)!}.
+\end{equation}
+The first polynomials are $1,x,x^2+1,x^3+3x$.
+Differentiation of the generating series gives, for all $n\geq0$,
+\begin{equation}\label{eq:hermite}
+ P_{n+1}=xP_n+P_n',\qquad
+ P_n''=nP_n-xP_n',\qquad P_{n+1}'=(n+1)P_n.
+\end{equation}
+For example, $\partial_x e^{tx+t^2/2}=t e^{tx+t^2/2}$ gives
+$P_n'=nP_{n-1}$ for $n\geq1$, while
+$\partial_t e^{tx+t^2/2}=(x+t)e^{tx+t^2/2}$ gives the first
+relation; differentiating it gives the remaining identities.
+At $n=0$ they hold directly since $P_0=1$.
+
+\begin{lemma}\label{lem:moment}
+For every $n\geq0$, $b_n=\Lfun(P_n^6)/(n!)^3$.
+\end{lemma}
+\begin{proof}
+By \eqref{eq:ibp}, in the ring of formal series in $t_1,\ldots,t_6$,
+\[
+ \Lfun\left(\prod_{i=1}^6 e^{xt_i+t_i^2/2}\right)
+ =\exp\left(\frac12\Bigl(\sum_i t_i\Bigr)^2+
+             \frac12\sum_i t_i^2\right)=e^{h(\bb t)}.
+\]
+The coefficient of $t_1^n\cdots t_6^n$ on the left is
+$\Lfun(P_n^6)/(n!)^6$. Since $h$ is homogeneous of degree $2$,
+only $h^{3n}/(3n)!$ contributes to that coefficient on the right,
+which is $a_n/(3n)!$. Multiplying by $(n!)^3$ proves the claim.
+\end{proof}
+
+\section{Closure on four moments}
+Fix $n\geq0$, and put $y=P_n(x)$ and $z=P_n'(x)$.
+Then $y'=z$ and $z'=ny-xz$. For $0\leq j\leq6$ write
+\[
+ e_j=y^{6-j}z^j,\qquad M_{k,j}=\Lfun(x^ke_j)\quad(k\geq0).
+\]
+Differentiating $x^ke_j$ and using \eqref{eq:ibp} gives
+\begin{equation}\label{eq:reduction}
+ (j+1)M_{k+1,j}=kM_{k-1,j}+(6-j)M_{k,j+1}+jnM_{k,j-1}.
+\end{equation}
+The first term is omitted at $k=0$. At $j=0$ and $j=6$, respectively,
+the out-of-range term is absent because its coefficient is zero.
+Explicitly,
+\[
+ (x^ke_j)'=kx^{k-1}e_j+(6-j)x^ke_{j+1}
+                 +jnx^ke_{j-1}-jx^{k+1}e_j,
+\]
+so the factor $j+1$ in \eqref{eq:reduction} includes the contribution
+from the Gaussian weight. In an integral formulation the boundary term
+is a polynomial times $e^{-x^2/2}$, hence vanishes at both infinities;
+the algebraic proof already accounts for it exactly.
+
+By \eqref{eq:polynomials}, $P_n(-x)=(-1)^nP_n(x)$, so $e_j$ has
+parity $j$. In particular $M_{0,j}=0$ for odd $j$.
+Induction on $k$ in \eqref{eq:reduction} expresses every $M_{k,j}$
+as a $\Q[n]$-linear combination of the four entries of
+\[
+ W_n=\bigl(\Lfun(y^6),\Lfun(y^4z^2),\Lfun(y^2z^4),
+                  \Lfun(z^6)\bigr)^{\mathsf T}.
+\]
+All divisions in this induction are by the positive integers $j+1$;
+there are no exceptional values of $n$.
+
+\begin{lemma}\label{lem:transfer}
+For every integer $n\geq0$,
+\begin{equation}\label{eq:transfer}
+ W_{n+1}=A(n)W_n,\qquad
+ U_{n+1}=B(n)U_n,\quad
+ U_n=\frac{W_n}{(n!)^3},\quad B(n)=\frac{A(n)}{(n+1)^3},
+\end{equation}
+where
+\begin{equation}\label{eq:matrix}
+\setlength{\arraycolsep}{4pt}
+ A(n)=\begin{pmatrix}
+ 3(2n+1)(29n^2+29n+5)&15(76n^2+95n+28)&75(4n+3)&7\\[2pt]
+ \dfrac{(n+1)^2(76n^2+57n+9)}3&\dfrac{241(n+1)^2(2n+1)}3&35(n+1)^2&0\\[6pt]
+ (n+1)^4(4n+1)&21(n+1)^4&0&0\\[2pt]
+ (n+1)^6&0&0&0
+ \end{pmatrix}.
+\end{equation}
+The first component of $U_n$ is $b_n$, and $U_0=(1,0,0,0)^{\mathsf T}$.
+\end{lemma}
+\begin{proof}
+Under $n\mapsto n+1$, \eqref{eq:hermite} replaces
+$(y,z)$ by $(xy+z,(n+1)y)$. Thus, for $j=0,2,4,6$,
+\begin{equation}\label{eq:entryrecipe}
+ \Lfun(P_{n+1}^{6-j}(P_{n+1}')^j)
+ =(n+1)^j\sum_{\ell=0}^{6-j}\binom{6-j}{\ell}
+ M_{6-j-\ell,\ell}.
+\end{equation}
+Applying \eqref{eq:reduction} produces the corresponding row of
+\eqref{eq:matrix}. For completeness, an exact finite specification of
+this computation is as follows. Let $R_{k,j}$ be a row of length four,
+set $R_{0,2r}$ equal to the $r$th unit row ($r=0,1,2,3$), and set
+$R_{0,j}=0$ for odd $j$. Set out-of-range rows to zero. For $k\geq1$,
+\begin{equation}\label{eq:R}
+ R_{k,j}=\frac{(k-1)R_{k-2,j}+(6-j)R_{k-1,j+1}
+                         +jnR_{k-1,j-1}}{j+1},
+\end{equation}
+omitting the first term when $k=1$. Row $r$ of $A(n)$ is then
+\begin{equation}\label{eq:Arecipe}
+ (n+1)^{2r}\sum_{\ell=0}^{6-2r}\binom{6-2r}{\ell}
+ R_{6-2r-\ell,\ell}.
+\end{equation}
+Equations \eqref{eq:R}--\eqref{eq:Arecipe} verify all sixteen displayed
+entries using only $k\leq6$. For instance,
+$M_{2,0}=M_{0,0}+6M_{1,1}$ and
+$M_{1,1}=(5M_{0,2}+nM_{0,0})/2$. Hence the row for $j=4$ is
+$(n+1)^4\bigl((4n+1)M_{0,0}+21M_{0,2}\bigr)$, as displayed.
+Normalization gives $B(n)$. The final assertions follow from
+Lemma~\ref{lem:moment} and $P_0=1$, $P_0'=0$.
+\end{proof}
+
+\section{An exact elimination certificate}
+Let $\epsilon=(1,0,0,0)$, and define matrix polynomials
+\[
+ C_0(n)=I_4,\qquad C_j(n)=A(n+j-1)C_{j-1}(n)\quad(1\leq j\leq4).
+\]
+The order of multiplication matters: explicitly,
+$C_j(n)=A(n+j-1)\cdots A(n)$.
+
+\begin{lemma}\label{lem:certificate}
+With the five polynomials in Theorem~\ref{thm:main}, the following is
+an identity of polynomial rows over $\Q[n]$:
+\begin{equation}\label{eq:certificate}
+ \boxed{\quad
+ \sum_{j=0}^4 p_j(n)\left(\prod_{t=j+1}^{4}(n+t)^3\right)
+                      \epsilon C_j(n)=(0,0,0,0).
+ \quad}
+\end{equation}
+An empty product is $1$.
+\end{lemma}
+\begin{proof}
+This is a finite polynomial identity with all of its inputs explicitly
+given in \eqref{eq:matrix} and Theorem~\ref{thm:main}. It can be verified
+by polynomial multiplication and coefficient collection as follows.
+Starting with $C=I_4$ and $H=(0,0,0,0)$, for $j=0,\ldots,4$ replace
+$C$ by $A(n+j-1)C$ if $j>0$, and add
+$p_j(n)\prod_{t=j+1}^4(n+t)^3$ times the first row of $C$ to $H$.
+The resulting polynomial coefficients are all zero. The sizes of the
+four coordinate checks are given in Table~\ref{tab:certificate}; these
+are identities in the indeterminate $n$, not evaluations at sample indices.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Coordinate & 0 & 1 & 2 & 3\\
+\midrule
+Maximum degree of any summand &20&19&18&17\\
+Coefficients checked (including constant)&21&20&19&18\\
+Nonzero coefficients after summation&0&0&0&0\\
+\bottomrule
+\end{tabular}
+\caption{Exact rational-polynomial certificate: all 78 coefficients vanish.}
+\label{tab:certificate}
+\end{table}
+
+The calculation has been checked with two separate exact-arithmetic
+programs. One uses SymPy rational functions; the other implements
+polynomial addition, multiplication, substitution $n\mapsto n+h$, and
+coefficient collection from scratch using rational numbers. The latter
+also reconstructs \eqref{eq:matrix} from \eqref{eq:R}--\eqref{eq:Arecipe}
+and reads the five target polynomials directly from the original TeX
+excerpt. Thus neither recurrence guessing nor numerical tolerance enters
+the certificate. Appendix~\ref{app:algorithm} gives precise coefficient
+rules sufficient to reproduce the calculation using rational arithmetic alone.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Iterating \eqref{eq:transfer} gives
+\[
+ b_{n+j}=\frac{\epsilon C_j(n)U_n}{\prod_{t=1}^j(n+t)^3}
+ \qquad(0\leq j\leq4).
+\]
+For $n\geq0$, the common denominator
+$D(n)=\prod_{t=1}^4(n+t)^3$ is strictly positive. Multiply the desired
+recurrence by $D(n)$, substitute the last display, and apply
+\eqref{eq:certificate} to $U_n$. This proves the exact recurrence on the
+full claimed domain, including $n=0$.
+
+The initial values can be computed without using that recurrence:
+\[
+ \Lfun(1)=1,\quad \Lfun(x^6)=15,\quad
+ \Lfun((x^2+1)^6)=17992,\quad
+ \Lfun((x^3+3x)^6)=96114600.
+\]
+Division by $(n!)^3$, for $n=0,1,2,3$, gives
+\eqref{eq:initial}. Every factor of $p_4(n)$ outside its quartic is
+positive, and all coefficients of that quartic are positive. Thus no
+singular starting index occurs for $n\geq0$, and forward induction proves
+the uniqueness assertion.
+\end{proof}
+
+\section{Independent checks and reproducibility}
+The proof above uses exact algebra for unbounded $n$. Separately, a direct
+coefficient dynamic program checks the original matrix interpretation.
+If $F_r(\bb c)$ counts ordered lists of $r$ admissible rows with column
+sums $\bb c$, then
+\[
+ F_0(\bb0)=1,\qquad
+ F_{r+1}(\bb c)=\sum_{\bb s\in S}F_r(\bb c-\bb s),\qquad
+ a_n=F_{3n}(n,n,n,n,n,n),
+\]
+where $S$ consists of the 21 row choices and any negative coordinate
+gives zero. This independently agrees with \eqref{eq:polynomials} and
+Lemma~\ref{lem:moment} for $0\leq n\leq8$. Further exact sixth-moment
+computations through $n=40$ give zero recurrence residual for
+$0\leq n\leq36$. These finite tests corroborate the proof; they are not
+its justification.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+\toprule
+$n$&$a_n$&$b_n$\\
+\midrule
+0&1&1\\
+1&90&15\\
+2&202410&2249\\
+3&747558000&444975\\
+4&3536978063850&102077289\\
+5&19292117692187340&25493181015\\
+\bottomrule
+\end{tabular}
+\caption{Exact examples, with the empty-matrix convention at $n=0$.}
+\end{table}
+
+The accompanying package contains the source excerpt, symbolic derivation,
+independent rational-polynomial verifier, direct-count checks, and their
+JSON reports. From the reproducibility directory the following commands reproduce the
+checks:
+\begin{lstlisting}
+python src/verify_certificate.py
+python src/route_alt_transfer.py
+python src/independent_checks.py
+\end{lstlisting}
+The first command needs only the Python standard library. The second
+uses SymPy; the third uses the standard library. Paths in the scripts
+are resolved relative to their own locations. The target coefficients
+are read from the supplied mathematical excerpt, whose transcription
+was checked against the original JIS source. The verifier also compares
+them to the coefficients printed in this paper. No network access is required.
+The paper can be rebuilt with two runs of
+\begin{lstlisting}
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output paper/main.tex
+\end{lstlisting}
+Rename the resulting \texttt{output/main.pdf} to
+\texttt{output/research\_paper.pdf}, or use the supplied
+\texttt{src/build\_paper.ps1} helper. A clean-directory release check
+copies the indispensable inputs into a temporary subdirectory, repeats
+the three verifiers and compilation, and records its results.
+
+\paragraph{Authorship and verification.}
+GPT-6 Astra is an AI system. The proof and computations were checked
+by internal review and the exact verifiers described above; they have
+not been externally peer reviewed or formalized in a proof assistant.
+
+\appendix
+\section{Coefficient arithmetic for the certificate}\label{app:algorithm}
+Here is a complete finite arithmetic specification of the identity check.
+Represent a polynomial $f$ by its list of rational coefficients
+$[f_0,\ldots,f_d]$, with omitted coefficients interpreted as zero.
+Use
+\begin{align*}
+ [n^k](f+g)&=f_k+g_k,\\
+ [n^k](fg)&=\sum_{i=0}^{k}f_i g_{k-i},\\
+ [n^k]f(n+h)&=\sum_{i=k}^{d}\binom{i}{k}h^{i-k}f_i.
+\end{align*}
+Apply addition and multiplication entrywise in the usual matrix-product
+rule. Expand the factored entries in \eqref{eq:matrix} and the five
+polynomials of Theorem~\ref{thm:main} by these rules, retaining exact
+rational numbers throughout. The following pseudocode fixes all loop
+bounds and the multiplication order:
+\begin{lstlisting}
+C := identity_matrix(4)
+H := zero_row(4)
+for j = 0,1,2,3,4:
+    if j > 0:
+        C := shift(A, j-1) * C
+    q := p[j]
+    for t = j+1,...,4:
+        q := q * (n+t)^3
+    H := H + q * first_row(C)
+assert H[0] == 0 and H[1] == 0 and H[2] == 0 and H[3] == 0
+\end{lstlisting}
+In the final line equality means equality of every rational coefficient.
+No interpolation, inferred annihilator, floating-point arithmetic, or
+unproved closure assertion is used. Together with the displayed
+polynomials and matrix, this algorithm fully specifies the 78 exact
+zero-coefficient checks of Lemma~\ref{lem:certificate}.
+
+\clearpage
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{KK} M. Kauers and C. Koutschan,
+\emph{Some D-finite and some possibly D-finite sequences in the OEIS},
+Journal of Integer Sequences \textbf{26} (2023), Article 23.4.5,
+Section 4.2, Conjecture 7 and Theorem 8.
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL26/Koutschan/kout4.pdf}.
+Preprint: \url{https://arxiv.org/abs/2303.02793v2}, 24 April 2023.
+\bibitem{OEIS} The OEIS Foundation Inc., \emph{Entry A172671},
+\url{https://oeis.org/A172671}, accessed 30 October 2026.
+\bibitem{Y} S. Yurkevich, \emph{Integer sequences, algebraic series and differential operators},
+doctoral dissertation, University of Vienna, 2023,
+Conjecture 10.60 and equation (10.5), pp.~180--181.
+\url{https://homepage.univie.ac.at/herwig.hauser/Publications/yurkevich%20dissertation%202023.pdf}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "pages": 7,
+  "author": "GPT-6 Astra",
+  "render_tool": "pdftoppm (Poppler), 110 dpi",
+  "review": "All seven revised pages visually inspected. Author and PDF metadata match; bibliography contains only mathematical sources; Table 1 sits between paragraphs; formulas, tables and references are legible.",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "pdf_sha256": "9fa20e58445dd1265dca7ef88d4b750e32f33ed42a2ab48b3635dcdf116e1753",
+  "latex_source_sha256": "075f4383b49fc438e514971825f9e99e35cdb0e94289fedc50d3292ce9c55ebc",
+  "public_source_rebuild": "All seven clean-built pages have identical extracted text to the visually reviewed published PDF."
+}

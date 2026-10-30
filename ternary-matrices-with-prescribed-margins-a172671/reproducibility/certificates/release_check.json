@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "clean_directory": "tmp\\release-rsf3cfbs",
+  "steps": [
+    {
+      "step": 1,
+      "command": "src/verify_certificate.py",
+      "returncode": 0,
+      "seconds": 0.078
+    },
+    {
+      "step": 2,
+      "command": "src/route_alt_transfer.py",
+      "returncode": 0,
+      "seconds": 2.5
+    },
+    {
+      "step": 3,
+      "command": "src/independent_checks.py",
+      "returncode": 0,
+      "seconds": 0.078
+    },
+    {
+      "step": 4,
+      "command": "pdflatex pass 1",
+      "returncode": 0,
+      "seconds": 0.656
+    },
+    {
+      "step": 5,
+      "command": "pdflatex pass 2",
+      "returncode": 0,
+      "seconds": 0.641
+    }
+  ],
+  "latex_warnings_checked": [
+    "Overfull",
+    "undefined references",
+    "undefined on input line",
+    "Rerun to get cross-references"
+  ],
+  "inputs_sha256": {
+    "src/verify_certificate.py": "84221d1770acff2c7d3a757be0763822354db1d7dcc236450568ce5791c89fd0",
+    "src/route_alt_transfer.py": "78f93a456cc783995c12b570607e4af27e1d000714e6856d558b478ce4d785c6",
+    "src/independent_checks.py": "532e3b26d6019ac9067109211db4ffda7705e01fcc0340ac82aa8f66d6125826",
+    "paper/main.tex": "075f4383b49fc438e514971825f9e99e35cdb0e94289fedc50d3292ce9c55ebc",
+    "literature/target_formula.tex": "a730e4622b9f6aaae47ce8d8eaa6dd0ed1154e051404f55060c73bd5b375f2be"
+  },
+  "scope": "All proof verifiers and two LaTeX passes succeed from isolated relative-path inputs."
+}
