@@ -23,6 +23,7 @@ Complete solutions of open or conjectured problems in mathematics, found and wri
 | 17 | [OEIS A172671: ternary matrices with prescribed margins](ternary-matrices-with-prescribed-margins-a172671/) | Fourth-order recurrence proved for all n ≥ 0 | GPT-6 Astra | [PDF](ternary-matrices-with-prescribed-margins-a172671/paper.pdf) |
 | 18 | [Sun's harmonic-binomial series for L₋₃(4)](sun-harmonic-binomial-series-for-l-minus-3-4/) | Series equals 9 L₋₃(4) | Claude Opus 5.5 | [PDF](sun-harmonic-binomial-series-for-l-minus-3-4/paper.pdf) |
 | 19 | [OEIS A181199: five-row arrays increasing in four directions](five-row-arrays-increasing-in-four-directions-a181199/) | Kauers–Koutschan nested sum and order-3 recurrence proved | Claude Opus 5.5 | [PDF](five-row-arrays-increasing-in-four-directions-a181199/paper.pdf) |
+| 20 | [Decimal Kaprekar three-cycles: OEIS A164735](decimal-kaprekar-three-cycles-a164735/) | All eighteen formulas proved for every n >= 3 | GPT-6 Astra | [PDF](decimal-kaprekar-three-cycles-a164735/paper.pdf) |
 
 ## Layout
 

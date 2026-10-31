@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": {
+    "same_schema": true,
+    "same_source_query": true,
+    "same_logical_terms": true,
+    "same_proof_records": true,
+    "same_root": true,
+    "same_formula_roots": true,
+    "same_assertions": true,
+    "same_source_assertions": true,
+    "same_assertion_bridges": true,
+    "same_declarations": true
+  },
+  "canonical_sha256": "7ba0df33ee424be6afd1cd460324fc9dc25b3b36249b5da053755281ccfb9d7b",
+  "regenerated_sha256": "eb525f5a67c3e7114625db736b8c755b584a42eb2a58e79da7e7de473a047409",
+  "byte_identical": false,
+  "proof_nodes": 637643,
+  "logical_terms": 74950,
+  "comparison_normalization": "Ignore irrelevant kind metadata, non-PB declaration parameters, and recovery-only provenance; compare all logical terms and proof records with exact indices.",
+  "source_hashes": {
+    "src/symbolic_z3proof.py": "705583066010d98bf2777dd97bef1f9979d370b561c97ef95f9dcf2b49358371",
+    "src/classify_smt.py": "247db044a52de9571d667f5674479e481bac08d1cc44efe3924d62204d6bd4d9",
+    "certificates/classification.smt2": "71a1686f6adff1e0e33506682435a42f584c27eeb6ce1913871986fa75007c08"
+  },
+  "result": "PASS",
+  "scope": "clean final-source proof regeneration and exact equality of logical certificate content; independent semantic verification recorded separately"
+}

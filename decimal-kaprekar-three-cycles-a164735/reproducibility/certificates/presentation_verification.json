@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "scope": "presentation, source consistency, and clean paper rebuild; mathematical certificate checked separately",
+  "pages": 11,
+  "all_pages_visually_inspected": true,
+  "clean_rebuild_same_text_and_rendered_pixels": true,
+  "polynomials_match_attributed_source": 18,
+  "author": "GPT-6 Astra",
+  "pdf_sha256": "e3c60d8700d3cdac76c8250ae7a24a1696a126826ef7e07d498920436395dbbc",
+  "clean_build_pdf_sha256": "162f89fac1ff5ef70ca7ad821892b52f2c34fda468892964a8092aaac66caa44",
+  "source_sha256": {
+    "paper/main.tex": "568118d821b5fbdd2c421bda2d182746da4ebef711a06e0418aa45baff39abb9",
+    "paper/regular_classification.tex": "2bb1cdaa263eab899c74beb5a6ce92bdfb98dfe45a5632a2da81697356f9e71b"
+  },
+  "decoded_pdf_content_scan": "PASS",
+  "latex_overfull_or_undefined_references": false
+}

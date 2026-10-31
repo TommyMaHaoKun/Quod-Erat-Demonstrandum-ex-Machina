@@ -1,0 +1,184 @@
+{
+  "solver": "5.3.2",
+  "result": "unsat",
+  "query_sha256": "dcab29251e00d29a102e95759e8c30f52fdcf3b2a4bcdf745e32ac8b3f379eea",
+  "solve_seconds": 198.10899999999674,
+  "construction": "direct builder",
+  "reduced": true,
+  "arithmetic_solver": 2,
+  "assertions_simplified": false,
+  "independent_proof_checked": false,
+  "original_query_sha256": "71a1686f6adff1e0e33506682435a42f584c27eeb6ce1913871986fa75007c08",
+  "reduction_dependencies": [
+    "zero-count monotonicity lemma",
+    "regular-cycle classification",
+    "orbit rotation and X closure",
+    "inner imbalance bounded by three"
+  ],
+  "builder_query_sha256": "dcab29251e00d29a102e95759e8c30f52fdcf3b2a4bcdf745e32ac8b3f379eea",
+  "logical_terms": 74950,
+  "operators": {
+    "*:Int": 2363,
+    "+:Int": 4216,
+    "-:Int": 406,
+    "<:Bool": 27,
+    "<=:Bool": 3641,
+    "=:Bool": 18370,
+    "=>:Bool": 81,
+    ">:Bool": 27,
+    ">=:Bool": 2398,
+    "and:Bool": 9,
+    "at-least:Bool": 10,
+    "distinct:Bool": 12,
+    "false:Bool": 1,
+    "if:Int": 3173,
+    "not:Bool": 3608,
+    "numeral:Int": 13,
+    "or:Bool": 36448,
+    "pb!100:Bool": 1,
+    "pb!101:Bool": 1,
+    "pb!102:Bool": 1,
+    "pb!105:Bool": 1,
+    "pb!106:Bool": 1,
+    "pb!111:Bool": 1,
+    "pb!112:Bool": 1,
+    "pb!115:Bool": 1,
+    "pb!116:Bool": 1,
+    "pb!117:Bool": 1,
+    "pb!118:Bool": 1,
+    "pb!120:Bool": 1,
+    "pb!123:Bool": 1,
+    "pb!127:Bool": 1,
+    "pb!128:Bool": 1,
+    "pb!130:Bool": 1,
+    "pb!131:Bool": 1,
+    "pb!133:Bool": 1,
+    "pb!134:Bool": 1,
+    "pb!139:Bool": 1,
+    "pb!140:Bool": 1,
+    "pb!143:Bool": 1,
+    "pb!144:Bool": 1,
+    "pb!145:Bool": 1,
+    "pb!146:Bool": 1,
+    "pb!148:Bool": 1,
+    "pb!151:Bool": 1,
+    "pb!155:Bool": 1,
+    "pb!156:Bool": 1,
+    "pb!158:Bool": 1,
+    "pb!159:Bool": 1,
+    "pb!162:Bool": 1,
+    "pb!164:Bool": 1,
+    "pb!167:Bool": 1,
+    "pb!168:Bool": 1,
+    "pb!169:Bool": 1,
+    "pb!171:Bool": 1,
+    "pb!173:Bool": 1,
+    "pb!174:Bool": 1,
+    "pb!60:Bool": 1,
+    "pb!63:Bool": 1,
+    "pb!67:Bool": 1,
+    "pb!68:Bool": 1,
+    "pb!70:Bool": 1,
+    "pb!71:Bool": 1,
+    "pb!74:Bool": 1,
+    "pb!76:Bool": 1,
+    "pb!79:Bool": 1,
+    "pb!80:Bool": 1,
+    "pb!81:Bool": 1,
+    "pb!83:Bool": 1,
+    "pb!85:Bool": 1,
+    "pb!86:Bool": 1,
+    "pb!89:Bool": 1,
+    "pb!90:Bool": 1,
+    "pb!95:Bool": 1,
+    "pb!96:Bool": 1,
+    "pb!99:Bool": 1,
+    "pbeq:Bool": 16,
+    "pbge:Bool": 6,
+    "symbol:Int": 66,
+    "true:Bool": 1
+  },
+  "proof_nodes": 637643,
+  "formula_nodes": 59329,
+  "rules": {
+    "asserted": 199,
+    "commutativity": 33,
+    "def-axiom": 973,
+    "hypothesis": 2975,
+    "lemma": 11097,
+    "monotonicity": 12218,
+    "mp": 1228,
+    "rewrite": 2522,
+    "symm": 573,
+    "th-lemma": 19311,
+    "trans": 2173,
+    "trans*": 355,
+    "unit-resolution": 583986
+  },
+  "samples": {
+    "unit-resolution": {
+      "node_id": 711165,
+      "argument_count": 4
+    },
+    "lemma": {
+      "node_id": 711169,
+      "argument_count": 2
+    },
+    "hypothesis": {
+      "node_id": 79956,
+      "argument_count": 1
+    },
+    "th-lemma": {
+      "node_id": 715768,
+      "argument_count": 73
+    },
+    "def-axiom": {
+      "node_id": 59408,
+      "argument_count": 1
+    },
+    "mp": {
+      "node_id": 49258,
+      "argument_count": 3
+    },
+    "trans": {
+      "node_id": 49063,
+      "argument_count": 3
+    },
+    "rewrite": {
+      "node_id": 49061,
+      "argument_count": 1
+    },
+    "monotonicity": {
+      "node_id": 49056,
+      "argument_count": 2
+    },
+    "asserted": {
+      "node_id": 6411,
+      "argument_count": 1
+    },
+    "symm": {
+      "node_id": 272074,
+      "argument_count": 2
+    },
+    "commutativity": {
+      "node_id": 66038,
+      "argument_count": 1
+    },
+    "trans*": {
+      "node_id": 70239,
+      "argument_count": 3
+    }
+  },
+  "dag": {
+    "bytes": 9908542,
+    "sha256": "7ba0df33ee424be6afd1cd460324fc9dc25b3b36249b5da053755281ccfb9d7b",
+    "uncompressed_bytes": 72315832,
+    "uncompressed_sha256": "3231c3cfec71f9d7d1b6b848da22ad06e9970736d8dcecd33abda3f96fa24a5d"
+  },
+  "total_seconds": 319.1559999999881,
+  "metadata_recovery": {
+    "status": "PASS",
+    "pseudo_boolean_terms": 32,
+    "internal_bool_symbols": 58
+  }
+}

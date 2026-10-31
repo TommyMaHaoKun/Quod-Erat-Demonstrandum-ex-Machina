@@ -1,0 +1,68 @@
+{
+  "result": "PASS",
+  "python": "3.9.9",
+  "runs": [
+    {
+      "command": [
+        "src/test_proof_checker.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.077999999979511
+    },
+    {
+      "command": [
+        "src/verify_model.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.375
+    },
+    {
+      "command": [
+        "src/families.py",
+        "--symbolic"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7970000000204891
+    },
+    {
+      "command": [
+        "src/verify_query.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17199999999138527
+    },
+    {
+      "command": [
+        "src/check_z3_dag.py",
+        "--bridge-assertions",
+        "--dag",
+        "certificates/classification_builder_reduced_arith2_terms.z3.dag.json.gz",
+        "--query",
+        "certificates/classification_builder_reduced.smt2",
+        "--report",
+        "certificates/z3_dag_reduced_verification.json"
+      ],
+      "exit_code": 0,
+      "seconds": 6486.641000000003
+    }
+  ],
+  "seconds": 6492.062999999995,
+  "sha256": {
+    "src/build_paper.py": "908c5fb303c345082a7cb03e5dd68ef56916bb0db867c0212fa82adbbc9c8cd7",
+    "src/check_z3_dag.py": "fd40b00192437d812a022acd74690497db2ab02377ee7f683d801ae95c70e596",
+    "src/classify_smt.py": "247db044a52de9571d667f5674479e481bac08d1cc44efe3924d62204d6bd4d9",
+    "src/families.py": "8f2cdca63690ba7c1177888f1f422dda274c18130ec3632a413904cbc259ba27",
+    "src/pb_auxiliaries.py": "595eb4b5fd7a511b13aeb6045cb612b337ae9dea5ab2b138c90d6e1d4cb016bb",
+    "src/symbolic_z3proof.py": "705583066010d98bf2777dd97bef1f9979d370b561c97ef95f9dcf2b49358371",
+    "src/test_proof_checker.py": "5470bdf741456a6cd195997fbeb841d55c3bf13d1256f987dbcaff38cb065c55",
+    "src/verify_all.py": "be246437b7f945af62d5ae052d18851bd27cf2217d3b183c2ddf7155e6a363f5",
+    "src/verify_cvc5.py": "83d2ab368ec3bda5af74dae85cac81a7d80409c643e470bf092cc39c43966472",
+    "src/verify_model.py": "a05b0553ae6a8356074fc34ed9ed5de94b15c05786c9c9d599ef1ff02e0f9f12",
+    "src/verify_query.py": "d26845484a198aea80556bb101c285790bf37bae350a5aba8ae57ab41370fc3f",
+    "requirements.txt": "b25d26b167306f99c1c69d37b509d63bb2dc03e2f292f2c25d765010172a1f2e",
+    "literature/target_formula.tex": "ad100d07ae06c88911a1bf27aaaa93d840eab27461230c980aa315da3cf90cfc",
+    "certificates/classification.smt2": "71a1686f6adff1e0e33506682435a42f584c27eeb6ce1913871986fa75007c08",
+    "certificates/classification_builder_reduced.smt2": "dcab29251e00d29a102e95759e8c30f52fdcf3b2a4bcdf745e32ac8b3f379eea",
+    "certificates/classification_builder_reduced_arith2_terms.z3.dag.json.gz": "7ba0df33ee424be6afd1cd460324fc9dc25b3b36249b5da053755281ccfb9d7b"
+  }
+}

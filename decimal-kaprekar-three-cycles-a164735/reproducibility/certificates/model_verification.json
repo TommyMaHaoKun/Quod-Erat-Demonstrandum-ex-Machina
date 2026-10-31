@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "scope": "bounded validation; not a proof of all-length classification",
+  "all_histograms_lengths": [
+    1,
+    8
+  ],
+  "exhaustive_histograms": 43757,
+  "deterministic_random_cases": 2000,
+  "random_digit_lengths": [
+    9,
+    300
+  ],
+  "random_seed": 164735,
+  "symbolic_edge_cases": 67,
+  "exact_three_cycle_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 1
+  },
+  "checks": [
+    "positive-difference overlap",
+    "central length",
+    "borrow corrections",
+    "ordinary non-padded width",
+    "integer-cycle reconstruction",
+    "symbolic constraints and output uniqueness"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "scope": "full-query assertion bridge and exact list of analytic reduction constraints",
+  "full_assertions": 199,
+  "analytic_reduction_constraints": 28,
+  "full_query_sha256": "71a1686f6adff1e0e33506682435a42f584c27eeb6ce1913871986fa75007c08",
+  "reduced_query_sha256": "dcab29251e00d29a102e95759e8c30f52fdcf3b2a4bcdf745e32ac8b3f379eea",
+  "stats": {
+    "local_proof_nodes": 32,
+    "strict_cvc5_steps": 2
+  },
+  "seconds": 0.030999999988125637
+}
