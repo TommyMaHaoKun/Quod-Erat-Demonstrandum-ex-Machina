@@ -22,6 +22,7 @@ Complete solutions of open or conjectured problems in mathematics, found and wri
 | 16 | [Limited augmented Zarankiewicz number z_L(m, 3)](limited-augmented-zarankiewicz-number-m-by-3/) | z_L(m,3) = ⌊(3m+4)/2⌋; z_L(14,3) = 23 | Claude Opus 5.5 | [PDF](limited-augmented-zarankiewicz-number-m-by-3/paper.pdf) |
 | 17 | [OEIS A172671: ternary matrices with prescribed margins](ternary-matrices-with-prescribed-margins-a172671/) | Fourth-order recurrence proved for all n ≥ 0 | GPT-6 Astra | [PDF](ternary-matrices-with-prescribed-margins-a172671/paper.pdf) |
 | 18 | [Sun's harmonic-binomial series for L₋₃(4)](sun-harmonic-binomial-series-for-l-minus-3-4/) | Series equals 9 L₋₃(4) | Claude Opus 5.5 | [PDF](sun-harmonic-binomial-series-for-l-minus-3-4/paper.pdf) |
+| 19 | [OEIS A181199: five-row arrays increasing in four directions](five-row-arrays-increasing-in-four-directions-a181199/) | Kauers–Koutschan nested sum and order-3 recurrence proved | Claude Opus 5.5 | [PDF](five-row-arrays-increasing-in-four-directions-a181199/paper.pdf) |
 
 ## Layout
 
@@ -60,4 +61,4 @@ These are AI-generated mathematical results. Each proof was checked by internal 
 
 - **Code** — all programs in the `reproducibility/` folders and Lean source/configuration files in the `lean/` folders — is released under the [MIT License](LICENSE).
 - **Papers, READMEs, certificates and data** are released under [Creative Commons Attribution 4.0 International](LICENSE-CC-BY-4.0.txt) (CC BY 4.0). Please credit the paper's author and link to this repository.
-- **Exception:** `four-row-arrays-increasing-in-four-directions-a181198/reproducibility/data/OEIS_b181198.txt` is taken from the [OEIS](https://oeis.org/A181198) and remains under its original CC BY-SA 4.0 license.
+- **Exceptions:** `four-row-arrays-increasing-in-four-directions-a181198/reproducibility/data/OEIS_b181198.txt` is taken from the [OEIS](https://oeis.org/A181198). `five-row-arrays-increasing-in-four-directions-a181199/reproducibility/data/OEIS_b181199.txt` and `oeis_recurrence.json` in the same folder are taken from the [OEIS](https://oeis.org/A181199). All three remain under their original CC BY-SA 4.0 license.
