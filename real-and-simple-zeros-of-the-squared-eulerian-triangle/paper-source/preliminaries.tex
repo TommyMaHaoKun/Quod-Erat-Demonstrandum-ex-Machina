@@ -1,0 +1,108 @@
+\section{Eulerian identities and a monotone phase}
+
+\begin{lemma}\label{lem:eulerian}
+For $m\ge1$, $A_m$ has a simple zero at zero and $m-1$ simple negative zeros. It satisfies
+\[
+A_m(x)=x^{m+1}A_m(1/x),\qquad
+\frac{A_m(x)}{(1-x)^{m+1}}=\sum_{h\ge1}h^m x^h\quad(|x|<1).
+\]
+\end{lemma}
+\begin{proof}
+The recurrence gives
+\[
+A_m=x\{(1-x)A_{m-1}'+mA_{m-1}\}.
+\]
+At each negative zero of $A_{m-1}$ the expression in braces has the sign of $A_{m-1}'$. These signs alternate. Its value at zero is positive, and its leading coefficient is positive. The intermediate value theorem, including the leftmost interval and the interval ending at zero, gives all $m-1$ negative zeros and proves their simplicity by degree. The initial case is $A_1=x$. Reversing a permutation proves the reciprocal identity. Applying $x\,d/dx$ to the geometric series and using the same recurrence proves the series identity. See also \cite{Petersen2015}.
+\end{proof}
+
+\begin{lemma}\label{lem:bonferroni}
+For positive integers $m,k$,
+\begin{equation}\label{eq:bonferroni}
+k^m-(m+1)(k-1)^m\le A(m,k)\le k^m.
+\end{equation}
+The sequence $A(m,k)^{1/m}$, with its zero endpoints, is concave in $k$.
+\end{lemma}
+\begin{proof}
+The density at $k$ of a sum of $m+1$ independent uniforms on $[0,1]$ is $A(m,k)/m!$. Equivalently, the $m$-dimensional volume of the section of $[0,1]^{m+1}$ by $\sum x_i=k$ is $\sqrt{m+1}\,A(m,k)/m!$. In the positive orthant without the upper coordinate bounds, the corresponding section has volume $\sqrt{m+1}\,k^m/m!$. Each of the $m+1$ excluded sets $x_i>1$ has volume $\sqrt{m+1}\,(k-1)^m/m!$. The upper bound and the first union bound prove \eqref{eq:bonferroni}. Brunn's concavity theorem for parallel sections of a convex body gives the final assertion \cite{Gardner2002}.
+\end{proof}
+
+Define the factorial-weighted polynomial
+\[
+F_n(t)=\sum_{j=1}^n j!A(n,j)t^j\quad(n\ge1),\qquad F_0=1.
+\]
+\begin{lemma}\label{lem:factorial}
+For $n\ge1$, $F_n$ has $n$ simple nonpositive zeros, exactly one of which is zero. Thus
+\begin{equation}\label{eq:factorial-factorization}
+F_n(t)=n!t\prod_{i=1}^{n-1}(t+\beta_i),\qquad\beta_i>0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Writing $f=F_{n-1}$ and $\theta=t\,d/dt$, coefficient comparison in \eqref{eq:eulerian-recurrence} gives
+\[
+F_n=t\{f'+(1+\theta)(n-\theta)f\}
+ =t\{nf+[1+(n-2)t]f'-t^2f''\}.
+\]
+The cases $n=1,2$ are $t$ and $t+2t^2$. Assume the result at $n-1$. At any critical point $c$ of $f$, the expression in braces is $nf(c)-c^2f''(c)$, which has the sign of $f(c)$: each critical point lies between consecutive simple real zeros, and is a positive maximum or a negative minimum. There are $n-2$ such points, their signs alternate, and the last sign is negative. The expression in braces has degree $n-1$, positive leading coefficient, and value $f'(0)=1$ at zero. Its signs at the critical points, at negative infinity, and at zero give $n-1$ distinct negative zeros. Multiplication by $t$ completes the induction.
+\end{proof}
+
+For real $s$ put
+\[
+C=1+e^{-s},\qquad z_q=s+iq\pi\quad(q\text{ odd}),\qquad
+R_s(z)=\frac{F_n(C/z)}{z}.
+\]
+\begin{lemma}\label{lem:poles}
+For $n\ge1$,
+\begin{equation}\label{eq:pole-expansion}
+P_n(-e^{-s})=C\sum_{q\text{ odd}}R_s(z_q).
+\end{equation}
+The series is absolutely convergent and its terms pair by conjugation.
+\end{lemma}
+\begin{proof}
+The symmetrically paired partial-fraction identity
+\[
+\sum_{q\text{ odd}}\frac1{s+iq\pi}=\frac12\tanh(s/2)
+ =\frac1{1+e^{-s}}-\frac12
+\]
+and its derivatives give, for $j\ge1$,
+\[
+A_j(-e^{-s})=j!C^{j+1}\sum_{q\text{ odd}}z_q^{-j-1}.
+\]
+One may first differentiate for $s>0$ and use Lemma~\ref{lem:eulerian}, then continue along the real line. Multiply by $A(n,j)$ and sum over $j$. Since $F_n(0)=0$, the resulting terms are $O(q^{-2})$, which proves absolute convergence.
+\end{proof}
+
+\begin{lemma}\label{lem:phase}
+The continuous argument of the nearest upper-pole term is
+\begin{equation}\label{eq:phase}
+\phi(s)=-(n+1)\arg(s+i\pi)
+ +\sum_{i=1}^{n-1}\arg(s+C/\beta_i+i\pi),
+\end{equation}
+where every argument on the right lies in $(0,\pi)$. It is strictly increasing from $-(n+1)\pi$ to zero. In particular every level $j\pi$, $-n\le j\le-1$, is crossed exactly once.
+\end{lemma}
+\begin{proof}
+Factorization \eqref{eq:factorial-factorization} gives the displayed argument. Put $a=C/\beta_i$ and $\lambda=1/(1+e^s)$. The derivative of $s+a$ is $1-\lambda a$, and
+\[
+\frac1{s^2+\pi^2}-\frac{1-\lambda a}{(s+a)^2+\pi^2}
+=\frac{a\{a+2s+\lambda(s^2+\pi^2)\}}
+ {(s^2+\pi^2)((s+a)^2+\pi^2)}>0.
+\]
+For $s\ge0$ positivity is immediate. For $s<0$, use $\lambda\ge1/2$ and
+\[
+2s+\lambda(s^2+\pi^2)\ge\tfrac12\{(s+2)^2+\pi^2-4\}>0.
+\]
+Consequently $\phi'(s)\ge2\pi/(s^2+\pi^2)>0$. The two limits follow directly from \eqref{eq:phase}.
+\end{proof}
+
+The other exact representation used below follows by reversing the coefficients in the matrix product:
+\begin{equation}\label{eq:double-sum}
+\frac{P_n(-X)}{(-X)^n}
+=\sum_{\substack{k,h\ge1\\k+h\le n+1}}
+ (-1)^{k+h-2}A(n,k)A(n-k+1,h)X^{-(k+h-2)}\quad(X>0).
+\end{equation}
+Indeed the coefficient of $X^{-r}$ before its sign is
+\[
+B(n,n-r)=\sum_{k+h=r+2}A(n,k)A(n-k+1,h),
+\]
+by Eulerian symmetry. Its positive comparison weight will be
+\begin{equation}\label{eq:ideal-weight}
+W_u(k,h)=k^n h^{n-k+1}e^{-(k+h-2)u},\qquad X=e^u.
+\end{equation}

@@ -1,0 +1,194 @@
+\section{Pairs of large negative zeros}
+
+For an integer $\ell\ge1$ write
+\[
+\rho_\ell=\frac{\ell+1}{\ell},\quad
+a_\ell=\ell^{1-\ell},\quad
+b_\ell=(\ell+1)^{1-\ell}+\ell^{-\ell},\quad
+c_\ell=(\ell+1)^{-\ell},
+\]
+and set
+\begin{equation}\label{eq:outer-separators}
+\lambda_\ell^-=\frac{c_\ell}{2b_\ell},\qquad
+\lambda_\ell^0=\frac{b_\ell}{2a_\ell},\qquad
+\lambda_\ell^+=\frac{2b_\ell}{a_\ell},\qquad
+X_\ell^\nu=\lambda_\ell^\nu\rho_\ell^n.
+\end{equation}
+
+\begin{lemma}\label{lem:outer}
+Let $n\ge250$ and $L=\lfloor\sqrt{n/(4\log n)}\rfloor$. For $1\le\ell\le L$,
+\[
+\sgn P_n(-X_\ell^-)=\sgn P_n(-X_\ell^+)=(-1)^n,\qquad
+\sgn P_n(-X_\ell^0)=(-1)^{n+1}.
+\]
+The intervals $(X_\ell^-,X_\ell^+)$ are disjoint. Consequently $P_n$ has at least $2L$ distinct negative zeros with moduli greater than $X_L^-$.
+\end{lemma}
+\begin{proof}
+Fix $\ell$ and set $X=\lambda\rho_\ell^n$,
+$Z=(\ell+1)^{2n}X^{-2\ell}$. The four ideal weights
+$W_u(k,h)$ with $(k,h)\in\{\ell,\ell+1\}^2$ have signed sum and absolute sum
+\[
+ZQ(\lambda),\quad ZM(\lambda),\qquad
+Q=a_\ell\lambda^2-b_\ell\lambda+c_\ell,\quad
+M=a_\ell\lambda^2+b_\ell\lambda+c_\ell.
+\]
+Throughout $\lambda_\ell^-\le\lambda\le\lambda_\ell^+$,
+\begin{equation}\label{eq:lambda-bounds}
+\frac1{2(\ell+4)}<\lambda\le4.
+\end{equation}
+Indeed $b_\ell/c_\ell=\ell+1+\rho_\ell^\ell<\ell+4$, while
+$b_\ell/a_\ell\le2$.
+
+For fixed $h$, consecutive ideal $k$ ratios are
+$W(k+1,h)/W(k,h)=\rho_k^n/(hX)$.
+The outward right and left ratios beyond the two central columns are therefore at most
+\[
+q_R=2(\ell+4)e^{-n/(\ell+1)^2},
+\qquad q_L=4n e^{-n/\ell^2},
+\]
+respectively; a left tail is absent at $\ell=1$.
+The left estimate uses $h\le n$, sufficient for the actual triangular sum.
+In either central column, the corresponding outward $h$ ratios are at most
+$q_R$ and $16e^{-n/\ell^2}$.
+
+Put $H=\sqrt{n/(4\log n)}\ge3$. Then $\ell+1\le4H/3$, $\ell+1\le\sqrt n/3$, and
+\[
+\frac n{(\ell+1)^2}\ge\frac94\log n,\qquad
+\frac n{\ell^2}\ge4\log n,\qquad
+q_R\le\frac76n^{-7/4}<\frac1{1000}.
+\]
+The other three ratios are also below $1/1000$. Summing the two geometric tails in each coordinate shows that the ideal mass outside the central four cells is at most
+\[
+\{(1+2/999)^2-1\}ZM<ZM/200.
+\]
+By \eqref{eq:bonferroni}, replacing the central ideal weights by the actual Eulerian products changes their sum by less than $ZM/1000$: each of the two relative errors is bounded by
+$(n+1)e^{1-3\sqrt n}$, and $2(n+1)e^{1-3\sqrt n}<1/1000$.
+Thus, after division by $(-X)^n Z$, the actual polynomial differs from $Q(\lambda)$ by less than $M(\lambda)/100$.
+
+The three quadratic signs have uniform margins. Put
+$u=(\ell+1)^{1-\ell}$, $v=\ell^{-\ell}$, $w=u/v$. Then
+\[
+\frac{uv}{a_\ell c_\ell}=\frac{\ell+1}{\ell},
+\qquad w=(\ell+1)(\ell/(\ell+1))^\ell>\frac{\ell+1}{3}.
+\]
+For $\ell\ge2$, $w>1$, and
+\[
+\frac{b_\ell^2}{a_\ell c_\ell}
+>\left(1+\frac1\ell\right)
+ \left(\frac{\ell+1}{3}+\frac3{\ell+1}+2\right)
+=\frac{(\ell+4)^2}{3\ell}\ge\frac{16}{3}.
+\]
+For $\ell=1$ the ratio is $8$. Substitution at the three values of $\lambda$ gives
+\[
+\frac{Q(\lambda^-)}{M(\lambda^-)}>\frac{32}{99},\qquad
+-\frac{Q(\lambda^0)}{M(\lambda^0)}>\frac1{15},\qquad
+\frac{Q(\lambda^+)}{M(\lambda^+)}>\frac13.
+\]
+For the middle bound, put $D=b_\ell^2/(4a_\ell)>4c_\ell/3$ and use
+$(D-c_\ell)/(c_\ell+3D)>1/15$.
+These margins prove the signs of the actual polynomial.
+Finally
+\[
+\frac{X_{\ell+1}^+}{X_\ell^-}
+<8(\ell+4)e^{-n/(\ell+1)^2}=4q_R<1.
+\]
+The two sign changes in each disjoint interval give the asserted roots.
+\end{proof}
+
+For the short intermediate range we can increase the cutoff.
+\begin{lemma}\label{lem:finitebridge}
+Let $250\le n\le1600$ and $L=\lceil\sqrt n/4\rceil$. The signs and disjoint intervals of Lemma~\ref{lem:outer} hold for every $\ell\le L$. Moreover, with $u=\log X_L^-$,
+\begin{equation}\label{eq:finite-phase-match}
+40<u<4\sqrt n,\qquad
+(2L-n-1)\pi<\phi(-u)<(2L-n)\pi.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Here $\ell\le10$ and
+$n\ge n_\ell:=\max(250,16(\ell-1)^2+1)$.
+The four outward ratios used above have the uniform bounds
+\[
+\begin{array}{c|cc}
+ &\text{left}&\text{right}\\ \hline
+k&.036&.015\\
+h&.0006&.015
+\end{array}
+\]
+and the central relative error is below $10^{-6}$.
+These follow by evaluating the decreasing functions
+$4n e^{-n/\ell^2}$, $2(\ell+4)e^{-n/(\ell+1)^2}$,
+$16e^{-n/\ell^2}$ and $2(n+1)e^{-(n-\ell)/(\ell+1)}$
+at the ten integer endpoints $n_\ell$. Exact rational bounds for these evaluations are part of Appendix~\ref{sec:verification}.
+Each tail attaches to its own central row or column, so their common factors are
+\[
+\eta_k=\frac{.036}{1-.036},\qquad
+\eta_h=\frac{.015}{1-.015},\qquad
+(1+\eta_k)(1+\eta_h)-1<.054.
+\]
+Thus the quadratic error is less than $(.054+10^{-6})M<M/15$.
+The same margins prove the three signs; disjointness follows from
+$8(\ell+4)e^{-n/(\ell+1)^2}<.06$.
+Since $\lambda_L^-<1$, $u<n/L\le4\sqrt n$.
+
+We give the phase comparison in detail. For any $\ell\le L$, put
+\[
+D=2(\ell+1+\rho_\ell^\ell),\quad
+u=n\log\rho_\ell-\log D,\quad
+z=-u+i\pi,\quad \theta=\pi-\delta,\quad
+\delta=\arctan(\pi/u),\quad y=\frac z{1+e^u}.
+\]
+The same ten endpoint checks give
+\begin{equation}\label{eq:finite-phase-constants}
+\begin{gathered}
+u>40,\quad u>\frac{11n}{12(\ell+1)},\quad
+u>\frac{n-\ell+3}{\ell+1},\\
+\frac n{2(\ell+1)}>21,\qquad
+\frac{(\ell+1)^2}{n}<\frac16,\\
+(n+1)e^{-n/(\ell+2)}<10^{-6},\qquad e^{-u}<10^{-6}.
+\end{gathered}
+\end{equation}
+For the first three inequalities one uses the lower bound
+$u>n\log\rho_\ell-\log(2(\ell+4))$; all three differences increase with $n$.
+
+Write $E(y)=\sum_{r=0}^{n-1}b_r y^r$,
+$b_r=(n-r)!A(n,r+1)$. The first term to the left of $b_\ell y^\ell$ has ratio less than $p_0=11/20$. More generally, for every $1\le r\le\ell$,
+\[
+\frac{b_{r-1}}{b_r|y|}
+\le\frac n{Du}\,\frac{1+e^{-u}}{1-10^{-6}}
+       \left(\frac{\rho_\ell}{\rho_r}\right)^n
+<p_0\left(\frac{\rho_\ell}{\rho_r}\right)^n.
+\]
+This uses $n-r+1\le n$ directly. Thus all further left ratios are less than
+$p_0 e^{-n/\ell^2}<q_0=1/100$.
+The first ratio to the right is at most
+\[
+\frac{2(\ell+4)(n/\ell+4)}{(n-\ell)(1-10^{-6})}
+ e^{-n/(\ell+1)^2}<q_0.
+\]
+The rational prefactor and the exponential decrease with $n$; the endpoint check proves the bound. Since $E$ is the reversal of $F_n$, its coefficients are log-concave, so all later right ratios are no larger.
+Consequently, for $J(y)=E(y)/(b_\ell y^\ell)$ on the entire semicircle of radius $|y|$,
+\[
+|J-1|<\frac{p_0+q_0}{1-q_0}<.57,\qquad
+\sum_{r\ne\ell}|r-\ell|\frac{|b_r y^r|}{|b_\ell y^\ell|}
+<\frac{p_0+q_0}{(1-q_0)^2}<.58.
+\]
+At angle $\theta=\pi-\delta$, $|\Im J|<.58\delta$, $\Re J>.43$, and hence
+$|\arg J|<2\delta$. Control on the whole semicircle fixes the continuous argument without a multiple of $2\pi$. Reversal now gives
+\[
+\phi(-u)=-(n-\ell+1)\theta+\arg J.
+\]
+The upper phase bound follows from
+$(n-\ell+3)\delta/\pi<(n-\ell+3)/u<\ell+1$.
+For the lower bound, the trapezoid estimate for $1/t$ and $D>4$ yield
+\[
+n-\ell-1-\ell u
+\ge\frac n{2(\ell+1)}-\ell-1+\ell\log D
+>\frac n{2(\ell+1)}-1>20.
+\]
+On the other hand,
+$(n-\ell-1)\pi^2/(3u^2)<48\pi^2(\ell+1)^2/(121n)<1$.
+Using $\arctan t>t-t^3/3$ gives
+$(n-\ell-1)\delta/\pi>\ell$. The two bounds imply
+$(2\ell-n-1)\pi<\phi(-u)<(2\ell-n)\pi$.
+Taking $\ell=L$ proves \eqref{eq:finite-phase-match}.
+\end{proof}

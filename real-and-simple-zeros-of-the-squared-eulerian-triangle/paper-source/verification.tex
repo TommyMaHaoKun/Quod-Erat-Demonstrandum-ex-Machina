@@ -1,0 +1,224 @@
+\section{Exact certificates and reproducibility}\label{sec:verification}
+
+The finite row certificates and the scalar inequalities in the analytic
+proof are checked using integers and rational numbers. The supplied
+verifier uses Python's standard library; it requires no computer algebra
+system, numerical root finder, or external package. From the supplement's
+root directory, the command is
+\begin{verbatim}
+python src/verify_all.py
+\end{verbatim}
+The script also accepts invocation by its absolute path from another
+working directory. All component paths are resolved relative to the
+script. It checks that the row certificate ends at $250$, checks the
+presence of every required verifier, and stops at the first failed
+assertion or process. Python must be run without the optimization option
+\texttt{-O}, which disables assertions.
+
+\subsection{The finite row certificates}
+
+For $1\le n\le250$, the file
+\path{certificates/sign_certificates_n1_250.json} contains $n-1$ rational
+numbers
+\[
+ 0>q_{n,1}>q_{n,2}>\cdots>q_{n,n-1}.
+\]
+The verifier independently computes the Eulerian numbers from
+\[
+ A(n,k)=\sum_{i=0}^k(-1)^i\binom{n+1}{i}(k-i)^n
+       \qquad(1\le k\le n)
+\]
+and checks agreement with the recurrence. It then forms the matrix-square
+coefficients
+\[
+ B(n,k)=\sum_{j=k}^n A(n,j)A(j,k),\qquad
+ R_n(x)=P_n(x)/x.
+\]
+It checks $B(n,n)=1$, $B(n,1)=n!$, positivity of all coefficients of
+$R_n$, the order and negativity of the certificate points, and
+\[
+ \operatorname{sgn}R_n(q_{n,i})=(-1)^i
+       \qquad(1\le i\le n-1).
+\]
+Since $R_n(0)=n!>0$, these signs give one root in each of the $n-1$
+disjoint intervals between consecutive listed points, starting at zero.
+They exhaust the degree. Thus every root of $R_n$ is negative and simple;
+$P_n$ has the additional simple root at zero. The case $P_0=1$ is immediate.
+
+The sign evaluations clear denominators during Horner evaluation.
+For $q=a/d$ with $d>0$ and
+$R(x)=\sum_{i=0}^m r_i x^i$, the sign is the sign of the integer
+\[
+ d^mR(a/d)=\sum_{i=0}^m r_i a^i d^{m-i}.
+\]
+Starting with $h=r_m$, the verifier successively replaces
+$h$ by $ah+r_i d^{m-i}$ for $i=m-1,\ldots,0$.
+It retains the original rational Horner routine and checks equality of
+the two evaluations, after multiplying by $d^m$, at every certificate
+point in the first $20$ rows.
+The verifier does not rely on the numerical procedure that originally
+selected the rational points.
+
+\subsection{Rational bounds for the analytic constants}
+
+The scalar verifiers use positive Taylor series and geometric remainder
+bounds. For rational $x\ge0$ and $M+2>x$, put
+\[
+ E_M(x)=\sum_{j=0}^{M}\frac{x^j}{j!}.
+\]
+Then
+\[
+ E_M(x)\le e^x\le E_M(x)+
+ \frac{x^{M+1}}{(M+1)!}\frac1{1-x/(M+2)}.
+\]
+Taking reciprocals gives outward bounds for $e^{-x}$. To bound logarithms,
+write $x=2^r y$ with $1\le y\le2$, and use
+\[
+ \log y=2\sum_{j=0}^{\infty}\frac{z^{2j+1}}{2j+1},
+ \qquad z=\frac{y-1}{y+1}\in[0,1/3].
+\]
+After terms $0,\ldots,M-1$, the remaining sum is at most
+\[
+ \frac{2z^{2M+1}}{(2M+1)(1-z^2)}.
+\]
+The same formula bounds $\log2$, and reciprocation handles $x<1$.
+The series
+\[
+ I_0(v)=\sum_{j=0}^{\infty}\frac{(v^2/4)^j}{(j!)^2}
+\]
+is treated in the same way, with successive tail ratios bounded by
+$(v^2/4)/(M+2)^2$. Square-root comparisons are reduced to squared
+rational inequalities with the signs checked first.
+
+For inequalities on unbounded intervals, the proof first reduces the
+claim to positivity of a polynomial in a shifted nonnegative variable;
+the verifier checks its coefficients. On a bounded interval the
+corresponding Bernstein coefficients are used. These are finite rational
+calculations. The reduction from the original function to the polynomial
+inequality is given in the relevant proof above.
+
+Table~\ref{tab:scalar-summary} records the principal bounds used in the
+proof. Every terminating decimal in the table denotes an exact rational
+number. The estimates for $n\ge250$ are uniform in $n$; the program checks
+the scalar reductions, rather than enumerating values of $n$.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{p{.46\textwidth}p{.43\textwidth}}
+\toprule
+Quantity and range & Certified bound \\
+\midrule
+Positive pole tail, $0\le s\le3\sqrt n$ & $<.85$ \\
+Positive pole tail, $3\sqrt n\le s\le4\sqrt n$ & $<.33$ \\
+Negative pole tail, $-4\sqrt n\le s\le0$ & $<.88$ \\
+Variance parameters, $\pi\le u\le4\sqrt n$ &
+ $Y>7.5$, $Y/n<.26$, $h=Y^2/n<17$ \\
+Tilted variance & $\operatorname{Var}L<8/h$ \\
+Quadratically weighted far tail in the variance bound & $<.003$ \\
+Poisson--binomial maximum mass, $v\ge.7$ & $<.47/\sqrt v$ \\
+Each weighted tail outside a paired rectangle & $<.04AB$ \\
+Ideal mass outside an isolated mode & $<.907$ times the mode \\
+Eulerian replacement error in the overlap band & $<AB/(1000H)$ \\
+Independent-zero location error & $<.001$ in $\log X$ \\
+Derivative near each independent zero & $>.128$ \\
+Paired middle sign after all errors & $<-.79AB/H$ \\
+Same-coordinate event spacing in the overlap band & $>12$ \\
+\bottomrule
+\end{tabular}
+\caption{Principal rational constants in the proof.}
+\label{tab:scalar-summary}
+\end{table}
+
+For example, write
+\[
+ S(a)=\sum_{j\ge1}j^2e^{-aj(j-1)},\qquad
+ F(h)=.47\{S(h/7)+e^{-h/2}S(h/3)+.003\}.
+\]
+The maximum-mass argument for the variance reduces to
+$F(h)<(8/h)^{3/2}$. On each interval $[a,b]$ in
+Table~\ref{tab:variance-numerical}, monotonicity bounds $F(h)$ by the
+listed rational upper bound for $F(a)$, whose square is less than
+$(8/b)^3$. The range $0<h\le2$ is covered by
+$S(a)<2a^{-3/2}$ for $a\le2/3$, as proved above.
+For $11\le h<17$, the two-adjacent-point argument is checked on the
+twelve intervals $[j/2,(j+1)/2]$, $j=22,\ldots,33$. On each interval,
+the verifier checks the positive gap and the squared inequality used to
+bound $\frac14+\Delta+\sqrt\Delta$ by $8/h$.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{ccc}
+\toprule
+$a$ & $b$ & Upper bound for $F(a)$ \\
+\midrule
+2&3&2.969\\
+3&4&1.803\\
+4&6&1.298\\
+6&8&.861\\
+8&10&.676\\
+10&11&.584\\
+\bottomrule
+\end{tabular}
+\caption{The six intermediate intervals in the variance estimate.}
+\label{tab:variance-numerical}
+\end{table}
+
+For the edge bridge $250\le n\le1600$, put
+$L=\lceil\sqrt n/4\rceil$. If $\ell\le L$, then $\ell\le10$ and
+\[
+ n\ge n_{\min}(\ell)=\max\{250,16(\ell-1)^2+1\}.
+\]
+The required upper bounds decrease with $n$ at fixed $\ell$, and the
+affine lower bounds increase, so the
+ten endpoint checks in Table~\ref{tab:finite-edge-endpoints} cover the
+whole range. They give outside coordinate ratios
+$(.036,.015,.0006,.015)$ in the four directions, total ideal error
+$<.054$, and central Eulerian error $<10^{-6}$. Their sum is below the
+quadratic sign margin $1/15$. The same checks give the phase comparison
+and $40<\log X_L^-<4\sqrt n$.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{cccccccc}
+\toprule
+$\ell$&$1,2,3,4$&5&6&7&8&9&10\\
+\midrule
+$n_{\min}(\ell)$&250&257&401&577&785&1025&1297\\
+\bottomrule
+\end{tabular}
+\caption{Endpoints used for the finite edge bridge.}
+\label{tab:finite-edge-endpoints}
+\end{table}
+
+\subsection{Supplement map}
+
+The reproduction entry point is \path{src/verify_all.py}. The required
+files are organized as follows.
+\begin{itemize}
+\item \path{src/verify_certificates.py} and
+\path{src/eulerian_core.py} reconstruct the Eulerian rows and check the
+rational sign certificates.
+\item Under \path{src/astra_literature/},
+\path{verify_extended_variance_constants.py} checks the variance estimate,
+\path{verify_joint_tail_audit_constants.py} checks both lattice tails and
+the Eulerian replacement error, and \path{verify_finite_edge_bridge.py}
+checks the finite-range edge and phase constants.
+\item Under \path{src/astra_structural/},
+\path{verify_positive_bulk_constants.py} and
+\path{verify_positive_bulk_extension_constants.py} check the two positive
+bulk ranges, while \path{verify_negative_bulk_pole_constants_4sqrt.py}
+checks the negative bulk through $4\sqrt n$.
+These scripts import their rational Taylor helpers from
+\path{verify_negative_bulk_variance_constants.py}, which is also included.
+The file \path{verify_paired_cluster_sign_constants.py} checks the
+independent-zero and paired-sign constants.
+\item Under \path{src/astra_interlacing/},
+\path{verify_mode_geometry_constants.py} checks the overlap-band
+geometry, outer separator, lattice-sum margins, and separator phase
+constants.
+\end{itemize}
+
+The finite polynomial certificates and the scalar checks have distinct
+roles. The former prove the initial rows directly. The latter verify the
+explicit constants in the uniform analytic proof, whose root count
+covers all remaining rows.

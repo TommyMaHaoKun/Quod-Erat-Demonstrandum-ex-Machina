@@ -1,0 +1,103 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Real and simple zeros of the squared Eulerian triangle},pdfauthor={Claude Opus 5.5 and GPT-6 Astra}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\eps}{\varepsilon}
+\title[The squared Eulerian triangle]{Real and simple zeros of the squared Eulerian triangle}
+\author{Claude Opus 5.5 \and GPT-6 Astra}
+\date{1 November 2026}
+\begin{document}
+\begin{abstract}
+Let $A(n,k)$ be the Eulerian numbers counting permutations with $k$ ascending runs, and let $B=A\cdot A$ be the ordinary matrix square of the Eulerian triangle. We prove that every polynomial $P_n(x)=\sum_k B(n,k)x^k$, for $n\ge1$, has a simple zero at zero and $n-1$ distinct negative zeros. This resolves the Eulerian part of Mao and Wang's Conjecture~4.1. The proof combines a monotone phase in an exact pole expansion, uniform bounds for the remaining poles, and sign changes in the two extreme ranges. In the transition at large negative arguments, an exact two-dimensional weight comparison separates close pairs of zeros. Integer sign certificates cover $n\le250$; the remaining verification consists of explicit rational inequalities for universal constants.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+Define $A(0,0)=1$, put $A(n,k)=0$ outside $0\le k\le n$, and set
+\begin{equation}\label{eq:eulerian-recurrence}
+A(n,k)=(n-k+1)A(n-1,k-1)+kA(n-1,k)\qquad(n\ge1).
+\end{equation}
+For $n\ge1$, $A(n,k)$ counts permutations of $n$ letters with $k-1$ descents, or equivalently with $k$ ascending runs. Write
+\[
+A_n(x)=\sum_k A(n,k)x^k,\qquad
+B(n,k)=\sum_{j=k}^n A(n,j)A(j,k),\qquad
+P_n(x)=\sum_k B(n,k)x^k.
+\]
+The square defining $B$ is ordinary matrix multiplication. Mao and Wang conjectured that the row polynomials of this square have only real nonpositive zeros \cite[Conjecture~4.1]{MaoWang2026}. Their conjecture also treats a separate Delannoy triangle. We prove its Eulerian part, including simplicity.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\ge1$, $P_n$ has exactly $n$ distinct real zeros: one at zero and $n-1$ in $(-\infty,0)$. The polynomial $P_0=1$ has no zeros.
+\end{theorem}
+
+For example,
+\[
+\begin{aligned}
+P_1(x)&=x, &P_2(x)&=2x+x^2,\\
+P_3(x)&=6x+8x^2+x^3, &
+P_4(x)&=24x+66x^2+22x^3+x^4.
+\end{aligned}
+\]
+The Eulerian transformation $T(t^j)=A_j(x)$ gives $P_n=T(A_n)$. General real-rootedness preservation by $T$ is false \cite{BrandenJochemko2022}; the positive cone on which preservation is known \cite{Athanasiadis2025} does not contain $A_n$ for $n\ge3$. Our proof uses the particular Eulerian coefficients.
+
+The zeros occupy very different scales. We use the coordinate $x=-e^{-s}$. A pole expansion has a strictly increasing phase, and its nearest conjugate poles determine the sign for $|s|\le4\sqrt n$. Explicit coefficient estimates handle the small negative zeros. At the other end, a four-term comparison gives pairs of large negative zeros. Between this comparison and the pole range, the maximizing terms of an exact double sum move along an ordered lattice path. Single transitions give one sign change. Two nearby transitions give two sign changes because their mixed coefficient is strictly smaller than the product of the two independent coefficients. This last strict inequality persists after every remaining term is included.
+
+The argument for $n\ge250$ is uniform. A finite family of rational sign certificates supplies the initial range. Every numerical constant used in the estimates is an explicit rational bound, checked by the standard-library supplement described in Appendix~\ref{sec:verification}. Approximations of polynomial zeros are not used in the uniform argument.
+
+\input{preliminaries}
+\input{bulk}
+\input{small_roots}
+\input{outer_roots}
+\input{bridge}
+
+\section{Completion of the root count}\label{sec:count}
+We now prove Theorem~\ref{thm:main}. The coefficients satisfy
+\[
+B(n,0)=0,\qquad B(n,1)=n!,\qquad B(n,n)=1,
+\qquad B(n,k)>0\quad(1\le k\le n).
+\]
+Thus zero is simple and the degree is $n$. It suffices to construct $n-1$ distinct negative zeros. The exact certificates in Appendix~\ref{sec:verification} do this for $n\le250$.
+
+Suppose first that $250\le n\le1600$, put $L=\lceil\sqrt n/4\rceil$, and let $u=\log X_L^-$ be the endpoint in Lemma~\ref{lem:finitebridge}. There are $2L$ distinct negative zeros with modulus greater than $e^u$, and $P_n(-e^u)$ has sign $(-1)^n$. Moreover
+\[
+0<u<4\sqrt n,\qquad
+\phi(-u)<(2L-n)\pi<(2L+1-n)\pi.
+\]
+Put $r=2L$ and $j=r+1-n$. Since the phase is strictly increasing, its node of index $j$ occurs after $s=-u$. Its sign is opposite to that of the endpoint. It therefore supplies one additional zero.
+
+For $n>1600$, Lemma~\ref{lem:bridge} supplies a separator $u\in[4\sqrt n-8,4\sqrt n]$ and an integer $r$ such that exactly $r$ negative zeros lie outside its circle, the endpoint sign is $(-1)^{r-n}$, and
+\[
+\phi(-u)<(r+1-n)\pi.
+\]
+Again the node $j=r+1-n$ occurs after the separator and supplies one additional zero. In both cases this node is in the bulk range of Lemma~\ref{lem:bulk}.
+
+In either range let $K=\lfloor\sqrt n/3\rfloor$. The bounds on $r$ in the two lemmas give $r+K+2<n$, so $j<-(K+1)$. Continue through the consecutive phase nodes
+\[
+j,j+1,\ldots,-(K+1).
+\]
+Their alternating signs yield $n-r-K-2$ more zeros. Lemma~\ref{lem:small} provides $K$ further zeros after the last node. All intervals are disjoint, and their number is
+\[
+r+1+(n-r-K-2)+K=n-1.
+\]
+Together with the simple zero at zero, these exhaust the degree. Each is simple, because $n$ distinct zeros have been obtained. This proves the theorem.
+
+\appendix
+\input{verification}
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

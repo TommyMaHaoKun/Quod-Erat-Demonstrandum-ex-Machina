@@ -1,0 +1,667 @@
+% Uniform phase signs for the Eulerian-square polynomial.
+\section{Uniform phase signs in the central region}\label{sec:bulk}
+
+Throughout this section $n\ge250$. We use the real-rootedness of the
+factorial-weighted polynomial
+\[
+ F_n(t)=\sum_{j=1}^n j!A(n,j)t^j
+       =n!t\prod_{i=1}^{n-1}(t+\beta_i),\qquad \beta_i>0.
+\]
+For real $s$, set $C_s=1+e^{-s}$ and
+\[
+ \mathcal R_{n,s}(z)=\frac{F_n(C_s/z)}z,\qquad
+ z_q=s+iq\pi\quad(q\text{ odd}).
+\]
+The pole expansion and its continuous nearest-pole phase are
+\[
+ P_n(-e^{-s})=C_s\sum_{q\text{ odd}}\mathcal R_{n,s}(z_q),
+ \qquad
+ \phi(s)=\arg\mathcal R_{n,s}(s+i\pi).
+\]
+The sum is absolutely convergent. All phase comparisons below use the
+continuous argument specified by the factorization of $F_n$.
+
+\begin{lemma}[Central phase signs]\label{lem:bulk}
+For every $n\ge250$ and $|s|\le4\sqrt n$,
+\[
+ \sum_{q=3,5,7,\ldots}
+ \frac{|\mathcal R_{n,s}(s+iq\pi)|}
+      {|\mathcal R_{n,s}(s+i\pi)|}<1.
+\]
+In particular, if $\phi(s)=j\pi$ in this interval, then
+\[
+ \operatorname{sgn}P_n(-e^{-s})=(-1)^j.
+\]
+One may use the upper bounds $.85$ for $0\le s\le3\sqrt n$,
+$.33$ for $3\sqrt n\le s\le4\sqrt n$, and $.88$ for
+$-4\sqrt n\le s\le0$.
+\end{lemma}
+
+We prove the three estimates separately. The finite arithmetic checks
+used in the proof involve only rational constants; their precise
+inequalities and bounding series are given at the end of the section.
+
+\subsection{A weighted mean and the positive half of the interval}
+
+\begin{lemma}\label{lem:weightedmean}
+For $n\ge2$ and $t\ge e/n$,
+\[
+ \frac{tF_n'(t)}{F_n(t)}\ge\frac{n+1}{2}.
+\]
+\end{lemma}
+\begin{proof}
+Pair the terms indexed by $j$ and $\ell$ with $j+\ell=n+1$ and
+$j>\ell$. Eulerian symmetry gives $A(n,j)=A(n,\ell)$. The geometric
+mean of $\ell+1,\ldots,j$ is at least $(n!)^{1/(n-1)}$: these intervals
+have the same center, and deleting an outer symmetric pair increases
+the average logarithm, since the products of the symmetric pairs
+increase toward the center. Moreover,
+\[
+ \log(n!)\ge\int_1^n\log x\,dx
+ =n\log n-n+1\ge(n-1)(\log n-1).
+\]
+Thus $j!t^j\ge\ell!t^\ell$. Each pair makes a nonnegative contribution
+to $\sum_j(j-(n+1)/2)j!A(n,j)t^j$, proving the assertion.
+\end{proof}
+
+Fix $s\ge0$, put $C=C_s$ and $a_i=C/\beta_i$, and write
+\[
+ R_q=\frac{|\mathcal R_{n,s}(s+iq\pi)|}
+ {|\mathcal R_{n,s}(s+i\pi)|}.
+\]
+Direct factorization gives
+\begin{equation}\label{eq:bulk-positive-ratio}
+ R_q=\left(\frac{s^2+\pi^2}{s^2+q^2\pi^2}\right)^{(n+1)/2}
+ \prod_{i=1}^{n-1}
+ \left(\frac{(s+a_i)^2+q^2\pi^2}{(s+a_i)^2+\pi^2}\right)^{1/2}.
+\end{equation}
+For $0<s\le3\sqrt n$, $C/s\ge e/n$, so Lemma~\ref{lem:weightedmean}
+implies
+\[
+ \sum_i\frac{a_i}{s+a_i}\ge\frac{n-1}{2}.
+\]
+At least $(n-1)/3$ of the $a_i$ are at least $s/3$: if $M$ have this
+property, the left side is at most $M+(n-1-M)/4$.
+Set
+\[
+ v=\frac{s^2}{\pi^2},\quad c=\frac{16}{9},\quad
+ M_0=\frac{n-1}{3},\quad V=\frac{9n}{\pi^2}.
+\]
+Bounding the $M$ distant factors separately in
+\eqref{eq:bulk-positive-ratio} gives
+\begin{equation}\label{eq:positive-fq}
+ R_q\le f_q(v):=\frac{v+1}{v+q^2}
+ \left\{\frac{(v+1)(cv+q^2)}{(v+q^2)(cv+1)}\right\}^{M_0/2}.
+\end{equation}
+The sign of the logarithmic derivative of $f_q$ is the sign of
+\[
+ \left[c^2+\frac{M_0}{2}c(c-1)\right]v^2
+ +c(1+q^2)v+q^2\left[1-\frac{M_0}{2}(c-1)\right].
+\]
+Its first two coefficients are positive. Hence $f_q$ decreases and
+then increases, or increases throughout, and its maximum on $[0,V]$
+is attained at an endpoint. At zero, $f_q(0)=q^{-2}$. Using
+$\log(1-x)\le-x$ at the other endpoint gives
+\[
+ f_q(V)\le e^{-E_n(q)},\qquad
+ E_n(q)=\frac{7n(n-1)(q^2-1)\pi^2}
+ {6(9n+q^2\pi^2)(16n+\pi^2)}.
+\]
+For fixed $q$, $E_n(q)$ increases with $n$. At $n=250$,
+\[
+ E_n(3)>.60,\quad E_n(5)>1.70,\quad
+ E_n(7)>3.11,\quad E_n(9)>4.60.
+\]
+Thus the first three ratios are less than $.55,.19,.045$, respectively,
+and $f_9(V)<1/81$. Differentiation in $y=q^2$ shows that
+$yf_{\sqrt y}(V)$ decreases whenever
+\[
+ y\ge\frac{cV}{M_0(c-1)/2-1}<13.
+\]
+Consequently $f_q(V)\le q^{-2}$ for $q\ge9$, and the endpoint argument
+extends this inequality to every $v\in[0,V]$. Since
+\[
+ \sum_{q=9,11,\ldots}q^{-2}
+ =\frac{\pi^2}{8}-1-\frac19-\frac1{25}-\frac1{49}<.063,
+\]
+we obtain $\sum_{q\ge3,\ q\text{ odd}}R_q<.848<.85$. At $s=0$ the
+same result follows directly from $R_q\le q^{-2}$.
+
+For the remaining positive interval, $3\sqrt n\le s\le4\sqrt n$,
+Lemma~\ref{lem:weightedmean} still applies because
+$C/s\ge1/(4\sqrt n)\ge e/n$. Put
+\[
+ p_i=\frac{a_i}{s+a_i},\quad t_i=1-p_i,\quad
+ A=\frac{q^2\pi^2}{s^2},\quad B=\frac{\pi^2}{s^2},
+\]
+so $\sum_i p_i\ge(n-1)/2$. Define
+\[
+ h_q(t)=\frac12\log\frac{1+At^2}{1+Bt^2},\qquad D_q=h_q(1).
+\]
+If $A\le3$ and $B\le.005$, then $h_q(t)\le tD_q$ on $[0,1]$.
+Indeed, for
+$\psi(v)=v/(1+v)-\tfrac12\log(1+v)$,
+\[
+ t^2\left(\frac{h_q(t)}t\right)'=\psi(At^2)-\psi(Bt^2).
+\]
+The function $\psi$ increases on $[0,1]$ and decreases on $[1,3]$.
+If $At^2\le1$, the difference is nonnegative. Otherwise
+$\psi(At^2)\ge\psi(3)>.05$, whereas $\psi(Bt^2)\le B/2\le.0025$.
+It follows from \eqref{eq:bulk-positive-ratio} that
+\begin{equation}\label{eq:positive-strong}
+ \log R_q\le-\frac{n+3}{2}D_q
+ \qquad\left(\frac{q\pi}{s}\le\sqrt3\right).
+\end{equation}
+Let $Q$ be the largest odd integer at most $\sqrt3s/\pi$. Then
+$Q\ge25$ and
+\[
+ \frac{Q\pi}{s}>\sqrt3\frac{Q}{Q+2}
+ \ge\sqrt3\frac{25}{27}>1.6.
+\]
+The inequality $\log(1+x)\ge2x/(2+x)$ in
+\eqref{eq:positive-strong} gives, for $q=3,5,7,9$,
+\[
+ -\log R_q\ge
+ \frac{(q^2-1)9.86}{64+2(q^2+1)9.87/250}.
+\]
+The corresponding four upper bounds sum to less than $.326$.
+For $11\le q\le Q$ the same inequality gives
+\[
+ -\log R_q\ge\alpha(q^2-1),\qquad \alpha=\frac{9.86}{160.16},
+\]
+and hence
+\[
+ \sum_{11\le q\le Q,\ q\text{ odd}}R_q
+ \le\frac{e^{-120\alpha}}{1-e^{-48\alpha}}<.001.
+\]
+For later use, comparison of the individual root factors yields, for
+any real $s$, any odd $Q$, and $q\ge Q$,
+\begin{equation}\label{eq:universal-pole-tail}
+ \frac{R_q}{R_Q}\le\left(\frac Qq\right)^2
+ \exp\!\left(\frac{(n+1)s^2}{2Q^2\pi^2}\right),\qquad
+ \sum_{q>Q,\ q\text{ odd}}R_q
+ \le\frac Q2R_Q\exp\!\left(\frac{(n+1)s^2}{2Q^2\pi^2}\right).
+\end{equation}
+Here the last inequality uses
+$\sum_{q>Q,\ q\text{ odd}}q^{-2}\le1/(2Q)$.
+At the present $Q$,
+$D_Q\ge\tfrac12\log(3.56/1.005)>.62$, so $R_Q<e^{-.31n}$.
+The extra exponential in \eqref{eq:universal-pole-tail} is at most
+$e^{.197n}$ and $Q/2<2\sqrt n$. The resulting tail is less than $.001$
+for $n\ge250$. This proves the positive-interval bound $.33$.
+
+\subsection{A uniform variance estimate}
+
+We next record the distributional estimate needed on the negative
+half of the interval. Write $(n)_\ell=n!/(n-\ell)!$.
+
+\begin{lemma}\label{lem:variance}
+Let $n\ge250$, $\pi\le u\le4\sqrt n$, and
+\[
+ B=\frac{1+e^u}{u},\qquad Y=\log(nB).
+\]
+If $L$ has probabilities
+\[
+ p_\ell\ \propto\ \frac{A(n,\ell+1)}{(n)_\ell B^\ell},
+ \qquad 0\le\ell\le n-1,
+\]
+then $L$ is a sum of independent Bernoulli variables and
+\[
+ \operatorname{Var}L<\frac{8n}{Y^2}.
+\]
+\end{lemma}
+\begin{proof}
+The real-rootedness of $F_n$, coefficient reversal, and positive
+tilting show that $L$ is a Bernoulli sum. More explicitly, its success
+probabilities are $\beta_i/(B+\beta_i)$. In particular its probabilities
+are log-concave. Let $m$ be a mode and put $N=n-m$.
+
+The sequence $u_k=A(n,k)^{1/n}$, with zero endpoints, is concave.
+Indeed, the $n$-dimensional volume of the section
+$\sum_{i=1}^{n+1}x_i=k$ of $[0,1]^{n+1}$ is
+$\sqrt{n+1}A(n,k)/n!$; Brunn's concavity theorem applies
+\cite{Gardner2002}. Thus $u_{k+1}/u_k\le(k+1)/k$.
+Eulerian unimodality places $m$ before the midpoint. If $m\ge1$,
+\[
+ B(n-m+1)\le\frac{A(n,m+1)}{A(n,m)}
+ \le(1+1/m)^n\le e^{n/m}.
+\]
+Consequently
+\begin{equation}\label{eq:bulk-mode-mean}
+ m\le\frac n{Y-\log2},\qquad
+ \mu:=\mathbb EL\le\frac n{Y-\log2}+1,
+\end{equation}
+where the second bound is Darroch's mode theorem
+\cite{Darroch1964}. The first bound also holds when $m=0$.
+
+Put $h=Y^2/n$. Elementary endpoint estimates give
+\begin{equation}\label{eq:variance-parameters}
+ Y>7.5,\quad Y/n<.26,\quad h<17,\quad
+ N/n>.852,\quad\log(N/n)>-.16.
+\end{equation}
+For the two upper bounds, $Y$ increases with $u$ and at $u=4\sqrt n$,
+\[
+ Y=4\sqrt n+\tfrac12\log n-\log4+
+       \log(1+e^{-4\sqrt n}).
+\]
+The resulting bounds on $Y/n$ and $Y/\sqrt n$ decrease after $n=250$;
+the endpoint gives $Y<65$ and $Y/\sqrt n<\sqrt{17}$.
+The lower bound follows at $n=250,u=\pi$.
+
+Set
+\[
+ a=\frac{p_{m-1}}{p_m},\quad b=\frac{p_{m+1}}{p_m},\quad
+ c=(BN)^{1/n}-1,\quad e=1-[B(N+1)]^{-1/n},\quad
+ J=\lfloor n/Y\rfloor\ge3,
+\]
+with missing adjacent probabilities set equal to zero. Concavity of
+$u_k$ gives the tangent estimates
+\begin{align}
+ \frac{p_{m+j}}{p_m}&\le b\,e^{-hj(j-1)/7}
+       &&(1\le j\le J),\label{eq:variance-forward}\\
+ \frac{p_{m-j}}{p_m}&\le a\,e^{-hj(j-1)/3}
+       &&(1\le j\le m),\label{eq:variance-backward}\\
+ ab&\le e^{-h/2}.\label{eq:variance-adjacent}
+\end{align}
+Here are the details retaining the adjacent factors. If
+$c_0=u_{m+2}/u_{m+1}-1\le c$, concavity implies
+$u_{m+j+1}/u_{m+1}\le1+jc_0$. After subtracting $\log b$, the
+$c_0$-dependent expression
+$n[\log(1+jc_0)-\log(1+c_0)]$ is increasing in $c_0$.
+Therefore
+\[
+ \log\frac{p_{m+j}}{bp_m}
+ \le n[\log(1+jc)-j\log(1+c)]
+      +\sum_{i=0}^{j-1}-\log(1-i/N)
+ \le-\left\{\frac{nc^2}{(1+Jc)(1+c)}-\frac1{N-J}\right\}
+       \frac{j(j-1)}2.
+\]
+The elementary bounds
+\[
+ c\ge\left(1-\frac{.16}{7.5}\right)\frac Yn,
+ \quad c<.298,\quad Jc<1.15,\quad (N-J)/n>.719
+\]
+make the bracket exceed $2h/7$.
+For the backward direction the actual decrement
+$d=1-u_m/u_{m+1}$ is at least $e$. Subtracting $\log a$ leaves
+$n[\log(1-jd)-\log(1-d)]$, which decreases in $d$. Hence
+\[
+ \log\frac{p_{m-j}}{ap_m}
+ \le n[\log(1-je)-j\log(1-e)]
+       +\sum_{i=0}^{j-1}\log(1+i/(N+1))
+ \le-\left(ne^2-\frac1{N+1}\right)\frac{j(j-1)}2.
+\]
+Since $1-e^{-t}\ge.88t$ for $0\le t\le.26$, the bracket exceeds
+$2h/3$. This argument is needed only for $m\ge1$, so $N+1\le n$.
+Finally, concavity gives
+$u_mu_{m+2}/u_{m+1}^2\le(1-d)(1+d)\le1-e^2$, and thus
+\[
+ ab\le(1-e^2)^n\frac{N+1}{N}
+ \le\exp\!\left(-ne^2+\log\frac{N+1}{N}\right)<e^{-h/2}.
+\]
+When $m=0$, the backward assertion is empty and $ab=0$.
+
+The one-step version of the forward estimate gives
+$p_{m+J}/p_{m+J-1}\le e^{-2h(J-1)/7}$.
+All later ratios are no larger, by log-concavity. For $t=n/Y\ge3$,
+\[
+ \frac{J(J-1)}{t^2}\ge\frac38,\qquad
+ \frac{J-1}{t}\ge\frac12.
+\]
+The initial amplitude is at most $e^{-3n/56}$ and the subsequent
+ratio is less than $e^{-Y/7}<.343$. Summing the geometric tail gives
+\begin{equation}\label{eq:variance-far-tail}
+ \sum_{j>J}j^2\frac{p_{m+j}}{p_m}
+ \le1.3J^2e^{-3n/56}
+ \le1.3(n/7.5)^2e^{-3n/56}<.003.
+\end{equation}
+
+Let $v=\operatorname{Var}L$. Fourier inversion for a Bernoulli sum gives
+\[
+ \max_k p_k\le e^{-v}I_0(v),\qquad
+ I_0(v)=\sum_{k\ge0}\frac{(v^2/4)^k}{(k!)^2}.
+\]
+Indeed, the squared modulus of its characteristic function is at most
+$\exp[-4v\sin^2(t/2)]$. We shall use
+\begin{equation}\label{eq:variance-mass}
+ \sqrt v\,e^{-v}I_0(v)<.47\qquad(v\ge.7).
+\end{equation}
+For $v\ge1$, put $f(v)=\sqrt v\,e^{-v}I_0(v)$. The Bessel equation gives
+$f''+2f'+f/(4v^2)=0$. Writing $I_1=I_0'$, the defining series imply
+$2I_1(1)<I_0(1)$, so $f'(1)<0$; at every zero of $f'$, one has
+$f''<0$. Thus $f$ decreases on $[1,\infty)$, and $f(1)<.47$.
+On $[.7,1]$, inequality~\eqref{eq:variance-mass} is certified on
+300 rational intervals of length $.001$ by the bounds below.
+
+Define
+\[
+ S(t)=\sum_{j\ge1}j^2e^{-tj(j-1)},\qquad
+ T(t)=\sum_{j\ge2}(j-1)^2e^{-tj(j-1)}.
+\]
+Equations~\eqref{eq:variance-forward}--\eqref{eq:variance-far-tail}
+imply
+\[
+ v\le\mathbb E(L-m)^2
+ \le p_m\{bS(h/7)+aS(h/3)+.003\}
+ \le p_m\{S(h/7)+e^{-h/2}S(h/3)+.003\}.
+\]
+The last inequality maximizes a linear function over
+$0\le a,b\le1$, $ab\le e^{-h/2}$, using $S(h/7)\ge S(h/3)$.
+If $h\le11$ and $v\ge8/h$, then $v>.7$ and
+\[
+ v^{3/2}<.47\{S(h/7)+e^{-h/2}S(h/3)+.003\}
+          <(8/h)^{3/2},
+\]
+a contradiction. For $0<h\le2$, the last comparison follows from
+$S(t)\le2t^{-3/2}$ for $0<t\le2/3$. To verify this elementary bound,
+apply the integral-plus-maximum bound for a positive unimodal sum to
+$x^2e^{-tx(x-1)}$. After multiplication by $t^{3/2}$, its integral
+increases with $t$ and is less than $1.21$ at $t=2/3$; its maximum
+also increases with $t$ and is less than $.75$ there. For the remaining
+values of $h\le11$, the six rational interval checks in
+Table~\ref{tab:variance-intervals} prove the comparison.
+
+For $11\le h<17$, clamp $L$ to $[m,m+1]$ if $b\ge a$, and to
+$[m-1,m]$ otherwise. Write the resulting variable as $Z$, and
+$W=L-Z$. In the first case $a\le e^{-h/4}$, and in the second
+$b\le e^{-h/4}$. Since $\operatorname{Var}Z\le1/4$,
+\[
+ v\le\frac14+\mathbb EW^2+\sqrt{\mathbb EW^2}
+ \le\frac14+\Delta(h)+\sqrt{\Delta(h)},
+\]
+where
+\[
+ \Delta(h)=\max\{T(h/7)+e^{-h/4}S(h/3),\,
+                    T(h/3)+e^{-h/4}S(h/7)\}+.003.
+\]
+This function decreases. On each half-unit interval $[a,b]$ in
+$[11,17]$, exact rational bounds give
+\[
+ 8/b-1/4-\Delta(a)>0,\qquad
+ \Delta(a)<[8/b-1/4-\Delta(a)]^2.
+\]
+Consequently $v<8/h$, completing the proof.
+\end{proof}
+
+\subsection{Kernels for the negative half of the interval}
+
+Write $s=-u$, $u\ge0$. For $u\ge\pi$ set
+\[
+ B=\frac{1+e^u}{u},\quad Y=\log(nB),\quad
+ r_i=\beta_i/B,\quad p_i=\frac{r_i}{1+r_i},\quad
+ w_i=p_i(1-p_i).
+\]
+Then $\mu=\sum p_i$ and $v=\sum w_i$ are the mean and variance in
+Lemma~\ref{lem:variance}. For $q\ge1$ let
+\[
+ D_q=\frac12\log\frac{u^2+q^2\pi^2}{u^2+\pi^2},\qquad
+ g_q(r)=\frac12\log
+ \frac{u^2(1-1/r)^2+q^2\pi^2}{u^2(1-1/r)^2+\pi^2}.
+\]
+The exact pole ratio satisfies
+\begin{equation}\label{eq:negative-exact-ratio}
+ \log R_q=-(n+1)D_q+\sum_i g_q(r_i).
+\end{equation}
+For $p=r/(1+r)$ and $w=p(1-p)$, the needed kernel bounds are
+\begin{align}
+ g_3(r)&\le D_3p+4\log3\,w,\label{eq:kernel-three}\\
+ g_q(r)&\le D_qp+[4\log q+(q-1)/2]w,\label{eq:kernel-variance}\\
+ g_q(r)&\le\max(q,4\log q)\,p.\label{eq:kernel-mean}
+\end{align}
+We give proofs to fix the constants.
+
+For $r\ge1$, put $b=1/r\in[0,1]$ and $L=\log q$. Convexity of
+$z\mapsto\tfrac12\log[(u^2z+q^2\pi^2)/(u^2z+\pi^2)]$ gives
+\[
+ g_q(r)\le D_q+(2b-b^2)(L-D_q)
+ \le\frac{D_q}{1+b}+\frac{4Lb}{(1+b)^2}.
+\]
+The last comparison is affine in $D_q\in[0,L]$; at its endpoints it
+reduces to $(1-b)^2(b+2)\ge0$ and $b(3-b)\ge0$.
+This proves the right half of \eqref{eq:kernel-three} and
+\eqref{eq:kernel-variance}.
+For $r\le1$, $g_3$ decreases as $u$ increases, so it suffices to take
+$u=\pi$. Put
+\[
+ N_r=1-2r+10r^2,\quad Q_r=1-2r+2r^2,\quad
+ H(r)=\frac{(1+r)^2}{r}\log\frac{N_r}{Q_r}.
+\]
+Differentiation gives
+\[
+ H'(r)=(1-r)(1+r)
+ \left[-\frac1{r^2}\log\frac{N_r}{Q_r}
+       +\frac{16(1+r)}{N_rQ_r}\right]\ge0.
+\]
+For the inequality, use $\log z\le(z-1)/\sqrt z$ and
+\[
+ 4(1+r)^2-N_rQ_r
+ =3+12r(1-r)+4r^3(6-5r)\ge0.
+\]
+Since $H(1)=8\log3$, this proves $g_3\le4\log3\,w$ on the left.
+For general $q$, put $y=(1-r)/r\ge0$ and $k=u/\pi\ge1$. Then
+\[
+ \partial_q(g_q/w)
+ =\frac{q[y+3+1/(y+1)]}{k^2y^2+q^2}
+ \le\frac{q(y+4)}{y^2+q^2}\le\frac12+\frac4q.
+\]
+The last step follows from $2qy\le y^2+q^2$. Integration from $1$
+to $q$ proves \eqref{eq:kernel-variance}. Finally, if $r\ge1/3$,
+then $p\ge1/4$ and $g_q\le\log q$. If $r\le1/3$, then
+$y=1/r-1\ge2$, and $\log(1+t^2)\le t$ gives
+\[
+ \frac{g_q}{p}\le\frac{y+2}{2}\log(1+q^2/y^2)
+ \le\frac{q(y+2)}{2y}\le q.
+\]
+This proves \eqref{eq:kernel-mean}.
+
+Put $C_q=4\log q+(q-1)/2$ and $M_q=\max(q,4\log q)$.
+Equations~\eqref{eq:bulk-mode-mean}, \eqref{eq:negative-exact-ratio}
+and Lemma~\ref{lem:variance} yield
+\begin{align}
+ \log R_3&\le-n\left(1-\frac1{Y-\log2}\right)D_3
+                    +\frac{32n\log3}{Y^2},\label{eq:negative-three-bound}\\
+ \log R_q&\le-n\left(1-\frac1{Y-\log2}\right)D_q
+                    +\frac{8nC_q}{Y^2},\label{eq:negative-var-bound}\\
+ \log R_q&\le-(n+1)D_q+M_q\left(\frac n{Y-\log2}+1\right).
+                    \label{eq:negative-mean-bound}
+\end{align}
+
+For $0\le u\le\pi$, use $B=(1+e^u)/\pi$ instead. Bound
+\eqref{eq:bulk-mode-mean} remains valid: at the midpoint the
+consecutive probability ratio is less than one because
+$B\ge2/\pi$ and $n\ge250$; log-concavity therefore places the mode
+before the midpoint. The kernel becomes
+\[
+ \frac12\log\frac{(u/\pi-1/r)^2+q^2}{(u/\pi-1/r)^2+1},
+\]
+and \eqref{eq:kernel-mean} still holds. Its proof for $r\le1/3$ uses
+$|u/\pi-1/r|\ge1/r-1\ge2$; its other case is unchanged.
+Thus \eqref{eq:negative-mean-bound} applies in this range as well.
+
+\subsection{Summation of the negative-side pole bounds}
+
+On $0\le u\le\pi$, the rational interval checks specified below
+show that the bounds for $R_3,R_5,R_7,R_9$ are all less than $e^{-12}$.
+For $Q=9$, the exponent on the right of
+\eqref{eq:universal-pole-tail}, before its factor $Q/2$, is also less
+than $-12$. Hence the whole sum is less than $.001$.
+
+On $\pi\le u\le50$, the same checks give
+$R_3<.79$, $R_5<e^{-4}<.02$, and bounds $e^{-12}$ for the remaining
+finite poles and the tail exponent. There are at most $23$ finite
+terms with $q\ge7$, and $Q/2\le25.5$, so the total is less than $.811$.
+
+It remains to treat $50\le u\le4\sqrt n$. Here
+\[
+ Y\ge u+1.37,\quad Y-\log2\ge u+.67,\quad
+ 1-1/(Y-\log2)>.96,\quad n/u^2\ge1/16.
+\]
+The first inequality follows from
+$n/u\ge\sqrt{250}/4>e^{1.37}$. Using
+$\log(1+x)\ge2x/(2+x)$, the bound for $q=3$ reduces to
+\begin{equation}\label{eq:negative-rational-polynomial}
+ \left(1-\frac1{u+.67}\right)
+       \frac{39.44u^2}{u^2+49.35}
+ -\frac{35.156u^2}{(u+1.37)^2}\ge3.9.
+\end{equation}
+After multiplication by the positive common denominator, the
+numerator has positive coefficients in $u-50$. Thus
+$R_3\le e^{-3.9/16}<.79$.
+For $q=5$,
+\[
+ -\log R_5\ge\frac n{u^2}
+ \left\{\frac{.96\cdot9.86\cdot24}
+ {2+9.87\cdot26/2500}-8C_5\right\}>2.53,
+\]
+so $R_5<.08$.
+Let $Q$ be the smallest odd integer at least $u$. For $7\le q\le Q$,
+$u\ge\max(50,q-2)$, and the following rational-polynomial comparison
+holds:
+\[
+ \frac{.96\cdot9.86(q^2-1)}
+ {2+9.87(q^2+1)/\max(50,q-2)^2}
+ -32\log q-4(q-1)\ge16q.
+\]
+For completeness, replace $\log q$ by its tangent bound
+$1.946+(q-7)/7$. With
+\[
+ A=.96\cdot9.86,\quad D=9.87,\quad
+ L(q)=\frac{172}{7}q+26.272,
+\]
+the required numerators are
+\[
+ 2500A(q^2-1)-L(q)[5000+D(q^2+1)]\quad(7\le q\le52)
+\]
+and
+\[
+ A(q^2-1)(q-2)^2
+ -L(q)[2(q-2)^2+D(q^2+1)]\quad(q\ge52).
+\]
+The first has positive Bernstein coefficients on $[7,52]$ and the
+second has positive coefficients in $q-52$. Therefore $R_q\le e^{-q}$,
+and the sum from $q=7$ through $Q$ is less than $.0011$.
+
+At $Q$, one has $D_Q>1.18$ and
+\[
+ \frac{8C_Q}{Y^2}
+ \le\frac{32\log(u+2)+4(u+1)}{(u+1.37)^2}<.3.
+\]
+The last expression decreases for $u\ge50$, and its value at $50$
+is less than $.3$. Hence $R_Q<e^{-.8n}$. The extra exponent in
+\eqref{eq:universal-pole-tail} is at most $.051n$, and
+$Q/2<3\sqrt n$. The infinite tail is less than $.001$.
+Altogether,
+\[
+ \sum_{q\ge3,\ q\text{ odd}}R_q
+ <.79+.08+.0011+.001<.88.
+\]
+This establishes all the quantitative bounds in Lemma~\ref{lem:bulk}.
+At a phase node, the nearest conjugate pair contributes
+$2C_s(-1)^j|\mathcal R_{n,s}(s+i\pi)|$; the remaining pairs have
+strictly smaller total modulus. This proves its sign conclusion.
+
+\subsection{Exact verification of the scalar inequalities}
+
+We specify the finite checks so that the numerical constants in the
+proof are reproducible independently of root computations. Every
+terminating decimal in this section denotes the corresponding rational
+number. The elementary bounds $3.14159<\pi<355/113$ suffice.
+For $x\ge0$ and $x<m+2$, use
+\[
+ E_m(x)=\sum_{k=0}^m\frac{x^k}{k!},\qquad
+ E_m(x)\le e^x\le
+ E_m(x)+\frac{x^{m+1}}{(m+1)!}\frac1{1-x/(m+2)}.
+\]
+Take $m=100$ in the variance checks, $m=80$ in the bounded-interval
+pole checks, and $m=220$ for the final tail exponent at $n=250$.
+For logarithms, first reduce the argument to $[1,2]$ by powers of
+$2$ and use, with $z=(x-1)/(x+1)$,
+\[
+ 2\sum_{k=0}^{39}\frac{z^{2k+1}}{2k+1}
+ \le\log x\le
+ 2\sum_{k=0}^{39}\frac{z^{2k+1}}{2k+1}
+ +\frac{2z^{81}}{81(1-z^2)}.
+\]
+Reciprocation handles arguments below one.
+For $I_0(v)$ on $[.7,1]$, retain its first $25$ terms and bound its
+remaining terms by the geometric ratio $(v^2/4)/26^2$.
+
+The following explicit upper bounds control the two series used in
+the variance proof. Put $r=e^{-8t}$ and define
+\begin{align*}
+ \overline S(t)&=1+4e^{-2t}+9e^{-6t}
+ +e^{-12t}\left\{\frac{16}{1-r}
+ +\frac{8r}{(1-r)^2}+\frac{r(1+r)}{(1-r)^3}\right\},\\
+ \overline T(t)&=e^{-2t}+4e^{-6t}
+ +e^{-12t}\left\{\frac9{1-r}
+ +\frac{6r}{(1-r)^2}+\frac{r(1+r)}{(1-r)^3}\right\}.
+\end{align*}
+They follow from $j(j-1)\ge12+8(j-4)$ for $j\ge4$.
+Replacing exponentials by the rational bounds above makes every entry
+of Table~\ref{tab:variance-intervals} a rational comparison. In its last
+row, $\overline\Delta$ is obtained from $\Delta$ by replacing $S,T$
+with $\overline S,\overline T$.
+
+\begin{table}[ht]
+\centering
+\caption{Finite scalar checks for Lemma~\ref{lem:variance}.}
+\label{tab:variance-intervals}
+\begin{tabular}{p{.30\textwidth}p{.62\textwidth}}
+\toprule
+Intervals or parameters & Verified inequality\\
+\midrule
+$[a,b]=[.7+i/1000,.7+(i+1)/1000]$, $0\le i<300$
+& $b[e^{-a}I_0(a)]^2<.47^2$\\[3pt]
+$[a,b]$ one of $(2,3)$, $(3,4)$, $(4,6)$, $(6,8)$, $(8,10)$, $(10,11)$
+& $\{.47[\overline S(a/7)+e^{-a/2}\overline S(a/3)+.003]\}^2<(8/b)^3$\\[3pt]
+$[a,b]=[i/2,(i+1)/2]$, $22\le i<34$
+& $G=8/b-1/4-\overline\Delta(a)>0$ and $\overline\Delta(a)<G^2$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Here are the bounded-interval pole checks in equally explicit form.
+For a box $[a,b]$, use
+\[
+ D_q^-:=\frac12\log\left(1+
+       \frac{(q^2-1)9.86}{b^2+9.87}\right),\qquad
+ \ell_2=.7>\log2.
+\]
+On $0\le u\le\pi$, take $[a,b]=[i/20,(i+1)/20]$,
+$0\le i<63$, and
+$Y^- =\log[250(1+e^a)/(355/113)]$.
+For $q=3,5,7,9$, set
+\[
+ f_q=-D_q^-+\frac{M_q}{Y^--\ell_2},\qquad
+ c_q=M_q-D_q^-.
+\]
+The checks give $f_q<0$ and $250f_q+c_q<-12$.
+For $q=9$, they also give
+\[
+ f_q+\tau<0,\qquad 250(f_q+\tau)+c_q+\tau<-12,
+ \quad \tau=\frac{b^2}{2q^2\,9.86}.
+\]
+
+On $\pi\le u\le50$, take
+$a=3.14+i/10$, $b=\min(a+.1,50)$, $0\le i<469$, and
+$Y^-=a+\log(250/b)$. Bound $q=3$ by
+\eqref{eq:negative-three-bound}, using $D_3^-$, $Y^-$ and $.7$;
+the resulting exponent at $n=250$ is less than $-39/160$.
+Let $Q$ be the least odd integer at least $\max(5,b)$.
+For each $q=5,7,\ldots,Q$, use the smaller of the mean bound and the
+variance bound, with the same substitutions. The exponent is less
+than $-4$ for $q=5$ and less than $-12$ for $q\ge7$.
+For $q=Q$, adding $(n+1)\tau$ still gives an exponent below $-12$.
+In each case the coefficient of $n$ is strictly negative and decreases
+as $Y$ increases. Since $Y_n=Y_{250}+\log(n/250)$, the $n=250$ check
+therefore proves the assertion for every $n\ge250$.
+
+The remaining checks are polynomial positivity in
+\eqref{eq:negative-rational-polynomial} and in the two displayed
+polynomials in $q$, together with their scalar endpoint comparisons.
+For the cubic on $[7,52]$, substitute $q=7+45t$ and convert its power
+coefficients $a_k$ to Bernstein coefficients
+$\sum_{k\le i}a_k\binom ik/\binom3k$; all four are positive.
+For the unbounded intervals, direct expansion in $u-50$ or $q-52$
+has strictly positive coefficients. Thus the finite verification uses
+rational arithmetic throughout.

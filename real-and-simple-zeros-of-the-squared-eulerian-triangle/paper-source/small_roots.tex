@@ -1,0 +1,157 @@
+\section{The small negative zeros}
+
+Throughout this section $n\ge250$, $p=n+1$ and $K=\lfloor\sqrt n/3\rfloor$. Set
+\[
+c(t)=\frac{t-1}{\log t}\quad(t>1),\qquad c(1)=1,\qquad \ell(t)=\log c(t).
+\]
+
+\subsection{Coefficient estimates}
+For $t\ge1$,
+\begin{equation}\label{eq:logmean-curvature}
+\ell'(t)\ge\frac1{2t},\qquad -\ell''(t)\ge\frac5{12t^2}.
+\end{equation}
+For the first inequality, put $u=\log t$ and use
+$t\ell'(t)=1/(1-e^{-u})-1/u\ge1/2$.
+For the second, multiplication by $12u^2(e^u-1)^2$ reduces the claim to
+\[
+(7u^2-12u-12)e^{2u}+2(5u^2+12u+12)e^u-(5u^2+12u+12)\ge0.
+\]
+Its coefficients through degree four vanish. For $h\ge5$, its coefficient multiplied by $h!$ is
+\[
+2^{h-2}(7h^2-31h-48)+10h^2+14h+24>0:
+\]
+at $h=5$ this is $120$, and for $h\ge6$ both displayed terms are positive. This proves \eqref{eq:logmean-curvature}.
+
+Uniformly for the integers $1\le j\le n$,
+\begin{equation}\label{eq:eulerian-evaluation}
+A_n(j)=n!c(j)^p(1+e_{n,j}),\qquad |e_{n,j}|<2^{-120}.
+\end{equation}
+The assertion is exact at $j=1$. For $j\ge2$, the Frobenius identity, reciprocity and the partial fractions of $1/(1-e^{-z})$ give
+\[
+\frac{A_n(j)}{n!c(j)^p}
+=\sum_{h\in\mathbb Z}\left(1+\frac{2\pi i h}{\log j}\right)^{-p}.
+\]
+Put $a=2\pi/\log n$. The nonzero terms have total modulus at most
+\begin{equation}\label{eq:evaluation-tail}
+2(1+a^2)^{-p/2}
+\left(1+\frac1{pa^2/(1+a^2)-1}\right).
+\end{equation}
+Indeed the decreasing-integral bound applies after using
+$1+a^2t^2\ge(1+a^2)t^{2a^2/(1+a^2)}$ for $t\ge1$.
+Both $p\log(1+a^2)$ and $pa^2/(1+a^2)$ increase with $n\ge250$.
+At $n=250$, $\pi>3$ and $\log250<6$ imply $a^2>1$ and
+$pa^2/(1+a^2)>125$. Thus \eqref{eq:evaluation-tail} is less than
+$4\cdot2^{-125}<2^{-120}$.
+
+Summing \eqref{eq:bonferroni} against $A(n,h)$ gives
+\begin{equation}\label{eq:B-small}
+A_n(j)-(n+1)A_n(j-1)\le B(n,j)\le A_n(j).
+\end{equation}
+For $j\ge2$, \eqref{eq:logmean-curvature} gives
+$(c(j-1)/c(j))^p\le e^{-p/(2j)}$; at $j=1$, $B(n,1)=n!$ exactly. Consequently
+\begin{equation}\label{eq:B-small-relative}
+\left|\frac{B(n,j)}{n!c(j)^p}-1\right|<\frac1{1000}
+\qquad(1\le j\le K+4),
+\end{equation}
+and $0<B(n,j)/(n!c(j)^p)<2$ for every $1\le j\le n$.
+For completeness, the error in \eqref{eq:B-small-relative} is at most
+\[
+2^{-120}+(n+1)(1+2^{-120})
+\exp\left(-\frac{n+1}{2(\sqrt n/3+4)}\right).
+\]
+This decreases for $n\ge250$: after setting $t=\sqrt n$, the relevant logarithmic derivative is
+\[
+\frac{3(t^2+24t-1)}{2(t+12)^2}-\frac{2t}{t^2+1}>0.
+\]
+At $n=250$ the exponent exceeds $753/56>13$, and $251e^{-13}<1/1000$ with room for the $2^{-120}$ term.
+
+\subsection{Alternating signs}
+For $2\le k\le K+1$ define
+\[
+r_{n,k}=\left(\frac{c(k-1)}{c(k+1)}\right)^{p/2},
+\qquad s_k=-\log r_{n,k}.
+\]
+Then
+\begin{equation}\label{eq:small-separator-sign}
+\sgn P_n(-r_{n,k})=(-1)^k.
+\end{equation}
+To prove this, let $\delta_k=2\ell(k)-\ell(k-1)-\ell(k+1)$.
+Equation \eqref{eq:logmean-curvature} yields
+$\delta_k\ge5/[12(k+1)^2]$ and $p\delta_k\ge2$.
+For $K=5$, use $p\ge251$ and $k+1\le7$; for $K\ge6$, use
+$n\ge9K^2$ and $(15/4)(K/(K+2))^2\ge135/64>2$.
+
+Set $r=r_{n,k}$ and $T_j=c(j)^p r^j$. Strict log-concavity gives
+\[
+\frac{T_{k-h}}{T_k},\frac{T_{k+h}}{T_k}\le q^h,\qquad
+q=e^{-p\delta_k/2}\le e^{-1}<\frac38.
+\]
+Each one-sided alternating tail is decreasing, so
+$\sum_{j=1}^n(-1)^{j-k}T_j/T_k\ge1-2q>1/4$.
+Replacing the ideal coefficients by $B(n,j)/n!$ changes this by less than
+\[
+\frac1{1000}\left(1+\frac{2q}{1-q}\right)
++\frac{q^4}{1-q}
+<\frac{11}{5000}+\frac{81}{2560}<\frac14.
+\]
+Here \eqref{eq:B-small-relative} applies through $j=k+3$, and the global ratio in $(0,2)$ applies thereafter. This proves \eqref{eq:small-separator-sign}. The $s_k$ strictly decrease with $k$.
+
+\subsection{Joining these signs to the bulk}
+\begin{lemma}\label{lem:small}
+There is a phase node $s_*$ with
+\[
+\phi(s_*)=-(K+1)\pi,\qquad 0<s_*<3\sqrt n,\qquad s_*<s_K.
+\]
+The phase-node sign followed by the signs at $s_K,s_{K-1},\ldots,s_2$ and near $x=0-$ supplies $K$ distinct negative roots after this node.
+\end{lemma}
+\begin{proof}
+For $s>0$, write $C=1+e^{-s}$, $a_i=C/\beta_i$, $t=C/s$, and
+$\mu(t)=tF_n'(t)/F_n(t)$. Directly from \eqref{eq:phase},
+\begin{equation}\label{eq:positive-phase-mean}
+-\phi(s)=2\arctan(\pi/s)
++\sum_i\arctan\frac{a_i\pi}{s(s+a_i)+\pi^2}
+<\frac{\pi}{s}\{\mu(t)+1\}.
+\end{equation}
+For $0<t\le1$, $\mu(t)\le n-1$. In fact the only negative coefficient of
+$(n-1)F_n-tF_n'$ is $-n!t^n$, and the term of degree $n-2$ covers it:
+$A(n,3)\ge n(n-1)$ for $n\ge5$. The latter starts at $A(5,3)=66$ and follows inductively from $A(n+1,3)\ge3A(n,3)$. Thus
+\[
+-\phi(3\sqrt n)<\pi\sqrt n/3<(K+1)\pi.
+\]
+
+To compare with $s_K$, give $U>0$ the density proportional to
+$g(u)e^{-su}$, where $g(u)=A_n(Cu)$. Termwise integration gives
+\[
+\E U=\frac{\mu(C/s)+1}{s}=:M.
+\]
+The function $h(u)=ug'(u)/g(u)$ is concave, since the negative roots of $A_n$ express it as a sum of terms $u/(u+\alpha)$, $\alpha\ge0$. Integration by parts and Jensen's inequality yield
+$sM=1+\E h(U)\le1+h(M)$.
+As $1/u+g'(u)/g(u)$ strictly decreases, it follows that
+\begin{equation}\label{eq:mean-saddle}
+s>\frac1b+\frac{g'(b)}{g(b)}\quad\Longrightarrow\quad M<b.
+\end{equation}
+Take $s=s_K$ and $b=K+1$. The curvature bound gives
+\[
+s-p\{\ell(b)-\ell(b-1)\}=\frac p2\delta_K\ge1.
+\]
+Concavity of $\log A_n$ and \eqref{eq:eulerian-evaluation} imply
+\[
+\frac{g'(b)}{g(b)}
+\le C\{\log A_n(b)-\log A_n(b-1)\}
+\le C\{p(\ell(b)-\ell(b-1))+4\cdot2^{-120}\}.
+\]
+Here $b\ge6$, $b\le(2/5)\sqrt n$, $s\ge p/(2b)\ge(5/4)\sqrt n$, and
+$p(\ell(b)-\ell(b-1))\le p$. Hence the extra factor $C-1=e^{-s}$ changes the last bound by less than $1/1000$; the function
+$(n+1)e^{-(5/4)\sqrt n}$ decreases and is already below $1/1000$ at $250$.
+Since $1/b\le1/6$, \eqref{eq:mean-saddle} gives $M<b$. Equation
+\eqref{eq:positive-phase-mean} now gives $\phi(s_K)>-(K+1)\pi$.
+
+Finally put $t_0=2/\pi$. Lemma~\ref{lem:weightedmean} and
+$\arctan x\ge x/(1+x)$ give
+\[
+-\phi(0)=\pi+\sum_i\arctan(t_0/\beta_i)
+\ge\pi+\mu(t_0)-1
+\ge\pi+(n-1)/2>(K+1)\pi.
+\]
+Strict phase monotonicity proves the three assertions about $s_*$. Its sign is $(-1)^{K+1}$ by Lemma~\ref{lem:bulk}; the subsequent separator signs alternate, and the sign near zero is negative because $B(n,1)=n!$. Their $K$ intervening intervals are disjoint.
+\end{proof}

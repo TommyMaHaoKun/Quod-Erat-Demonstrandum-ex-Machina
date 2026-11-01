@@ -1,0 +1,95 @@
+[1/9] exact sign certificates for 0 <= n <= 250
+OK: integer Horner equals the original Fraction evaluation at every certificate point for n <= 20.
+OK: for every 1 <= n <= 250, R_n = P_n/x has n-1 sign changes on (-inf,0);
+hence P_n has n simple real zeros, all <= 0 (P_0 = 1 has none).
+[2/9] uniform variance through 4 sqrt(n)
+PASS: parameters and tangent-envelope constants
+PASS: weighted far tail < .003
+PASS: Fourier maximum-mass constant for v >= .7
+PASS: small-h margin
+PASS: maximum-mass h interval 2 3
+PASS: maximum-mass h interval 3 4
+PASS: maximum-mass h interval 4 6
+PASS: maximum-mass h interval 6 8
+PASS: maximum-mass h interval 8 10
+PASS: maximum-mass h interval 10 11
+PASS: two-point concentration h interval 11 23/2
+PASS: two-point concentration h interval 23/2 12
+PASS: two-point concentration h interval 12 25/2
+PASS: two-point concentration h interval 25/2 13
+PASS: two-point concentration h interval 13 27/2
+PASS: two-point concentration h interval 27/2 14
+PASS: two-point concentration h interval 14 29/2
+PASS: two-point concentration h interval 29/2 15
+PASS: two-point concentration h interval 15 31/2
+PASS: two-point concentration h interval 31/2 16
+PASS: two-point concentration h interval 16 33/2
+PASS: two-point concentration h interval 33/2 17
+PASS: all extended variance constants
+[3/9] negative-s pole dominance through 4 sqrt(n)
+PASS: Poisson-binomial maximum-mass constant on [.8,1]
+PASS: forward, backward and adjacent-ratio constants
+PASS: h interval 2 4 coupled sum < 271/50
+PASS: h interval 4 6 coupled sum < 12/5
+PASS: h interval 6 8 coupled sum < 81/50
+PASS: h interval 8 10 coupled sum < 131/100
+PASS: geometric tail < 1e-7
+PASS: small-h integral bound
+PASS: 0<=s<=pi; q=3,5,7,9 and q>9 tail
+PASS: pi<=s<=50; q3<.79, higher-pole sum <.021
+PASS: s>=50, q3<.79
+PASS: s>=50, q5<.08 and sum odd q>=7 through Q <.0011
+PASS: negative-s pole tail <.88 for n>=250, 0<=s<=4sqrt(n)
+[4/9] positive-s pole dominance through 3 sqrt(n)
+PASS: Poisson-binomial maximum-mass constant on [.8,1]
+PASS: forward, backward and adjacent-ratio constants
+PASS: h interval 2 4 coupled sum < 271/50
+PASS: h interval 4 6 coupled sum < 12/5
+PASS: h interval 6 8 coupled sum < 81/50
+PASS: h interval 8 10 coupled sum < 131/100
+PASS: geometric tail < 1e-7
+PASS: small-h integral bound
+PASS: positive-s pole sum <.85 for n>=250, 0<=s<=3sqrt(n)
+[5/9] positive-s pole dominance from 3 to 4 sqrt(n)
+PASS: Poisson-binomial maximum-mass constant on [.8,1]
+PASS: forward, backward and adjacent-ratio constants
+PASS: h interval 2 4 coupled sum < 271/50
+PASS: h interval 4 6 coupled sum < 12/5
+PASS: h interval 6 8 coupled sum < 81/50
+PASS: h interval 8 10 coupled sum < 131/100
+PASS: geometric tail < 1e-7
+PASS: small-h integral bound
+PASS: positive-s pole sum <.33 for n>=250, 3sqrt(n)<=s<=4sqrt(n)
+[6/9] joint tails and actual Eulerian errors
+PASS: descent, weighted lattice sum, and central mixed margin
+PASS: single-vertex off-mode ideal mass < .907
+PASS: actual Eulerian approximation error < AB/(1000 H)
+[7/9] finite edge bridge for 250 <= n <= 1600
+PASS: ell = 1 at n_min = 250
+PASS: ell = 2 at n_min = 250
+PASS: ell = 3 at n_min = 250
+PASS: ell = 4 at n_min = 250
+PASS: ell = 5 at n_min = 257
+PASS: ell = 6 at n_min = 401
+PASS: ell = 7 at n_min = 577
+PASS: ell = 8 at n_min = 785
+PASS: ell = 9 at n_min = 1025
+PASS: ell = 10 at n_min = 1297
+PASS: all finite-edge signs, disjointness constants, and phase-index bounds
+[8/9] independent zeros and paired-cluster signs
+PASS: Poisson-binomial maximum-mass constant on [.8,1]
+PASS: forward, backward and adjacent-ratio constants
+PASS: h interval 2 4 coupled sum < 271/50
+PASS: h interval 4 6 coupled sum < 12/5
+PASS: h interval 6 8 coupled sum < 81/50
+PASS: h interval 8 10 coupled sum < 131/100
+PASS: geometric tail < 1e-7
+PASS: small-h integral bound
+PASS: independent roots within .001, positive derivatives on 2.02-neighborhoods, paired actual sign margin .79 AB/H
+[9/9] mode geometry and phase matching
+PASS: eight-unit band, curvature >12, and diagonal dominance
+PASS: outer separator lies beyond 4sqrt(n), with four small neighbors
+PASS: weighted tail <.04AB, vertex dominance, and paired sign margin
+PASS: Eulerian replacement error <AB/(1000H)
+PASS: shifted-separator phase error <3pi/4
+PASS: all 9 proof checks (47.7 seconds)

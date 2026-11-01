@@ -1,0 +1,421 @@
+\section{The transition on the large-root side}\label{sec:bridge}
+
+Put $X=e^u>1$ and
+\[
+ W_u(k,h)=k^n h^{n-k+1}X^{-(k+h-2)},\qquad k,h\ge1.
+\]
+The positive double sum converges, since
+$W_u(k,h)\le k^nh^nX^{-(k+h-2)}$. Eulerian symmetry gives
+\begin{equation}\label{eq:bridge-exact}
+ \frac{P_n(-X)}{(-X)^n}
+ =\sum_{\substack{k,h\ge1\\k+h\le n+1}}
+ (-1)^{k+h-2}A(n,k)A(n-k+1,h)X^{-(k+h-2)}.
+\end{equation}
+Lemma~\ref{lem:bonferroni} bounds every absolute summand by $W_u(k,h)$.
+Throughout this section, $\rho_j=(j+1)/j$.
+
+\subsection{The path of maximizing cells}
+
+For an integer $m\ge2$, define
+\[
+ f(k,h)=n\log k+(n-k+1)\log h,\qquad
+ M_m=\max_{k+h=m}e^{f(k,h)}.
+\]
+Choose the smallest maximizing $k=k_m$, and set $h_m=m-k_m$.
+For $2\le m<m+1\le\lfloor\sqrt n\rfloor$, this path increases exactly
+one coordinate by one at each step. Indeed, for $h=m-k\ge2$ its
+adjacent difference is
+\[
+ q_m(k)=n\log\rho_k-\log h-(n-k)\log\rho_{h-1}.
+\]
+The comparisons
+\begin{align*}
+ q_{m+1}(k)-q_m(k)
+   &=(n-k)\log\frac{h^2}{h^2-1}-\log\rho_h>0,\\
+ q_{m+1}(k+1)-q_m(k)
+   &=-n\log\frac{(k+1)^2}{k(k+2)}+\log\rho_{h-1}<0
+\end{align*}
+follow from $n-k>h$ and $n/(k+1)^2\ge1>\log2$, respectively.
+They also imply that $q_m(k)$ strictly decreases in $k$. Its zero
+crossing therefore moves by zero or one position when $m$ increases.
+The smallest-maximizer convention includes a tie of adjacent cells;
+boundary cases use the same one-sided comparisons.
+
+The sequence $\log M_m$ is strictly concave. Two successive steps in
+one coordinate have decreasing increments by coordinate concavity.
+For a $k$ step followed by an $h$ step, optimality gives
+$f(K+1,H)\ge f(K,H+1)$, whereas
+\[
+ [f(K,H+1)-f(K,H)]
+ -[f(K+1,H+1)-f(K+1,H)]=\log\rho_H>0.
+\]
+Thus the second increment is strictly smaller; the opposite order is
+identical. Consequently the global maximizing total degree changes
+one at a time as $u$ decreases, at the ordered times
+$\log(M_{m+1}/M_m)$.
+
+The two coordinate events starting from $(K,H)$ have balance times
+\begin{equation}\label{eq:bridge-balances}
+ \alpha=n\log\rho_K-\log H,\qquad
+ \beta=(n-K+1)\log\rho_H.
+\end{equation}
+Consecutive events in the same coordinate are separated by more than
+\begin{equation}\label{eq:bridge-spacing}
+ \frac{n}{(K+1)^2},\qquad \frac{n-K+1}{(H+1)^2},
+\end{equation}
+respectively. Their exact differences are
+$n\log((K+1)^2/(K(K+2)))+\log(H'/H)$, or
+$(n-K+1)\log((H+1)^2/(H(H+2)))+(K'-K)\log\rho_{H+1}$,
+where $H'\ge H$ and $K'\ge K$ along the path.
+
+\subsection{Global descent estimates}
+
+Fix $(K,H)$ and put $N=n-K+1$, $S=K+H$. For integer shifts
+$p\ge1-K$, $q\ge1-H$, write
+\[
+ w_{pq}=\frac{W_u(K+p,H+q)}{W_u(K,H)},\quad
+ A=\frac{\rho_K^n}{HX},\quad B=\frac{\rho_H^N}{X},\quad
+ d(p)=\max\{-p,p-1,0\}.
+\]
+
+\begin{lemma}\label{lem:bridge-joint}
+Suppose $K,H\ge7$, $n-S>S^2$,
+\[
+ \delta_k=n\log(\rho_K/\rho_{K+1})\ge12,\qquad
+ \delta_h=N\log(\rho_H/\rho_{H+1})\ge12,\qquad
+ e^{-2.02}\le A,B\le e^{2.02}.
+\]
+With $\varepsilon=10^{-4}$, one has
+\[
+ w_{pq}\le57AB\varepsilon^{d(p)+d(q)},\qquad
+ \sum_{(p,q)\notin\{0,1\}^2}|pq|w_{pq}<.04AB.
+\]
+\end{lemma}
+
+\begin{proof}
+At an outside cell decrease the coordinate with the larger distance
+from $\{0,1\}$. The four outward ratios are bounded by
+$Ae^{-G_+(d)}$, $A^{-1}e^{-G_-(d)}$, $Be^{-J_+(d)}$, or
+$B^{-1}e^{-J_-(d)}$, where
+\begin{align*}
+G_+(d)&=n\log\frac{\rho_K}{\rho_{K+d}}
+             -\log\frac{H}{\max(1,H-d)},&&p=d+1,\\
+G_-(d)&=n\log\frac{\rho_{K-d}}{\rho_K}
+             -\log\frac{H+d+1}{H},&&p=-d,\\
+J_+(d)&=N\log\rho_H-[N+\min(d,K-1)]\log\rho_{H+d},&&q=d+1,\\
+J_-(d)&=(N-d-1)\log\rho_{H-d}-N\log\rho_H,&&q=-d.
+\end{align*}
+These expressions are used for admissible cells and $d\ge1$.
+For example the first case has $h\ge\max(1,H-d)$; the last has
+$k\le K+d+1\le S<n$.
+All four losses increase with $d$. Before truncation, their successive
+increments are bounded below, respectively, by
+\[
+ \frac{n}{(K+d+1)^2}-\log2,\quad
+ \frac{n}{(K-d)^2}-\log2,\quad
+ \frac{N}{(H+d+1)^2}-\log2,\quad
+ \frac{n-S}{S^2}-\log2,
+\]
+which are positive. For the fourth, putting $m=H-d\ge2$ gives the
+exact increment
+$(N-d-2)\log(\rho_{m-1}/\rho_m)-\log\rho_m$.
+After truncation in $G_+$ or $J_+$ monotonicity is immediate.
+The first-layer losses are at least
+\[
+ \delta_k-\log\frac H{H-1},\quad
+ \delta_k-\log\frac{H+2}H,\quad
+ \delta_h-\log\rho_{H+1},\quad
+ \delta_h-2\log\rho_{H-1}.
+\]
+Each correction is at most $1/3$. Thus every selected outward ratio
+is at most $e^{2.02-12+1/3}<\varepsilon$.
+This holds on the entire positive quadrant: a selected negative
+$h$ step forces $k\le S<n$, whereas in a positive $h$ step increasing
+$k$ only decreases the ratio, even when $n-k+1$ is negative.
+
+Descent takes exactly $d(p)+d(q)$ steps to the central four cells.
+Their largest normalized weight is
+$M=\max\{1,A,B,ABH/(H+1)\}<57AB$, since $e^{4.04}<57$.
+Finally
+\[
+ \sum_{p\in\mathbb Z}|p|\varepsilon^{d(p)}
+ =\frac{1+\varepsilon}{(1-\varepsilon)^2}.
+\]
+Only $(1,1)$ contributes inside the central box, so the weighted tail is
+less than
+\[
+ 57AB\left\{\left[\frac{1+\varepsilon}{(1-\varepsilon)^2}\right]^2-1\right\}
+ <57AB\,7\varepsilon<.04AB.
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:bridge-vertex}
+Suppose $K,H\ge7$, $n-K-H>(K+H)^2$, and the four coordinate-neighbor
+weights are at most $e^{-2}W_u(K,H)$. Then
+\[
+ \sum_{(k,h)\ne(K,H)}W_u(k,h)<\frac{400}{441}W_u(K,H).
+\]
+If also $n>1600$ and $\max(K,H)\le\sqrt n/4+2$, the sign of
+$P_n(-X)$ is $(-1)^{n+K+H-2}$ and exactly $K+H-2$ zeros lie outside
+$|x|=X$, counted with multiplicity.
+\end{lemma}
+
+\begin{proof}
+Use the preceding descent with distances $|p|,|q|$ from one cell.
+The first-layer boosts over the corresponding coordinate-neighbor
+ratios are at most $H/(H-1)$, $(H+1)/H$, $\rho_H$, $\rho_{H-1}$.
+Their logarithms are at most $1/6$. Subsequent losses increase by the
+same four difference calculations, now starting at the single cell.
+Thus $w_{pq}\le r^{|p|+|q|}$ for $r=e^{-11/6}<4/25$. Summation gives
+$\sum_{(p,q)\ne(0,0)}w_{pq}<4(4/25)/(1-4/25)^2=400/441$.
+The two central Bonferroni errors sum to at most
+$2(n+1)e^{-(8/5)\sqrt n}<.001$ under the stated coordinate bounds.
+Every other actual weight is bounded by its ideal weight. Hence the
+actual central monomial of degree $n-K-H+2$ dominates the remainder
+on $|x|=X$. Rouch\'e's theorem gives the count, and evaluation at $-X$
+gives the sign.
+\end{proof}
+
+\subsection{The sign inside a paired transition}
+
+Under the hypotheses of Lemma~\ref{lem:bridge-joint}, there is an exact factorization
+\[
+ w_{pq}=a_pb_qc_{pq},\quad
+ a_p=(1+p/K)^n(HX)^{-p},\quad
+ b_q=(1+q/H)^NX^{-q},\quad c_{pq}=(1+q/H)^{-p}.
+\]
+Let $F(u)=\sum_p(-1)^pa_p$ and $G(u)=\sum_q(-1)^qb_q$.
+All sums converge absolutely. The residual is one on both axes and
+$c_{11}=H/(H+1)$. Moreover
+\begin{equation}\label{eq:bridge-residual}
+ |c_{pq}-1|\le\frac{|pq|}{H}\max(1,c_{pq}).
+\end{equation}
+Indeed, if $t=1+q/H>0$ and $m=|p|$, its left side divided by the
+maximum is $1-\min(t,t^{-1})^m\le m[1-\min(t,t^{-1})]\le m|t-1|$.
+Consequently
+\begin{equation}\label{eq:bridge-product}
+ \sum_{p,q}(-1)^{p+q}w_{pq}
+ =F(u)G(u)-\frac{AB}{H+1}+E,\qquad |E|<.08AB/H.
+\end{equation}
+Here Lemma~\ref{lem:bridge-joint} bounds the weighted tail of $w$ by
+$.04AB$. The independent product $a_pb_q$ has the same bound: its
+first outward ratios are at most $e^{2.02-12}<10^{-4}$ and subsequent
+ratios decrease. Sum \eqref{eq:bridge-residual} outside the central box.
+
+We also need the actual Eulerian coefficients. Suppose $n\ge1600$
+and $\max(K,H)\le\sqrt n/4+2$. In the region $d(p)<H$, $d(q)<H$,
+both coordinates are at most $\sqrt n/2+4$, all cells belong to
+$k+h\le n+1$, and
+\[
+ n/k\ge(8/5)\sqrt n,\qquad (n-k+1)/h\ge(8/5)\sqrt n.
+\]
+The second follows at $t=\sqrt n\ge40$ from
+$t^2/5-69t/10-3>0$; the first is weaker.
+Bonferroni therefore bounds each near relative error by
+$2(n+1)e^{-(8/5)\sqrt n}$.
+Using the global envelope and
+$\sum_p\varepsilon^{d(p)}=2/(1-\varepsilon)$, the normalized error
+between the actual sum \eqref{eq:bridge-exact} and the infinite ideal
+sum is at most
+\begin{equation}\label{eq:bridge-actual-error}
+ \frac{456AB}{(1-\varepsilon)^2}
+ \left((n+1)e^{-(8/5)\sqrt n}+\varepsilon^H\right)
+ <\frac{AB}{1000H}.
+\end{equation}
+For the far part use the union of $d(p)\ge H$ and $d(q)\ge H$.
+After multiplying by $H/AB$, the near bound decreases for
+$\sqrt n\ge40$ and is below $10^7e^{-64}$ at the endpoint; the far
+bound decreases for integer $H\ge7$. This proves the strict inequality.
+
+For two successive mode events in different coordinates of one
+rectangle, the exact event times are
+$\max(\alpha,\beta)$ and $\min(\alpha,\beta)-\log\rho_H$.
+If their gap is less than $4$, then
+$|\alpha-\beta|+\log\rho_H<4$.
+There is a unique zero $\widetilde\alpha$ of $F$ within $.001$ of
+$\alpha$, and a unique zero $\widetilde\beta$ of $G$ within $.001$ of
+$\beta$; both functions are increasing in the respective
+$2.02$ neighborhoods. To verify this explicitly, put $\eta=e^{-12}$.
+Coordinate concavity gives, with missing negative indices set to zero,
+\[
+ a_{2+j}\le A^2\eta(A\eta)^j,\qquad
+ a_{-1-j}\le A^{-1}\eta(A^{-1}\eta)^j,\qquad j\ge0.
+\]
+If $|u-\alpha|\le T$ and $r_T=e^T\eta$, the two tail bounds are
+\begin{align*}
+ \sum_{p\notin\{0,1\}}a_p
+ &\le\frac{\eta(e^T+e^{2T})}{1-r_T},\\
+ \sum_{p\notin\{0,1\}}|p|a_p
+ &\le\frac{\eta[e^T+e^{2T}(2-r_T)]}{(1-r_T)^2}.
+\end{align*}
+For $T=.001$, the first is below $.00002$, whereas $1-A$ has
+opposite signs of magnitude exceeding $.000999$ at the endpoints.
+For $T=2.02$, the second is below $.001$, so
+$F'(u)>e^{-2.02}-.001>.128$. This proves the assertions directly.
+The proof for $G$ is identical. These are exact Eulerian zeros:
+the Frobenius identity expresses $F$ as the nonzero prefactor
+$(-1)^K(HX)^K/K^n$ times
+$A_n(-1/(HX))/(1+1/(HX))^{n+1}$.
+
+Choose $u_*=(\widetilde\alpha+\widetilde\beta)/2$.
+Its distances from the two balances are below $2.001$, and
+$F(u_*)G(u_*)\le0$. Equations~\eqref{eq:bridge-product} and
+\eqref{eq:bridge-actual-error} show that the normalized actual sum is
+less than
+\[
+ -\frac{AB}{H}\left(\frac H{H+1}-.08-.001\right)<-.79AB/H<0.
+\]
+This sign is opposite to the two separators around the paired cluster.
+The midpoint lies between those separators: the independent zeros
+are within $.001$ of their balances, and the separators are at least
+$2$ from the actual events.
+
+\subsection{The phase at a separator}
+
+\begin{lemma}\label{lem:bridge-phase}
+Let $n>1600$, $u\ge3\sqrt n$, and let $(K,H)$ maximize $W_u$, with
+$K,H\ge7$ and coordinate-neighbor ratios at most $e^{-2}$.
+For $r=K+H-2$,
+\[
+ |\phi(-u)-(r-n)\pi|<3\pi/4.
+\]
+\end{lemma}
+
+\begin{proof}
+Set $C=1+e^u$, $z=-u+i\pi$, $N=n-K+1$, and
+$H_n(y)=\sum_{\ell=0}^{n-1}A(n,\ell+1)y^\ell/(n)_\ell$.
+Eulerian symmetry gives $R_{-u}(z)=n!C^nz^{-n-1}H_n(z/C)$.
+By Lemma~\ref{lem:factorial}, $H_n$ has negative real roots, so its
+coefficients tilted by a positive geometric sequence are log-concave.
+Put $\varrho=|z|/C$ and
+$c_\ell=A(n,\ell+1)\varrho^\ell/(n)_\ell$.
+
+Comparison first in $k$ and then in $h$ gives $K,H<n/u+1$ and
+\begin{equation}\label{eq:bridge-h-mode}
+ N\log\rho_H\le u\le N\log\rho_{H-1}.
+\end{equation}
+The Eulerian relative error at $K$ is below $.001$, since
+$n/K>3\sqrt n-9$ and $(n+1)e^{9-3\sqrt n}<.001$.
+Writing $A_\pm$ for the $k$-neighbor ratios, we have
+\begin{align*}
+ \frac{c_K}{c_{K-1}}
+ &\le\frac{A_+}{.999}\frac{H\sqrt{u^2+\pi^2}}N\frac XC,\\
+ \frac{c_{K-2}}{c_{K-1}}
+ &\le\frac{A_-}{.999}\frac{(N+1)C}{HX\sqrt{u^2+\pi^2}}.
+\end{align*}
+Here $u>120$, $N>1585$, and \eqref{eq:bridge-h-mode} gives
+$Hu/N\le7/6$ and $(N+1)/(Hu)<1.001(8/7)$.
+Also $C/X<1.001$ and $\sqrt{1+\pi^2/u^2}<1.001$.
+Both ratios are therefore below $1.18e^{-2}<1/6$.
+Log-concavity bounds the sum of the other terms by
+$2\sum_{j\ge1}6^{-j}=2/5$ times the term of degree $K-1$.
+
+That monomial dominates on $|y|=\varrho$. Along the upper semicircle
+the remaining factor stays within distance $.4$ of $1$, so its
+canonical argument has magnitude below $.42$. It starts positive,
+which fixes the argument without a winding ambiguity. With
+$\theta=\arctan(\pi/u)$ we obtain
+\[
+ \phi(-u)=-(N+1)(\pi-\theta)+\zeta,\qquad |\zeta|<.42.
+\]
+The logarithmic-mean bounds
+$1/\log\rho_{H-1}\ge\sqrt{H(H-1)}>H-.6$ and
+$1/\log\rho_H\le H+.5$ give $H-.6<N/u\le H+.5$.
+Furthermore
+\[
+ 0<(N+1)/u-(N+1)\theta/\pi
+ <(n+1)\pi^2/(3u^3)<.004,\qquad 1/u<.009.
+\]
+Thus $H-.604<(N+1)\theta/\pi<H+.509$.
+Subtracting $(r-n)\pi=-(N+1)\pi+H\pi$ bounds the phase error by
+$.604\pi+.42<3\pi/4$.
+\end{proof}
+
+\subsection{Assembling the transition}
+
+\begin{lemma}\label{lem:bridge}
+For every $n>1600$ there are an integer $r<3\sqrt n/5$ and a number
+$u\in[4\sqrt n-8,4\sqrt n]$ such that exactly $r$ zeros of $P_n$ lie
+outside $|x|=e^u$, all are distinct and negative, and
+\[
+ \operatorname{sgn}P_n(-e^u)=(-1)^{n+r},\qquad
+ |\phi(-u)-(r-n)\pi|<3\pi/4.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $v=\sqrt n>40$ and $L=\lfloor\sqrt{n/(4\log n)}\rfloor$.
+Lemma~\ref{lem:outer} supplies $2L$ distinct negative roots beyond
+its innermost separator $X_L^-$.
+Start at $u_{\rm out}=\log X_L^- -2$, with central cell $(L+1,L+1)$.
+Its left ratios are below $e^{-2}/2$ and its right ratios below
+$e^2/1000<e^{-2}$, by the outer lemma.
+Since $\log n>25/4$, we have $7\le L\le v/5$ and $L+1\le9v/40$.
+For $D=2(L+1+\rho_L^L)<2(L+4)$,
+\[
+ u_{\rm out}=n\log\rho_L-\log D-2
+ >40v/9-\log(2v/5+8)-2>37v/9>4v.
+\]
+The logarithm comparison holds at $v=40$ and its right side has the
+larger derivative thereafter. Lemma~\ref{lem:bridge-vertex} gives an
+exact exterior count of $2L$, already supplied by the outer lemma.
+
+We verify all geometry down to $u=4v-8$. A maximum of $W_u$ exists
+on the infinite quadrant. Comparison first in $k$ gives $K<n/u+1<n$,
+and then comparison in $h$ gives $H<n/u+1$.
+At an event its stepping coordinate is less than $n/u$, directly
+from \eqref{eq:bridge-balances}. Put $a=v^2/(4v-8)$.
+Thus the stepping coordinate is less than $a$ and the other less
+than $a+1$. The same-coordinate spacings exceed
+\[
+ \frac{v^2}{(a+1)^2},\qquad \frac{v^2-a}{(a+1)^2},
+\]
+both greater than $12$. For $v\ge41$, clearing denominators in the
+second comparison gives
+$4\{v^3(v-41)+18v^2+192v-192\}>0$.
+For $40<v<41$, $a<11$, so the stepping coordinate is at most $10$
+and the other at most $11$; the smaller spacing exceeds $1590/121>13$.
+In a paired rectangle both stepping coordinates are less than $a$,
+so its $\delta_k,\delta_h$ exceed $12$ as well.
+Every mode center satisfies
+\[
+ \max(K,H)<a+1<v/4+2,\quad
+ K+H<v/2+4<3v/5,\quad n-K-H>(K+H)^2.
+\]
+The mode path applies since its total degree remains below
+$\lfloor\sqrt n\rfloor$. Its coordinates never decrease as $u$
+decreases, and hence remain at least $L+1\ge8$.
+
+Join consecutive events into a cluster when their gap is \emph{less}
+than $4$; gaps at least $4$ separate clusters.
+A cluster contains at most two events: three would put two
+same-coordinate events within $8$. A pair uses both coordinates.
+The spacing lower bounds depend only on the earlier event, so this
+also excludes a hypothetical third event just below the eight-unit band.
+
+Choose $u_{\rm in}\in[4v-8,4v]$ at distance at least $2$ from every
+event. If $4v$ is already safe, use it. Otherwise take the cluster
+with an event within $2$ of $4v$ and move to distance $2$ below its
+lowest event. Its width is less than $4$, so the displacement is
+less than $8$; the next cluster is at least $4$ away.
+Use the two endpoints and the midpoints of intervening separating
+gaps as separators. A coordinate neighbor of their maximizing cell
+belongs to an adjacent total degree, so its ratio is at most $e^{-2}$.
+Lemma~\ref{lem:bridge-vertex} applies at each separator.
+
+Across a singleton cluster the total degree increases by one.
+The opposite separator signs give one negative real zero.
+Across a paired cluster it increases by two; the separator signs
+agree and the intermediate sign established above gives two distinct
+negative real zeros. The Rouch\'e counts give exactly one or two
+zeros in the respective annuli. Starting with the $2L$ outer zeros,
+all $r=K+H-2$ exterior zeros at the final separator are therefore
+distinct and negative.
+Finally $u_{\rm in}\ge4v-8>3v$, so Lemma~\ref{lem:bridge-phase}
+gives the phase estimate, while the coordinate bound gives
+$r<3v/5$.
+\end{proof}
+
+All decimal constants here are terminating rational numbers.
+Their exponential comparisons and polynomial endpoint checks are also
+certified by the accompanying standard-library verification scripts.
