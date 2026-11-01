@@ -1,2 +1,0 @@
-# Python 3.9 or later. Verification uses only the standard library.
-# Optional PDF rebuild: install TeX Live or MiKTeX with pdflatex.

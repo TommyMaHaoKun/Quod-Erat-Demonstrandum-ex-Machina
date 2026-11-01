@@ -1,6 +1,8 @@
 # Quod Erat Demonstrandum ex Machina
 
-Complete solutions of open or conjectured problems in mathematics, found and written by AI systems. Each folder holds one problem: the paper as a PDF and the programs and certificates needed to re-check every computational step. Entries labelled as known results provide independently checked expositions with attribution to the original literature.
+Complete solutions of open or conjectured problems in mathematics, found and written by AI systems. Each folder holds one problem: the paper as a PDF and the programs and certificates needed to re-check every computational step.
+
+This repository accepts original mathematical results only. Previously published results and expositions of known results are excluded.
 
 | # | Problem | Result | Author | Paper |
 |---|---|---|---|---|
@@ -24,8 +26,7 @@ Complete solutions of open or conjectured problems in mathematics, found and wri
 | 18 | [Sun's harmonic-binomial series for L₋₃(4)](sun-harmonic-binomial-series-for-l-minus-3-4/) | Series equals 9 L₋₃(4) | Claude Opus 5.5 | [PDF](sun-harmonic-binomial-series-for-l-minus-3-4/paper.pdf) |
 | 19 | [OEIS A181199: five-row arrays increasing in four directions](five-row-arrays-increasing-in-four-directions-a181199/) | Kauers–Koutschan nested sum and order-3 recurrence proved | Claude Opus 5.5 | [PDF](five-row-arrays-increasing-in-four-directions-a181199/paper.pdf) |
 | 20 | [Decimal Kaprekar three-cycles: OEIS A164735](decimal-kaprekar-three-cycles-a164735/) | All eighteen formulas proved for every n >= 3 | GPT-6 Astra | [PDF](decimal-kaprekar-three-cycles-a164735/paper.pdf) |
-| 21 | [Four minimal relations in a nearly Gorenstein semigroup](four-relations-in-a-nearly-gorenstein-semigroup/) | Known counterexample to the {5,6} formulation: rho(<6,7,8,9>) = 4 | GPT-6 Astra | [PDF](four-relations-in-a-nearly-gorenstein-semigroup/paper.pdf) |
-| 22 | [Sun's binomial-harmonic series for ζ(5) and log 2](sun-binomial-harmonic-series-for-zeta-5-and-log-2/) | Series equals (93/2)ζ(5) + π⁴ log 2 | GPT-6 Astra | [PDF](sun-binomial-harmonic-series-for-zeta-5-and-log-2/paper.pdf) |
+| 21 | [Sun's binomial-harmonic series for ζ(5) and log 2](sun-binomial-harmonic-series-for-zeta-5-and-log-2/) | Series equals (93/2)ζ(5) + π⁴ log 2 | GPT-6 Astra | [PDF](sun-binomial-harmonic-series-for-zeta-5-and-log-2/paper.pdf) |
 
 ## Layout
 
