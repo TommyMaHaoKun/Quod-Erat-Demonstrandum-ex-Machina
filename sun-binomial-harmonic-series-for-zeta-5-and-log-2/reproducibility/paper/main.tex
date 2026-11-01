@@ -1,0 +1,407 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\Li}{\operatorname{Li}}
+\newcommand{\dd}{\,\mathrm{d}}
+\title{A parameter-derivative proof of Sun's\\
+binomial-harmonic identity for $\zeta(5)$}
+\author{GPT-6 Astra}
+\date{November 1, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Conjecture 3.11, equation (3.15), of Zhi-Wei Sun's
+\emph{Various conjectural series identities}. The series has the value
+$\frac{93}{2}\zeta(5)+\pi^4\log 2$.
+The proof differentiates a parameter identity already established by
+Kam Cheong Au and uses a second evaluation proved in the same work.
+We give the normalization, justify differentiation by locally uniform
+convergence, and evaluate the remaining harmonic sums explicitly.
+We also correct the Gamma interpolation appearing in Sun's accompanying
+remark. Exact rational interval computations provide an independent check
+of the final identity.
+\end{abstract}
+
+\section{Statement and relation to earlier work}
+Write $H_0=0$, $H_m=\sum_{j=1}^m j^{-1}$ for $m\geq1$, and
+$\zeta(s)=\sum_{j=1}^{\infty}j^{-s}$ for real $s>1$.
+All logarithms below are natural. Define
+\begin{equation}\label{eq:definitions}
+ P(x)=21x^3-22x^2+8x-1,\qquad
+ c_n=\frac{256^n}{n^7\binom{2n}{n}^7},\qquad
+ h_n=H_{2n-1}-H_{n-1}.
+\end{equation}
+\begin{theorem}\label{thm:main}
+The following series converges absolutely and satisfies
+\begin{equation}\label{eq:target}
+ \boxed{\displaystyle
+ \sum_{n=1}^{\infty}
+ \frac{256^n\bigl(14P(n)(H_{2n-1}-H_{n-1})-63n^2+44n-8\bigr)}
+ {n^7\binom{2n}{n}^7}
+ =\frac{93}{2}\zeta(5)+\pi^4\log2.}
+\end{equation}
+\end{theorem}
+
+This is exactly Sun's Conjecture 3.11, equation (3.15), in
+\cite{Sun}, version 3, dated April 13, 2026. The conjecture itself is
+dated April 12, 2026. Its companion identity
+\begin{equation}\label{eq:companion}
+ \sum_{n=1}^{\infty}c_nP(n)=\frac{\pi^4}{8}
+\end{equation}
+was conjectured by Guillera and proved by Au in
+\cite[Example XI, equation (4.2)]{Au}.
+
+Our two substantive hypergeometric inputs are Au's parameter identity
+\cite[equation (4.4)]{Au} and the evaluation at the end of
+\cite[Example XV]{Au}. Both are stated explicitly in the next section.
+Au derives them using Wilf--Zeilberger pairs; the first combines two such
+pairs, including their boundary contributions. The result here is the
+explicit derivative consequence giving Sun's later conjecture.
+A source and subsequent-proof search performed on November 1, 2026
+is recorded in the accompanying literature review.
+
+\section{Two established hypergeometric inputs}
+For $m\geq0$, let $(z)_m=\prod_{j=0}^{m-1}(z+j)$, with $(z)_0=1$.
+The Gamma function is $\Gamma(z)=\int_0^{\infty}t^{z-1}e^{-t}\dd t$
+for $\Re z>0$, continued meromorphically elsewhere. Its logarithmic
+derivative is denoted by $\psi$.
+
+For $a$ near zero define
+\begin{align}
+ S(a)&=\sum_{n=1}^{\infty}
+ \frac{64^{-n}P(n+2a)(1+2a)_n^7}
+ {(n+2a)^7(\tfrac12+2a)_n^7},\label{eq:S}\\
+ C(a)&=\frac{\Gamma(\tfrac12-a)\Gamma(\tfrac12+2a)^4\Gamma(1+2a)}
+ {\Gamma(\tfrac12+a)\Gamma(1+a)^4\Gamma(1+4a)},\label{eq:C}\\
+ B(a)&=\sum_{k=0}^{\infty}
+ \frac{(3a+2k+1)(\tfrac12+a)_k^3(1+a)_k}
+ {(4a+2k+1)^3(\tfrac12+2a)_k^3(1+2a)_k},\label{eq:B}\\
+ A(a)&=\sum_{k=0}^{\infty}
+ \frac{(6a+4k+3)(\tfrac12+a)_k(1+a)_k^4(1+4a)_k}
+ {(2k+1-2a)(k+1+2a)(4a+2k+1)^4
+ (\tfrac12-a)_k(\tfrac12+2a)_k^4(1+2a)_k}.
+ \label{eq:A}
+\end{align}
+
+\begin{proposition}[Au's identities in the normalization used here]
+For $a$ in a neighborhood of zero,
+\begin{equation}\label{eq:Au}
+ S(a)=C(a)B(a)-4aA(a).
+\end{equation}
+In addition,
+\begin{equation}\label{eq:AuXV}
+ \sum_{n=1}^{\infty}
+ \frac{(1)_n^4}{(\tfrac12)_n^4}
+ \frac{4n-1}{4n^5(2n-1)}
+ =93\zeta(5)-7\pi^2\zeta(3).
+\end{equation}
+\end{proposition}
+
+These are established results of \cite{Au}.
+To check the translation of equation (4.4), its first series is
+$32A(a)$, its second is $-8C(a)B(a)/a$, and its right side is
+$-8S(a)/a$. The last assertion follows from
+\begin{equation}\label{eq:dup}
+ (1+4a)_{2n}=4^n(\tfrac12+2a)_n(1+2a)_n
+\end{equation}
+and expansion of $P(n+2a)$. Multiplication by $-a/8$ gives
+\eqref{eq:Au}. Formula \eqref{eq:AuXV} is the final displayed summation
+of Au's Example XV, before Remark 5.3. In that example, it is obtained
+from equation (5.2) by the degree-two coefficient combination specified
+in footnote 21.
+
+\begin{lemma}\label{lem:analytic}
+The functions $A$, $B$, and $S$ are holomorphic for $|a|<1/8$ and may
+be differentiated term by term there. Equation \eqref{eq:Au} extends
+holomorphically through $a=0$.
+\end{lemma}
+\begin{proof}
+Fix $0<r<1/8$. All summands are holomorphic on a neighborhood of
+$|a|\leq r$; their denominators are nonzero there. The uniform Gamma-ratio
+estimate
+\[
+ \frac{\Gamma(k+u)}{\Gamma(k+v)}
+ =k^{u-v}\bigl(1+O(k^{-1})\bigr)
+\]
+for $u,v$ in compact sets shows that the summands of $A$, $B$, and $S$
+are respectively
+\[
+ O(k^{-3}),\qquad O(k^{-2+4r}),\qquad
+ O(64^{-n}n^{-1/2}),
+\]
+uniformly on that disk. For $A$, the Pochhammer quotient has exponent
+$2$ and the rational factor has exponent $-5$. For $B$, these exponents
+are $-4a$ and $-2$. For $S$, they are $7/2$ and $-4$.
+The finitely many initial terms cause no problem. The three majorants
+are summable. Normal convergence and the holomorphic convergence theorem
+give the stated differentiability, also by applying Cauchy's formula
+on a slightly larger disk. Both sides of \eqref{eq:Au} are therefore
+holomorphic at zero, which removes the apparent pole in Au's original
+normalization. This argument supplies the continuation and
+differentiation needed below.
+\end{proof}
+
+\section{The harmonic sums produced by differentiation}
+\begin{lemma}\label{lem:Euler}
+One has
+\begin{align}
+ U:=\sum_{k=0}^{\infty}\frac{H_k}{(2k+1)^2}
+ &=\frac74\zeta(3)-\frac{\pi^2}{4}\log2,\label{eq:U}\\
+ W:=\sum_{k=0}^{\infty}\frac{H_{2k}}{(2k+1)^2}
+ &=\frac7{16}\zeta(3).\label{eq:W}
+\end{align}
+\end{lemma}
+\begin{proof}
+The generating function
+$\sum_{k\geq0}H_kz^k=-\log(1-z)/(1-z)$ gives
+\[
+ U=\int_0^1\frac{\log x\log(1-x^2)}{1-x^2}\dd x
+ =\frac14\int_0^1
+ \frac{y^{-1/2}\log y\log(1-y)}{1-y}\dd y.
+\]
+For $\alpha>0$, expand the beta function at $b=0$:
+\begin{equation}\label{eq:beta}
+ \mathrm B(\alpha,b)=\frac1b-\gamma-\psi(\alpha)
+ +\frac b2\bigl((\gamma+\psi(\alpha))^2+\zeta(2)-\psi'(\alpha)\bigr)
+ +O(b^2).
+\end{equation}
+Here $\gamma$ is Euler's constant; the expansion follows by multiplying
+the Taylor series of $\Gamma(b)\Gamma(\alpha)/\Gamma(\alpha+b)$.
+The derivative in $\alpha$ removes the pole. Taking the mixed derivative
+at $\alpha=1/2$, $b=0$ gives
+\[
+ U=\frac14\bigl((\gamma+\psi(\tfrac12))\psi'(\tfrac12)
+ -\tfrac12\psi''(\tfrac12)\bigr).
+\]
+Differentiation under the integral is valid near these parameters:
+at $y=1$ the factor $\log y$ cancels the apparent singularity, leaving
+an integrable logarithm. The values
+\[
+ \psi(\tfrac12)=-\gamma-2\log2,\qquad
+ \psi'(\tfrac12)=\frac{\pi^2}{2},\qquad
+ \psi''(\tfrac12)=-14\zeta(3)
+\]
+follow from Gamma duplication and the absolutely convergent polygamma
+series. They prove \eqref{eq:U}.
+
+Taking the even part of the harmonic generating function yields
+\begin{equation}\label{eq:Wint}
+ W=\frac12\int_0^1\log x
+ \left(\frac{\log(1-x)}{1-x}+\frac{\log(1+x)}{1+x}\right)\dd x.
+\end{equation}
+Integration by parts and then the substitution $t=1-x$ give
+\[
+ \int_0^1\frac{\log x\log(1-x)}{1-x}\dd x
+ =\frac12\int_0^1\frac{\log^2(1-x)}x\dd x
+ =\frac12\int_0^1\frac{\log^2t}{1-t}\dd t=\zeta(3).
+\]
+The second integral in \eqref{eq:Wint} is $-J/2$, where
+$J=\int_0^1\log^2(1+x)\dd x/x$. We give the details of its evaluation.
+
+Define $\Li_s(z)=\sum_{n\geq1}z^n/n^s$ on the unit disk, using continuous
+endpoint values where required. Differentiating and fixing constants
+at zero proves
+\begin{align}
+ \Li_2(x)+\Li_2(1-x)&=\zeta(2)-\log x\log(1-x),\label{eq:dilog1}\\
+ \Li_2\!\left(-\frac{x}{1-x}\right)
+ &=-\Li_2(x)-\frac12\log^2(1-x).\label{eq:dilog2}
+\end{align}
+For $0<x\leq1/2$, these in turn prove by differentiation
+\begin{align}
+ &\Li_3(x)+\Li_3(1-x)+\Li_3\!\left(-\frac{x}{1-x}\right)\notag\\
+ &\hspace{1em}=\zeta(3)+\zeta(2)\log(1-x)
+ -\frac12\log x\log^2(1-x)+\frac16\log^3(1-x).
+ \label{eq:trilog}
+\end{align}
+Writing $L=\log2$, substituting $x=1/2$, and using
+$\Li_3(-1)=-3\zeta(3)/4$, we obtain
+\[
+ \Li_2(\tfrac12)=\frac{\pi^2}{12}-\frac{L^2}{2},\qquad
+ \Li_3(\tfrac12)=\frac78\zeta(3)-\frac{\pi^2L}{12}+\frac{L^3}{6}.
+\]
+In $J$, the substitution $t=(1+x)^{-1}$ gives
+\[
+ J=\int_{1/2}^1\frac{\log^2t}{t(1-t)}\dd t
+ =\frac{L^3}{3}+2\zeta(3)-\int_0^{1/2}\frac{\log^2t}{1-t}\dd t.
+\]
+An antiderivative of the last integrand is
+$-\log^2t\log(1-t)-2\log t\Li_2(t)+2\Li_3(t)$.
+Consequently
+\[
+ J=2\zeta(3)-\frac23L^3-2L\Li_2(\tfrac12)
+ -2\Li_3(\tfrac12)=\frac14\zeta(3).
+\]
+Equation \eqref{eq:Wint} now gives $W=7\zeta(3)/16$.
+All integrals used here converge absolutely; the generating-function
+integrations also follow from monotone convergence after adjusting signs.
+\end{proof}
+
+\section{Proof of the conjecture}
+The values in \eqref{eq:C} and \eqref{eq:B} at zero are
+\begin{equation}\label{eq:CB0}
+ C(0)=\pi^2,\qquad C'(0)=-12\pi^2\log2,\qquad B(0)=\frac{\pi^2}{8}.
+\end{equation}
+Indeed, the logarithmic derivative of $C$ is
+$6\psi(1/2)-6\psi(1)=-12\log2$ at zero.
+The summand of $B(0)$ is $(2k+1)^{-2}$.
+Logarithmic differentiation of each factor of \eqref{eq:B} gives
+\begin{equation}\label{eq:Bprime}
+ B'(0)=\sum_{k=0}^{\infty}
+ \left(\frac{-6H_{2k}+2H_k}{(2k+1)^2}
+ -\frac9{(2k+1)^3}\right)
+ =-7\zeta(3)-\frac{\pi^2}{2}\log2.
+\end{equation}
+For clarity, the Pochhammer factors contribute $-6H_{2k}+2H_k$,
+using $\sum_{j=0}^{k-1}(j+1/2)^{-1}=2H_{2k}-H_k$.
+The linear numerator and cubed linear denominator contribute
+$-9/(2k+1)$. The last equality in \eqref{eq:Bprime} follows from
+Lemma~\ref{lem:Euler} and
+$\sum_{k\geq0}(2k+1)^{-3}=7\zeta(3)/8$.
+
+Setting $a=0$ in \eqref{eq:A} gives
+\[
+ A(0)=\sum_{k=0}^{\infty}
+ \frac{(4k+3)(1)_k^4}{(2k+1)^5(k+1)(\tfrac12)_k^4}.
+\]
+With $n=k+1$ and
+$\frac{(1)_{n-1}}{(1/2)_{n-1}}
+=\frac{n-1/2}{n}\frac{(1)_n}{(1/2)_n}$, its summand is one quarter
+of the corresponding summand in \eqref{eq:AuXV}. Hence
+\begin{equation}\label{eq:A0}
+ A(0)=\frac{93\zeta(5)-7\pi^2\zeta(3)}4.
+\end{equation}
+Differentiating \eqref{eq:Au}, justified by Lemma~\ref{lem:analytic},
+and applying \eqref{eq:CB0}--\eqref{eq:A0}, we find
+\begin{align}
+ S'(0)&=C'(0)B(0)+C(0)B'(0)-4A(0)\notag\\
+ &=-\frac32\pi^4\log2-7\pi^2\zeta(3)
+ -\frac12\pi^4\log2-93\zeta(5)+7\pi^2\zeta(3)\notag\\
+ &=-93\zeta(5)-2\pi^4\log2.\label{eq:Sprime}
+\end{align}
+
+To identify this derivative with the requested series, set
+\[
+ q_n(a)=\frac{64^{-n}(1+2a)_n^7}
+ {(n+2a)^7(\tfrac12+2a)_n^7}.
+\]
+The elementary identity $(1/2)_n=(2n)!/(4^nn!)$ gives $q_n(0)=c_n$.
+Differentiating the finite products directly gives
+\begin{align*}
+ \frac{q_n'(0)}{q_n(0)}
+ &=14H_n-14(2H_{2n}-H_n)-\frac{14}{n}\\
+ &=-28(H_{2n-1}-H_{n-1})=-28h_n.
+\end{align*}
+Since $P'(n)=63n^2-44n+8$, it follows that
+\[
+ S'(0)=\sum_{n=1}^{\infty}c_n\bigl(2P'(n)-28P(n)h_n\bigr)
+ =-2\sum_{n=1}^{\infty}c_n\bigl(14P(n)h_n-P'(n)\bigr).
+\]
+Combining this with \eqref{eq:Sprime} proves \eqref{eq:target}.
+Absolute convergence follows either from the same exponential
+majorant or from the explicit bound in Section~\ref{sec:check}.
+\hfill$\square$
+
+\section{The Gamma interpolation in the source}
+Sun's Remark 3.11 gives an auxiliary Gamma expression accompanying
+the conjecture. The denominator printed there has $\Gamma(2x)$;
+the expression that interpolates the stated binomial summand is
+\begin{equation}\label{eq:corrected}
+ f(x)=\frac{256^x P(x)\Gamma(x)^{14}}{128\Gamma(2x)^7}
+ =\pi^{7/2}64^{-x}P(x)\frac{\Gamma(x)^7}{\Gamma(x+1/2)^7},
+ \qquad x>0.
+\end{equation}
+The factor $\Gamma(2x)^7$ follows directly by replacing factorials
+in \eqref{eq:definitions}; Gamma duplication proves the second equality.
+In particular $f(n)=c_nP(n)$. If the seventh power is omitted,
+this equality already fails at $n=2$, by a factor $\Gamma(4)^6=6^6$.
+
+Logarithmic differentiation of the weight in \eqref{eq:corrected} gives
+\[
+ f'(n)=c_n\bigl(P'(n)+(8\log2-14h_n)P(n)\bigr).
+\]
+The companion identity \eqref{eq:companion} also follows by putting
+$a=0$ in \eqref{eq:Au}. Thus the theorem gives the equivalent
+derivative evaluation
+\[
+ \sum_{n=1}^{\infty}f'(n)=-\frac{93}{2}\zeta(5).
+\]
+The proof of the theorem used the finite-product derivative directly;
+the corrected interpolation provides a separate check of the formulation.
+
+\section{Independent arithmetic checks and reproducibility}\label{sec:check}
+The proof above is analytic and uses the two explicitly attributed
+identities of Au. The included verification program checks the algebraic
+normalization and constant cancellation using exact symbolic arithmetic,
+and computes independent rational enclosures of both sides of
+\eqref{eq:target}. We specify its error bounds here.
+
+Since $0<h_n\leq1$, the absolute value of the numerator in parentheses
+in \eqref{eq:target} is at most $843n^3$ for $n\geq1$.
+The largest coefficient in $(1+1)^{2n}$ is $\binom{2n}{n}$, so
+$\binom{2n}{n}\geq4^n/(2n+1)$. Therefore the absolute remainder
+after $N$ terms is bounded by
+\begin{equation}\label{eq:tail}
+ R_N\leq843\cdot3^7\sum_{n>N}\frac{n^3}{64^n}
+ \leq\frac87\,843\cdot3^7\frac{(N+1)^3}{64^{N+1}}.
+\end{equation}
+The last step uses the successive-term ratio at most $1/8$.
+For $N=100$ this is less than $8.175\times10^{-171}$.
+
+For the other side, the program uses Machin's formula
+$\pi=16\arctan(1/5)-4\arctan(1/239)$ with alternating-series bounds,
+and the positive series
+$\log2=2\sum_{j\geq0}3^{-2j-1}/(2j+1)$ with a geometric tail bound.
+For $\zeta(5)$, Euler's transformation gives
+\[
+ \frac{15}{16}\zeta(5)=\sum_{j=0}^{\infty}\frac{d_j}{2^{j+1}},
+ \qquad
+ d_j=\sum_{i=0}^{j}(-1)^i\binom ji\frac1{(i+1)^5}.
+\]
+The integral
+$d_j=\frac1{24}\int_0^1(1-t)^j(-\log t)^4\dd t$
+shows $0<d_j\leq1$. The omitted tail after $M$ terms is therefore
+at most $2^{-M}$. In particular, the rational computations require
+no floating-point error model.
+
+Both enclosures round outward to the same interval of width $10^{-160}$.
+For a readable numerical example their common value begins
+\[
+ 115.7359774252925386770599308882310257130715848179365598448183046\ldots.
+\]
+The first term of the series is exactly $114$.
+The arithmetic calculation is a consistency check accompanying the proof.
+
+To reproduce the checks, install \path{requirements.txt} and run
+\texttt{python src/verify.py} from the supplement root. It writes
+\path{certificates/verification.json}. The source \path{paper/main.tex}
+builds with pdfLaTeX; exact build commands are in the README.
+
+\paragraph{Authorship.}
+This manuscript was generated by the AI system GPT-6 Astra.
+The accompanying scripts check the stated algebra and numerical bounds.
+
+\begin{thebibliography}{9}
+\bibitem{Sun}
+Zhi-Wei Sun,
+\emph{Various conjectural series identities},
+arXiv:2603.29973v3, April 13, 2026.
+Conjecture 3.11, equation (3.15), and Remark 3.11.
+\url{https://arxiv.org/abs/2603.29973v3}.
+
+\bibitem{Au}
+Kam Cheong Au,
+\emph{Wilf--Zeilberger seeds and non-trivial hypergeometric identities},
+Journal of Symbolic Computation \textbf{130} (2025), 102421.
+\href{https://doi.org/10.1016/j.jsc.2025.102421}{doi:10.1016/j.jsc.2025.102421}.
+The version used for equation numbering is arXiv:2312.14051v4,
+October 10, 2024, Examples XI and XV.
+\url{https://arxiv.org/abs/2312.14051v4}.
+\end{thebibliography}
+\end{document}
