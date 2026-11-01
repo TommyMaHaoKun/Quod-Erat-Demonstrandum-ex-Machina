@@ -1,0 +1,884 @@
+{
+  "claim": "Counterexample to rho in {5,6}: S=<6,7,8,9> has rho=4.",
+  "arithmetic": "exact integers",
+  "generators": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "conductor": 12,
+  "conductor_block_factorizations": {
+    "12": [
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    "13": [
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "14": [
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "15": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "16": [
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "17": [
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ]
+  },
+  "gaps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    11
+  ],
+  "Frobenius_number": 11,
+  "Apery_modulo_6": [
+    0,
+    7,
+    8,
+    9,
+    16,
+    17
+  ],
+  "negative_PF_exclusion": {
+    "general_case": "Every f < -6 has f+6 < 0, hence f+6 is outside S.",
+    "remaining_negative_candidates_generator_witnesses": {
+      "-6": 7,
+      "-5": 6,
+      "-4": 6,
+      "-3": 6,
+      "-2": 6,
+      "-1": 6
+    }
+  },
+  "pseudo_Frobenius_numbers": [
+    10,
+    11
+  ],
+  "NG_vector": [
+    11,
+    10,
+    10,
+    10
+  ],
+  "NG_membership_matrix_columns_PF": [
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      9,
+      8
+    ]
+  ],
+  "non_almost_symmetric_witness": {
+    "x": 1,
+    "F_minus_x": 10,
+    "x_is_PF": false
+  },
+  "all_Betti_degrees_search_bound": 28,
+  "all_degree_factorizations": [
+    {
+      "degree": 0,
+      "factorizations": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 1,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 2,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 3,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 4,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 5,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 6,
+      "factorizations": [
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 7,
+      "factorizations": [
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 8,
+      "factorizations": [
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 9,
+      "factorizations": [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 10,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 11,
+      "factorizations": [],
+      "components_by_index": []
+    },
+    {
+      "degree": 12,
+      "factorizations": [
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 13,
+      "factorizations": [
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 14,
+      "factorizations": [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 15,
+      "factorizations": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 16,
+      "factorizations": [
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 17,
+      "factorizations": [
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 18,
+      "factorizations": [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 19,
+      "factorizations": [
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 20,
+      "factorizations": [
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 21,
+      "factorizations": [
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "degree": 22,
+      "factorizations": [
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "degree": 23,
+      "factorizations": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "degree": 24,
+      "factorizations": [
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "degree": 25,
+      "factorizations": [
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "degree": 26,
+      "factorizations": [
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "degree": 27,
+      "factorizations": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "degree": 28,
+      "factorizations": [
+        [
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "components_by_index": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    }
+  ],
+  "Betti_elements": [
+    {
+      "degree": 14,
+      "factorizations": [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "component_count": 2
+    },
+    {
+      "degree": 15,
+      "factorizations": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "component_count": 2
+    },
+    {
+      "degree": 16,
+      "factorizations": [
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "component_count": 2
+    },
+    {
+      "degree": 18,
+      "factorizations": [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "component_count": 2
+    }
+  ],
+  "minimal_relation_count": 4,
+  "relations_exponent_pairs": [
+    [
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        0,
+        0
+      ]
+    ]
+  ],
+  "termination_weights": [
+    1,
+    4,
+    6,
+    7
+  ],
+  "normal_form_bases": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ]
+}

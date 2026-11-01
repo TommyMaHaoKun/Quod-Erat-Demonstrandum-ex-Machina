@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "status": "PASS",
+  "clean_copy_contains": "only declared source, certificate and LaTeX files",
+  "invocation_cwd": "outside copied project",
+  "runs": [
+    {
+      "program": "proof_verify.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"method\": \"exact finite checks of terminating normal-form proof\",\n  \"minimal_generators\": [\n    6,\n    7,\n    8,\n    9\n  ],\n  \"frobenius\": 11,\n  \"gaps\": [\n    1,\n    2,\n    3,\n    4,\n    5,\n    10,\n    11\n  ],\n  \"pseudo_frobenius\": [\n    10,\n    11\n  ],\n  \"ng_vector\": [\n    11,\n    10,\n    10,\n    10\n  ],\n  \"ng_table\": [\n    [\n      7,\n      6\n    ],\n    [\n      7,\n      6\n    ],\n    [\n      8,\n      7\n    ],\n    [\n      9,\n      8\n    ]\n  ],\n  \"almost_symmetric\": false,\n  \"auxiliary_weights\": [\n    1,\n    4,\n    6,\n    7\n  ],\n  \"normal_basis_degrees\": [\n    0,\n    7,\n    8,\n    9,\n    16,\n    17\n  ],\n  \"minimal_relation_degrees\": [\n    14,\n    15,\n    16,\n    18\n  ],\n  \"minimal_relation_count\": 4\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "search_verify.py",
+      "exit_code": 0,
+      "stdout": "VERIFIED: minimal generators [6,7,8,9]; PF=[10,11]; nearly Gorenstein; not almost symmetric.\nVERIFIED: complete Betti degrees [14,15,16,18], two components each; rho=4.\nVERIFIED: terminating four-relation normal-form data and six residue classes.\n",
+      "stderr": ""
+    },
+    {
+      "program": "build_paper.py",
+      "exit_code": 0,
+      "stdout": "LaTeX pass 1 succeeded.\nLaTeX pass 2 succeeded.\nBUILT: <clean-copy>\\output\\research_paper.pdf\n",
+      "stderr": ""
+    }
+  ],
+  "pdf_pages": 4,
+  "rebuilt_pdf_text_matches": true,
+  "author_metadata": "GPT-6 Astra",
+  "latex_boxes_or_unresolved_references": false,
+  "pdf_manual_visual_review": "all four final pages inspected: readable text, intact formulas/tables, all references on final page",
+  "main_tex_sha256": "ee9ba753478640e0033ec557773c61f6848374ecb6c731a334de561680287a53",
+  "pdf_sha256": "0e261a964324518213a897a6305d210ce0f47f2d4ef3a6557d3c2b48517d838c",
+  "source_review_final_diff": "Only margin, paragraph breaks, and portable reproduction wording changed after source review; mathematical statements and bibliography unchanged.",
+  "editorial_status_followup": "STATUS.md updated to COMPLETE_KNOWN_RESULT after the recorded final editorial review."
+}
