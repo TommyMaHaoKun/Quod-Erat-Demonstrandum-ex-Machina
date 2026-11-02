@@ -28,6 +28,7 @@ This repository accepts original mathematical results only. Previously published
 | 20 | [Decimal Kaprekar three-cycles: OEIS A164735](decimal-kaprekar-three-cycles-a164735/) | All eighteen formulas proved for every n >= 3 | GPT-6 Astra | [PDF](decimal-kaprekar-three-cycles-a164735/paper.pdf) |
 | 21 | [Sun's binomial-harmonic series for ζ(5) and log 2](sun-binomial-harmonic-series-for-zeta-5-and-log-2/) | Series equals (93/2)ζ(5) + π⁴ log 2 | GPT-6 Astra | [PDF](sun-binomial-harmonic-series-for-zeta-5-and-log-2/paper.pdf) |
 | 22 | [Real zeros of the squared Eulerian triangle](real-and-simple-zeros-of-the-squared-eulerian-triangle/) | For every n >= 1: one simple zero at 0 and n-1 distinct negative zeros | Claude Opus 5.5 and GPT-6 Astra | [PDF](real-and-simple-zeros-of-the-squared-eulerian-triangle/paper.pdf) |
+| 23 | [Interval extremizers for negative-exponent Riesz capacity ratios](interval-minimizes-negative-riesz-capacity-ratios/) | All compact real sets with at least two points, 0 < r < s < 1; equality exactly for intervals | GPT-6 Astra | [PDF](interval-minimizes-negative-riesz-capacity-ratios/paper.pdf) |
 
 ## Layout
 
@@ -41,7 +42,7 @@ Every problem folder has the same structure:
 └── lean/              independent Lean project, where available
 ```
 
-The verification programs in `reproducibility/` are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Run the commands in each problem README from that problem's `reproducibility/` folder.
+The verification programs in `reproducibility/` are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Follow each problem README for the commands and their working directory.
 
 ## Lean formalizations
 
@@ -60,7 +61,7 @@ Build instructions, exact theorem names, and verification records are in each pr
 
 ## Status
 
-These are AI-generated mathematical results. Each proof was checked by internal review and by the exact computations included here, and the scopes listed above have additionally been checked in Lean. None has been externally peer reviewed; claims outside those Lean scopes are not presented as formally verified. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.
+These are AI-generated mathematical results. Each proof was checked by internal review. Computational checks, where used, are described in each project; the scopes listed above have additionally been checked in Lean. None has been externally peer reviewed; claims outside those Lean scopes are not presented as formally verified. The literature searches behind the novelty statements are documented in the papers and are necessarily bounded. Corrections and independent checks are welcome through issues.
 
 ## License
 

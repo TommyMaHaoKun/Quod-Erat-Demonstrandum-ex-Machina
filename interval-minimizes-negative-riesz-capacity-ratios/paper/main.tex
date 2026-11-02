@@ -1,0 +1,504 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Prob}{\mathcal P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,d}
+\newcommand{\push}{_{\#}}
+\DeclareMathOperator{\supp}{supp}
+\title{The interval minimizes negative-exponent\protect\\ Riesz capacity ratios}
+\author{GPT-6 Astra}
+\date{November 2, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a compact set $K\subset\R$ containing at least two points,
+let $C_t(K)$ be the $t$th root of the
+maximum of $\iint |x-y|^t\dd\mu(x)\dd\mu(y)$ over probability measures on $K$.
+We prove that, for every $0<r<s<1$, the ratio $C_s(K)/C_r(K)$ is minimized
+by an interval, with equality only for nondegenerate closed intervals.
+This resolves the interval conjecture of Clark and Laugesen, restated by Fan.
+The main step is a comparison of energies of monotone images of beta measures.
+After a logistic change of coordinates, the relevant pair distribution is a
+positive mixture of cells from Poisson partitions. A likelihood-ratio
+comparison orders the mixing rates, and refinement of the partitions gives
+the energy comparison by concavity. The argument also derives the beta
+equilibrium measure and the interval capacity formula.
+\end{abstract}
+
+\section{The capacity inequality}
+
+For a Borel probability measure $\mu$ with compact support, write
+\[
+ \mathcal E_t(\mu)=\iint |x-y|^t\dd\mu(x)\dd\mu(y),\qquad t>0.
+\]
+For a nonempty compact set $K\subset\R$, define
+\[
+ U_t(K)=\max_{\mu\in\Prob(K)}\mathcal E_t(\mu),
+ \qquad C_t(K)=U_t(K)^{1/t}.
+\]
+The maximum exists: the probability measures on $K$ form a weakly compact
+space, and the bounded continuous kernel makes the energy continuous.
+For the latter assertion, weak convergence of the product measures follows
+by uniformly approximating continuous functions on $K\times K$ by finite
+sums of functions $f(x)g(y)$. If $K$ contains two distinct points, placing
+half the mass at each shows that $U_t(K)>0$.
+
+\begin{theorem}\label{thm:main}
+Let $K\subset\R$ be compact and contain at least two points. For every
+$0<r<s<1$,
+\begin{equation}\label{eq:main}
+ \frac{C_s(K)}{C_r(K)}\geq
+ \frac{C_s([-1,1])}{C_r([-1,1])},
+ \qquad
+ C_t([-1,1])=
+ \left[\frac{\Gamma((1+t)/2)\Gamma(1-t/2)}{\sqrt\pi}\right]^{1/t}
+ \quad(0<t<1).
+\end{equation}
+Equality holds if and only if $K$ is a nondegenerate closed interval.
+\end{theorem}
+
+In the conventional Riesz notation, $C_t=\operatorname{Cap}_{-t}$.
+Thus the inequality is the one-dimensional negative-exponent case
+$p=-s$, $q=-r$ of the interval conjecture in Clark and
+Laugesen~\cite[Conjecture 12]{CL}; Fan states exactly this formulation
+as Conjecture 4.1~\cite{Fan}. Fan's Theorem 4.3 proves positivity of
+equilibrium masses for finite subsets of the line, supporting numerical
+tests of the conjecture. Our argument applies directly to every compact
+set, including infinite and disconnected sets.
+
+We first prove a comparison for monotone maps. For $0<t<1$, set
+\begin{equation}\label{eq:beta}
+ a_t=\frac{1-t}{2},\qquad
+ d\beta_t(x)=\frac{[x(1-x)]^{a_t-1}}{B(a_t,a_t)}\dd x,
+ \quad 0<x<1,
+ \qquad e_t=\mathcal E_t(\beta_t).
+\end{equation}
+Here $B(a,b)=\Gamma(a)\Gamma(b)/\Gamma(a+b)$. In particular $e_t>0$.
+We will derive, rather than assume, that $e_t=U_t([0,1])$.
+For a bounded nondecreasing map $T:(0,1)\to\R$, define
+\begin{equation}\label{eq:normalized}
+ H_t(T)=\left[\frac{\mathcal E_t(T\push\beta_t)}{e_t}\right]^{1/t}.
+\end{equation}
+The pushforward $T\push\beta_t$ is the distribution of $T(X)$ when
+$X$ has distribution $\beta_t$.
+
+\begin{theorem}[Monotone transport comparison]\label{thm:transport}
+If $T:(0,1)\to\R$ is bounded and nondecreasing and $0<r<s<1$, then
+\begin{equation}\label{eq:transport}
+ H_r(T)\leq H_s(T).
+\end{equation}
+Equality holds if and only if $T(x)=A+Bx$ for Lebesgue-almost every $x$,
+with $B\geq0$.
+\end{theorem}
+
+\section{Random intervals and averaging}
+
+For $0<x<y<1$, let
+\[
+ D_T(x,y)=\frac{T(y)-T(x)}{y-x}.
+\]
+The ordered pair distribution
+\begin{equation}\label{eq:pair}
+ dP_t(x,y)=\frac{2}{e_t}(y-x)^t\dd\beta_t(x)\dd\beta_t(y),
+ \qquad 0<x<y<1,
+\end{equation}
+is a probability measure. The factor 2 accounts for both orders of a
+pair of independent beta variables. Directly from the definitions,
+\begin{equation}\label{eq:moment}
+ H_t(T)^t=\int D_T(x,y)^t\dd P_t(x,y).
+\end{equation}
+
+Let
+\begin{equation}\label{eq:logistic}
+ h(u)=\frac{1+\tanh u}{2},\qquad
+ \Delta(u,z)=h(u+z)-h(u),\qquad u\in\R,\ z>0.
+\end{equation}
+We use Poisson partitions only through the elementary properties proved
+below. A homogeneous Poisson process of rate $\lambda>0$ on $\R$ has
+independent counts on disjoint intervals, and the count in an interval
+of length $L$ has Poisson distribution with mean $\lambda L$.
+Its consecutive points partition $\R$ into bounded cells almost surely.
+Applying $h$ gives a countable partition $\mathcal Q_\lambda$ of $(0,1)$,
+apart from its cell endpoints.
+
+\begin{lemma}[The cell containing a uniform point]\label{lem:cell}
+Choose $V$ uniformly in $(0,1)$, independently of $\mathcal Q_\lambda$.
+Write the cell containing $V$ as $(h(u),h(u+z))$. The law of $(u,z)$ is
+\begin{equation}\label{eq:cell}
+ \lambda^2 e^{-\lambda z}\Delta(u,z)\dd u\dd z.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The variable $v=h^{-1}(V)$ has density $h'(v)$ on $\R$ and is independent
+of the process. Conditional on $v$, the distances to the nearest Poisson
+points on its left and right are independent exponential variables of
+rate $\lambda$: each survival probability is the probability of no
+Poisson point in the corresponding interval. Thus, for endpoints $u$
+and $u+z$ with $u<v<u+z$, their joint density is
+$\lambda^2e^{-\lambda z}\dd u\dd z$.
+Integrating over the sampled point gives
+\[
+ \lambda^2e^{-\lambda z}\int_u^{u+z}h'(v)\dd v
+ =\lambda^2e^{-\lambda z}\Delta(u,z),
+\]
+which proves~\eqref{eq:cell}.
+
+For an explicit normalization check, $h'\geq0$ and $\int_\R h'=1$, so
+Tonelli's theorem gives
+\begin{equation}\label{eq:gap-integral}
+ \int_\R\Delta(u,z)\dd u
+ =\int_\R\int_0^z h'(u+w)\dd w\dd u=z.
+\end{equation}
+Consequently the integral of~\eqref{eq:cell} is
+$\int_0^\infty\lambda^2z e^{-\lambda z}\dd z=1$.
+\end{proof}
+
+For a bounded nondecreasing $T$, its one-sided limits exist, and
+\[
+ L_T=T(1-)-T(0+)\geq0.
+\]
+Changing $T$ at its at most countably many discontinuities has no effect
+on any energy in this paper. Take a right-continuous version, and let
+$\nu$ be its finite Lebesgue--Stieltjes measure on $(0,1)$.
+Then $\nu((0,1))=L_T$.
+Almost surely no Poisson endpoint is an atom of $\nu$, since $\nu$ has
+at most countably many atoms and each fixed location has probability
+zero of being a Poisson point.
+For a cell $J=(x,y)$ with such endpoints, put
+\[
+ S_J=\frac{\nu(J)}{|J|}=D_T(x,y),
+ \qquad A_{\mathcal Q}(v)=S_J\quad(v\in J).
+\]
+For almost every partition, countable additivity gives
+\begin{equation}\label{eq:first-moment}
+ \int_0^1 A_{\mathcal Q}(v)\dd v
+ =\sum_{J\in\mathcal Q}\nu(J)=L_T.
+\end{equation}
+In particular, for $0<p<1$, Jensen's inequality yields
+\begin{equation}\label{eq:integrability}
+ 0\leq\int_0^1 A_{\mathcal Q}(v)^p\dd v\leq L_T^p.
+\end{equation}
+This also covers singular Stieltjes measures and maps with jumps.
+
+\begin{lemma}[Refinement comparison]\label{lem:refinement}
+If $0<\lambda_1\leq\lambda_2$, the Poisson partitions can be coupled
+so that $\mathcal Q_{\lambda_2}$ refines $\mathcal Q_{\lambda_1}$.
+For every $0<p<1$ and bounded nondecreasing $T$,
+\begin{equation}\label{eq:refinement}
+ \E\int_0^1 A_{\mathcal Q_{\lambda_1}}(v)^p\dd v
+ \geq
+ \E\int_0^1 A_{\mathcal Q_{\lambda_2}}(v)^p\dd v.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Superpose a rate-$\lambda_1$ process and an independent
+rate-$(\lambda_2-\lambda_1)$ process, omitting the second process when
+the rates are equal. Their union is a rate-$\lambda_2$ process by the
+addition rule for independent Poisson counts.
+Every coarse cell is bounded in the $u$ coordinate and hence contains
+only finitely many added points almost surely.
+If it splits into fine cells $J_1,\ldots,J_m$, its slope is
+\[
+ S_J=\sum_{i=1}^m\frac{|J_i|}{|J|}S_{J_i}.
+\]
+Concavity of $z^p$ gives
+$|J|S_J^p\geq\sum_i|J_i|S_{J_i}^p$.
+Summing over the countably many coarse cells, then taking expectations,
+proves~\eqref{eq:refinement}. The sums are nonnegative and bounded
+by~\eqref{eq:integrability}.
+\end{proof}
+
+\section{The beta pair distribution as a Poisson mixture}
+
+\begin{lemma}[Mixture representation]\label{lem:mixture}
+Under the change of variables $x=h(u)$, $y=h(u+z)$, the probability
+measure $P_t$ in~\eqref{eq:pair} has density
+\begin{equation}\label{eq:logistic-pair}
+ \frac{\Delta(u,z)(\sinh z)^{t-1}}{Z_t}\dd u\dd z,
+ \qquad
+ Z_t=\int_0^\infty z(\sinh z)^{t-1}\dd z.
+\end{equation}
+Let $\alpha=1-t$ and
+\begin{equation}\label{eq:weights}
+ b_n(\alpha)=\frac{(\alpha)_n}{n!},\quad
+ \lambda_n(\alpha)=2n+\alpha,\quad
+ W(\alpha)=\sum_{n=0}^\infty\frac{b_n(\alpha)}{\lambda_n(\alpha)^2},
+ \quad
+ w_n(\alpha)=\frac{b_n(\alpha)}{\lambda_n(\alpha)^2W(\alpha)}.
+\end{equation}
+Here $(\alpha)_0=1$ and $(\alpha)_n=\alpha(\alpha+1)\cdots(\alpha+n-1)$.
+Then $P_t$ is the mixture of the cell laws~\eqref{eq:cell}, with rate
+$\lambda_n(\alpha)$ chosen with probability $w_n(\alpha)$.
+\end{lemma}
+
+\begin{proof}
+Use
+\[
+ h'(u)=\frac{1}{2\cosh^2u},\qquad
+ h(u)(1-h(u))=\frac{1}{4\cosh^2u},\qquad
+ \Delta(u,z)=\frac{\sinh z}{2\cosh u\cosh(u+z)}.
+\]
+The unnormalized ordered-pair density transforms according to
+\begin{align*}
+ &(y-x)^t[x(1-x)y(1-y)]^{-(1+t)/2}\dd x\dd y\\
+ &\hspace{18mm}=2^{t+1}(\sinh z)^{t-1}\Delta(u,z)\dd u\dd z.
+\end{align*}
+Equation~\eqref{eq:gap-integral} supplies the normalization in
+\eqref{eq:logistic-pair}. The integral $Z_t$ is finite: its integrand
+is of order $z^t$ at zero and decays exponentially times $z$ at infinity.
+
+For every $z>0$, the binomial series gives the positive expansion
+\begin{equation}\label{eq:binomial}
+ (\sinh z)^{-\alpha}
+ =2^\alpha e^{-\alpha z}(1-e^{-2z})^{-\alpha}
+ =2^\alpha\sum_{n=0}^\infty b_n(\alpha)e^{-\lambda_n(\alpha)z}.
+\end{equation}
+Tonelli's theorem and~\eqref{eq:gap-integral} imply
+$Z_t=2^\alpha W(\alpha)$, in particular $0<W(\alpha)<\infty$.
+Substitution into~\eqref{eq:logistic-pair} expresses that density as
+\[
+ \sum_{n=0}^\infty w_n(\alpha)\,
+ \lambda_n(\alpha)^2e^{-\lambda_n(\alpha)z}\Delta(u,z).
+\]
+Lemma~\ref{lem:cell} identifies each summand's normalized density.
+\end{proof}
+
+\begin{lemma}[Ordering the mixing rates]\label{lem:rates}
+If $0<\beta<\alpha<1$, random integers with distributions
+$w_n(\beta)$ and $w_n(\alpha)$ can be coupled as
+$N_\beta\leq N_\alpha$. In this coupling,
+\[
+ 2N_\beta+\beta<2N_\alpha+\alpha.
+\]
+\end{lemma}
+
+\begin{proof}
+Apart from a positive factor independent of $n$, the likelihood ratio is
+\begin{equation}\label{eq:likelihood}
+ \frac{w_n(\beta)}{w_n(\alpha)}
+ =\frac{W(\alpha)}{W(\beta)}
+   \frac{(\beta)_n}{(\alpha)_n}
+   \left(\frac{2n+\alpha}{2n+\beta}\right)^2.
+\end{equation}
+The Pochhammer ratio decreases with $n$, since the ratio of successive
+terms is $(n+\beta)/(n+\alpha)<1$. The last factor also decreases,
+as $(2n+\alpha)/(2n+\beta)=1+(\alpha-\beta)/(2n+\beta)$.
+Thus the likelihood ratio decreases.
+
+For completeness, put $q_n=w_n(\beta)$ and $p_n=w_n(\alpha)$.
+For each integer $k\geq0$, $q_i p_j\geq p_i q_j$ whenever
+$i\leq k<j$. Summing shows
+\[
+ \left(\sum_{i\leq k}q_i\right)\left(1-\sum_{i\leq k}p_i\right)
+ \geq
+ \left(\sum_{i\leq k}p_i\right)\left(1-\sum_{i\leq k}q_i\right),
+\]
+and hence $\sum_{i\leq k}q_i\geq\sum_{i\leq k}p_i$.
+Applying the two discrete inverse distribution functions to the same
+uniform random number gives $N_\beta\leq N_\alpha$.
+The strict rate inequality follows from $\beta<\alpha$.
+\end{proof}
+
+\begin{proposition}[Concave moments of chord slopes]\label{prop:moments}
+For $0<r<s<1$, every bounded nondecreasing $T$, and every $0<p<1$,
+\begin{equation}\label{eq:concave-moments}
+ \int D_T^p\dd P_s\geq\int D_T^p\dd P_r.
+\end{equation}
+Also, for every $0<t<1$,
+\begin{equation}\label{eq:mean-slope}
+ \int D_T\dd P_t=L_T,\qquad
+ \int D_T^p\dd P_t\leq L_T^p\quad(0<p<1).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Take $\alpha=1-r$ and $\beta=1-s$ in Lemma~\ref{lem:rates}.
+Conditional on the coupled rates, use Lemma~\ref{lem:refinement} to
+couple the smaller-rate partition as a coarsening of the larger-rate
+partition. Choose the same independent uniform point $V$ to select
+the cells. Lemma~\ref{lem:mixture} identifies their endpoint laws as
+$P_s$ and $P_r$, respectively. Conditional Jensen, as in
+\eqref{eq:refinement}, proves~\eqref{eq:concave-moments} after averaging
+over the rates. Equations~\eqref{eq:first-moment} and
+\eqref{eq:integrability}, averaged over the mixture, prove
+\eqref{eq:mean-slope}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:transport}]
+By the power-mean inequality on the probability space $P_s$, followed
+by Proposition~\ref{prop:moments} with $p=r$,
+\begin{equation}\label{eq:chain}
+ \left(\int D_T^s\dd P_s\right)^{1/s}
+ \geq\left(\int D_T^r\dd P_s\right)^{1/r}
+ \geq\left(\int D_T^r\dd P_r\right)^{1/r}.
+\end{equation}
+All moments are finite by~\eqref{eq:mean-slope}.
+Together with~\eqref{eq:moment}, this proves the inequality.
+
+If equality holds, equality in the first step of~\eqref{eq:chain}
+implies that $D_T$ is constant $P_s$-almost surely; this follows also
+from strict concavity of $z^{r/s}$ applied to $D_T^s$.
+The density of $P_s$ is strictly positive on $0<x<y<1$.
+It follows that $T(y)-T(x)=B(y-x)$ for Lebesgue-almost every ordered
+pair, for a constant $B\geq0$. By symmetry this holds for almost every
+pair in $(0,1)^2$. Fubini's theorem then implies that $T(x)-Bx$ is
+almost everywhere constant. Conversely, if $T(x)=A+Bx$ almost
+everywhere, then $D_T=B$ almost everywhere, and $H_t(T)=B$ for every
+$t$. This includes constant maps.
+\end{proof}
+
+\section{Equilibrium of the interval and arbitrary compact sets}
+
+\begin{lemma}[Monotone realization of a measure]\label{lem:quantile}
+Let $\mu$ be a probability measure supported on a compact subset of
+$\R$, and let $0<t<1$. There is a bounded nondecreasing Borel map
+$T:(0,1)\to\R$ such that $T\push\beta_t=\mu$.
+For every $0<u<1$, $T\push\beta_u$ is supported on $\supp\mu$.
+\end{lemma}
+
+\begin{proof}
+Let $F_t$ be the continuous strictly increasing distribution function
+of $\beta_t$. It maps a beta-distributed variable to a uniform variable.
+If $Q_\mu(v)=\inf\{x:\mu(( -\infty,x])\geq v\}$ is the quantile
+function, take $T=Q_\mu\circ F_t$. The usual inverse-distribution
+identity gives $T\push\beta_t=\mu$. In particular,
+$T(x)\in\supp\mu$ for $\beta_t$-almost every $x$.
+All the measures $\beta_u$, $0<u<1$, have strictly positive densities
+on $(0,1)$ and thus have the same null sets. The support assertion follows.
+\end{proof}
+
+\begin{proposition}[Interval equilibrium and its energy]\label{prop:interval}
+For $0<t<1$, $\beta_t$ maximizes $\mathcal E_t$ among all probability
+measures on $[0,1]$, and
+\begin{equation}\label{eq:interval-energy}
+ e_t=U_t([0,1])
+ =\frac{\Gamma((1+t)/2)\Gamma(1-t/2)}{2^t\sqrt\pi}.
+\end{equation}
+Its potential $\int_0^1|x-y|^t\dd\beta_t(y)$ equals $e_t$ at every
+$x\in[0,1]$.
+\end{proposition}
+
+\begin{proof}
+For any probability measure $\mu$ on $[0,1]$, Lemma~\ref{lem:quantile}
+gives a monotone map $T$ taking values in $[0,1]$ almost everywhere.
+Thus $L_T\leq1$, and~\eqref{eq:moment} and~\eqref{eq:mean-slope} give
+\[
+ \frac{\mathcal E_t(\mu)}{e_t}
+ =\int D_T^t\dd P_t\leq L_T^t\leq1.
+\]
+This proves the equilibrium assertion without using a preexisting
+interval-capacity formula.
+
+Let $V_t(x)=\int|x-y|^t\dd\beta_t(y)$. For $x\in[0,1]$, maximality
+applied to $(1-\varepsilon)\beta_t+\varepsilon\delta_x$ gives
+\[
+ 0\geq\left.\frac{d}{d\varepsilon}
+ \mathcal E_t\bigl((1-\varepsilon)\beta_t+\varepsilon\delta_x\bigr)
+ \right|_{\varepsilon=0+}=2(V_t(x)-e_t).
+\]
+The function $V_t$ is continuous, $\beta_t$ has full support on $[0,1]$,
+and $\int V_t\dd\beta_t=e_t$. Therefore $V_t(x)=e_t$ everywhere on
+$[0,1]$. At zero this gives, with $a=(1-t)/2$,
+\[
+ e_t=\frac{B(a+t,a)}{B(a,a)}
+ =\frac{\Gamma((1+t)/2)\Gamma(1-t)}{\Gamma((1-t)/2)}.
+\]
+The gamma duplication formula yields~\eqref{eq:interval-energy}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $0<r<s<1$ and choose an $r$-energy maximizing measure $\mu$ on $K$.
+By Lemma~\ref{lem:quantile}, choose $T$ with $T\push\beta_r=\mu$;
+the measure $T\push\beta_s$ is also supported on $K$.
+The transport comparison and Proposition~\ref{prop:interval} give
+\begin{align*}
+ \frac{C_r(K)}{C_r([0,1])}
+ &=\left[\frac{\mathcal E_r(T\push\beta_r)}{e_r}\right]^{1/r}\\
+ &\leq\left[\frac{\mathcal E_s(T\push\beta_s)}{e_s}\right]^{1/s}
+ \leq\frac{C_s(K)}{C_s([0,1])}.
+\end{align*}
+The capacities in the denominators and $C_r(K)$ are positive, so this
+is the desired ratio inequality. Translating a set does not change its
+energy, and scaling it by $b>0$ multiplies $C_t$ by $b$. Thus $[0,1]$
+and $[-1,1]$ have the same ratio; scaling~\eqref{eq:interval-energy}
+also gives the gamma formula in~\eqref{eq:main}.
+
+For equality, both steps of the displayed comparison must be equalities.
+Theorem~\ref{thm:transport} gives $T(x)=A+Bx$ almost everywhere.
+Here $B>0$, because $U_r(K)>0$. Thus $\mu$ is the affine image of
+$\beta_r$, and its support is the interval $J=[A,A+B]\subset K$.
+Its potential equals $U_r(J)=U_r(K)$ on $J$ by
+Proposition~\ref{prop:interval} and scaling. If $K$ contained a point
+$z$ outside $J$, choose the endpoint $b=A+B$ when $z>A+B$, and the
+endpoint $b=A$ when $z<A$. For every $y\in J$, we have
+$|z-y|>|b-y|$. Hence the potential at $z$ would strictly exceed the
+potential at $b$, namely $U_r(K)$.
+Adding a sufficiently small positive mass at $z$, as in the preceding
+variation calculation, would increase the energy, a contradiction.
+Consequently $K=J$. Conversely, every nondegenerate closed interval
+attains equality by translation and scaling.
+\end{proof}
+
+\section{Examples, attribution, and verification}
+
+For two points at distance $d>0$, weights $a$ and $1-a$ give energy
+$2a(1-a)d^t$, maximized at $a=1/2$. Therefore
+\[
+ C_t(\{x,y\})=d\,2^{-1/t},\qquad
+ \frac{C_s(\{x,y\})}{C_r(\{x,y\})}=2^{1/r-1/s}.
+\]
+Theorem~\ref{thm:main} makes this strictly greater than the interval
+ratio. More generally the inequality is strict for every finite set
+with at least two points, every disconnected compact set, and every
+compact set that is not an interval. For an affine map $T(x)=A+Bx$ with
+$B\geq0$,
+the transport quantities satisfy $H_t(T)=B$, illustrating equality
+in the stronger transport theorem.
+
+The conjecture and the classical interval benchmark are attributed to
+Clark and Laugesen~\cite{CL} and Fan~\cite{Fan}. The contribution here
+is the monotone transport comparison, its Poisson-partition proof, and
+its application to the full interval conjecture with equality
+classification. The proof uses standard beta integrals, Poisson
+superposition, likelihood-ratio ordering, and Jensen's inequality;
+the required identities and comparison arguments are included above.
+The accompanying literature review records the sources and public
+repositories checked for earlier resolutions.
+
+The proof is analytic and requires no numerical certificate. Optional
+verification code checks the mixture normalization and finite
+quantile-transport examples. The manuscript and its independent internal
+mathematical checks were produced by GPT-6 Astra. The package contains
+the LaTeX source and the proof audit; it makes no claim of proof-assistant
+formalization or external peer review.
+
+\begin{thebibliography}{9}
+\bibitem{CL}
+C. Clark and R. S. Laugesen,
+\emph{Maximizing Riesz capacity ratios: conjectures and theorems},
+SIAM Journal on Mathematical Analysis \textbf{57} (2025), 5683--5717.
+\href{https://doi.org/10.1137/24M171992X}{doi:10.1137/24M171992X}.
+Preprint: \href{https://arxiv.org/abs/2410.14809}{arXiv:2410.14809}.
+
+\bibitem{Fan}
+Q. Fan,
+\emph{Riesz capacity ratios with negative exponents},
+\href{https://arxiv.org/abs/2609.11186v1}{arXiv:2609.11186v1} (2026).
+\end{thebibliography}
+\end{document}

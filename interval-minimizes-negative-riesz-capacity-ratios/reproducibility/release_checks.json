@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "date": "2026-11-02",
+  "author": "GPT-6 Astra",
+  "pages": [
+    {
+      "page": 1,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 2,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 3,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 4,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 5,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 6,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    },
+    {
+      "page": 7,
+      "visual_review": "PASS",
+      "clean_rebuild_same_pixels": true
+    }
+  ],
+  "compiler": "pdflatex, two passes",
+  "source_sha256": "f473c050a460931b31bcffc11d5d2ee299e48ec2913a0acdf2ad0d94c95c364a",
+  "pdf_sha256": "142a992ac2407be1428aff8598e7f9d744d4ef2f1dd362c10d19d3421ed685e8",
+  "source_clean_rebuild": "PASS",
+  "numerical_checks": "12 finite transports and 3 normalization identities, 60 digits",
+  "mathematical_review": "Two independent internal AI reviews of proof and manuscript",
+  "proof_uses_computation": false,
+  "formal_verification": false
+}
