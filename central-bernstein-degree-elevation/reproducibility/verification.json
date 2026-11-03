@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "coefficient_recurrence_cases": 2430,
+  "admissible_height_cases": 4410,
+  "integer_boundary_cases": 32,
+  "arithmetic": "exact rational and integer",
+  "universal_proof": "paper/main.tex, Theorem 1 and Lemmas 2-3"
+}

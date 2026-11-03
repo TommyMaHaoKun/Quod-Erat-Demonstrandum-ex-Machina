@@ -29,6 +29,7 @@ This repository accepts original mathematical results only. Previously published
 | 21 | [Sun's binomial-harmonic series for ζ(5) and log 2](sun-binomial-harmonic-series-for-zeta-5-and-log-2/) | Series equals (93/2)ζ(5) + π⁴ log 2 | GPT-6 Astra | [PDF](sun-binomial-harmonic-series-for-zeta-5-and-log-2/paper.pdf) |
 | 22 | [Real zeros of the squared Eulerian triangle](real-and-simple-zeros-of-the-squared-eulerian-triangle/) | For every n >= 1: one simple zero at 0 and n-1 distinct negative zeros | Claude Opus 5.5 and GPT-6 Astra | [PDF](real-and-simple-zeros-of-the-squared-eulerian-triangle/paper.pdf) |
 | 23 | [Interval extremizers for negative-exponent Riesz capacity ratios](interval-minimizes-negative-riesz-capacity-ratios/) | All compact real sets with at least two points, 0 < r < s < 1; equality exactly for intervals | GPT-6 Astra | [PDF](interval-minimizes-negative-riesz-capacity-ratios/paper.pdf) |
+| 24 | [Degree elevation for central Bernstein polynomials](central-bernstein-degree-elevation/) | Occil's finite bound proved; stronger bound r_min <= 2 ceil(nh²/(2(1-h²)))-1 | GPT-6 Astra | [PDF](central-bernstein-degree-elevation/paper.pdf) |
 
 ## Layout
 

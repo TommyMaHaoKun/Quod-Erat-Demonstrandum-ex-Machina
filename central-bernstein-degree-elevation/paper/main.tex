@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={A finite degree-elevation bound for central Bernstein polynomials},pdfauthor={GPT-6 Astra}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\title{A finite degree-elevation bound for\protect\\central Bernstein polynomials}
+\author{GPT-6 Astra}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $n$ be a positive even integer and let
+$f(x)=k\binom{n}{n/2}x^{n/2}(1-x)^{n/2}$, where $k>1$ and
+$h=f(1/2)<1$. We prove that all Bernstein coefficients of $f$ belong to
+$[0,1]$ after at most $\lceil nh^2/(1-h^2)\rceil$ degree elevations.
+This establishes the finite upper bound asked for by Peter Occil.
+The proof uses Sawin's explicit coefficient formula and a telescoping
+product inequality. A parity refinement gives
+$r_{\min}\le 2\lceil nh^2/(2(1-h^2))\rceil-1$.
+\end{abstract}
+
+\section{The question and the result}
+For an integer $N\ge0$, the degree-$N$ Bernstein basis is
+\[
+B_{i,N}(x)=\binom Ni x^i(1-x)^{N-i},\qquad 0\le i\le N.
+\]
+Every polynomial of degree at most $N$ has a unique expansion in this
+basis. Increasing $N$ while keeping the polynomial fixed is called
+\emph{degree elevation}.
+
+Fix a positive even integer $n=2m$ and a real number $k>1$, and suppose
+\[
+h=\frac{k\binom{2m}{m}}{4^m}\in(0,1).
+\]
+The polynomial under consideration is
+\[
+f(x)=k\binom{2m}{m}x^m(1-x)^m
+     =4^m h x^m(1-x)^m.
+\]
+Its maximum on $[0,1]$ is $h$, attained at $1/2$. For an integer $r\ge0$,
+write
+\[
+f(x)=\sum_{i=0}^{2m+r}b_i^{(r)}B_{i,2m+r}(x),
+\]
+and let $r_{\min}$ be the least $r$ for which all these coefficients
+belong to $[0,1]$. At $r=0$ the only nonzero coefficient is $k$, so
+$r_{\min}\ge1$ whenever it exists.
+
+Occil asked whether $\lfloor nh^2/(1-h^2)\rfloor+1$ elevations always
+suffice \cite{Occil}. Sawin derived the elevated coefficients and
+located their maximum; a central-binomial asymptotic then gives the
+scale $nh^2/(1-h^2)$ \cite{Sawin}. The argument below turns that scale
+into a finite bound, uniformly in all the parameters.
+
+\begin{theorem}\label{thm:main}
+Under the hypotheses above, put $T=nh^2/(1-h^2)$. Then
+\[
+1\le r_{\min}\le 2\left\lceil\frac T2\right\rceil-1
+                  \le\lceil T\rceil
+                  \le\lfloor T\rfloor+1.
+\]
+At the stated sufficient elevations every coefficient is strictly
+less than $1$. Moreover, $r_{\min}$ is odd.
+\end{theorem}
+
+\section{The maximum coefficient and its bound}
+We give the coefficient calculation in full, including the parity
+needed for the finite bound.
+
+\begin{lemma}[Coefficient formula and maximum]\label{lem:coeff}
+For $r\ge0$, the nonzero Bernstein coefficients are
+\begin{equation}\label{eq:coeff}
+b_{m+j}^{(r)}=4^m h\frac{\binom rj}{\binom{2m+r}{m+j}},
+\qquad 0\le j\le r.
+\end{equation}
+Their maximum is attained at $j=r/2$ if $r$ is even, and at
+$j=(r-1)/2,(r+1)/2$ if $r$ is odd. For $r\ge1$, set
+$R=2\lceil r/2\rceil$. Then
+\begin{equation}\label{eq:product}
+\max_i b_i^{(r)}
+=h\prod_{\ell=1}^{m}\frac{R+2\ell}{R+2\ell-1}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Multiplication by $(x+(1-x))^r=1$ gives
+\[
+f(x)=4^m h\sum_{j=0}^r\binom rj x^{m+j}(1-x)^{m+r-j},
+\]
+which proves \eqref{eq:coeff}; all other coefficients are zero.
+For $0\le j<r$, the ratio of consecutive nonzero coefficients is
+\[
+\frac{b_{m+j+1}^{(r)}}{b_{m+j}^{(r)}}
+=\frac{(r-j)(m+j+1)}{(j+1)(m+r-j)}.
+\]
+The numerator minus the denominator on the right is $m(r-2j-1)$.
+This establishes the asserted maxima.
+
+If $r=2s$ is even, its maximum divided by $h$ is
+\[
+4^m\frac{\binom{2s}{s}}{\binom{2s+2m}{s+m}}
+=\prod_{\ell=1}^m\frac{2s+2\ell}{2s+2\ell-1},
+\]
+by cancellation of factorials. If $r=2s-1$ is odd, with $s\ge1$,
+use
+\[
+\binom{2s-1}{s-1}=\frac12\binom{2s}{s},\qquad
+\binom{2s+2m-1}{s+m-1}=\frac12\binom{2s+2m}{s+m}.
+\]
+Thus the maximum at elevation $2s-1$ equals the maximum at elevation
+$2s$, proving \eqref{eq:product} in both cases.
+\end{proof}
+
+\begin{lemma}[A telescoping bound]\label{lem:bound}
+For every integer $r\ge1$ and $R=2\lceil r/2\rceil$,
+\begin{equation}\label{eq:bound}
+\left(\max_i b_i^{(r)}\right)^2
+<h^2\frac{R+n}{R}\le h^2\frac{r+n}{r}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For every real $a>2$,
+\[
+\left(\frac a{a-1}\right)^2<\frac a{a-2},
+\]
+since $(a-1)^2=a(a-2)+1$. Here $R\ge2$, so this inequality applies
+to every $a=R+2\ell$ in \eqref{eq:product}. Consequently
+\[
+\prod_{\ell=1}^m\left(\frac{R+2\ell}{R+2\ell-1}\right)^2
+<\prod_{\ell=1}^m\frac{R+2\ell}{R+2\ell-2}
+=\frac{R+2m}{R}.
+\]
+Multiplication by $h^2$ proves the strict inequality in
+\eqref{eq:bound}. The remaining inequality uses $R\ge r>0$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $q=\lceil T/2\rceil$, so $q\ge1$, and take $r=2q-1$. Then
+$R=2q\ge T$, whence
+\[
+h^2\frac{R+n}{R}\le1
+\quad\Longleftrightarrow\quad
+R\ge\frac{nh^2}{1-h^2}.
+\]
+Lemma~\ref{lem:bound} now gives $\max_i b_i^{(r)}<1$.
+Every coefficient is nonnegative by \eqref{eq:coeff}. This proves
+existence of $r_{\min}$ and the first upper bound, including the case
+$R=T$ because the product inequality is strict.
+
+To compare the integer bounds, set $L=\lceil T\rceil$. If $L=2a$,
+then $2\lceil T/2\rceil-1\le2a-1\le L$. If $L=2a+1$,
+then $2\lceil T/2\rceil-1\le2a+1=L$.
+Finally $L\le\lfloor T\rfloor+1$. Each of these two larger elevations
+satisfies $r\ge T$, so \eqref{eq:bound} gives strict coefficient
+bounds at those elevations as well.
+
+The case $r=0$ fails because $k>1$. Every positive even elevation
+$2s$ has exactly the same maximum as elevation $2s-1$, by
+Lemma~\ref{lem:coeff}. Since all coefficients are nonnegative, the
+first successful elevation must therefore be odd.
+\end{proof}
+
+\section{An exact criterion and examples}
+The product formula also describes the answer exactly, even when the
+simple sufficient bound is larger than the minimum.
+
+\begin{corollary}\label{cor:exact}
+Let $s_*$ be the least positive integer $s$ satisfying
+\[
+h\prod_{\ell=1}^m\frac{2s+2\ell}{2s+2\ell-1}\le1.
+\]
+Then $r_{\min}=2s_*-1$.
+\end{corollary}
+
+\begin{proof}
+Existence follows from Theorem~\ref{thm:main}. The displayed product
+times $h$ is the common maximum at elevations $2s-1$ and $2s$.
+All coefficients are nonnegative, and elevation zero fails.
+The criterion and the formula for $r_{\min}$ follow.
+\end{proof}
+
+For example, take $n=2$ and $h=3/4$. Then $k=3/2$ and $T=18/7$.
+At elevation $r=1$, the four coefficients are $(0,1,1,0)$, so
+$r_{\min}=1$. The requested bound gives $r_{\min}\le3$.
+This example also shows that the asymptotic scale $T$ need not be
+a lower bound for the exact minimum.
+
+For an integer-boundary example, take $n=32$ and $h=3/5$. These
+parameters satisfy $k>1$: indeed
+$\binom{32}{16}/2^{32}=601080390/4294967296<3/5$.
+Here $T=18$, and the parity bound gives $r_{\min}\le17$.
+The strict inequality in Lemma~\ref{lem:bound} applies with $R=T=18$,
+so this boundary case requires no limiting argument.
+
+The proof is entirely algebraic. The accompanying exact-arithmetic
+program checks the coefficient formula against repeated degree
+elevation, the maximizing indices, the product identity, and the
+stated bounds on finite sets of parameters. These checks provide
+reproducible verification of the formulas used in the proof.
+
+\begin{thebibliography}{9}
+\bibitem{Occil}
+Peter Occil,
+\emph{On the degree elevation needed to bring Bernstein coefficients
+to $[0,1]$}, MathOverflow question 381419,
+17 January 2021, revised the same day.
+\href{https://mathoverflow.net/q/381419}{mathoverflow.net/q/381419}.
+
+\bibitem{Sawin}
+Will Sawin,
+Answer to \emph{On the degree elevation needed to bring Bernstein
+coefficients to $[0,1]$}, MathOverflow,
+17 January 2021, edited 18 January 2021.
+\href{https://mathoverflow.net/a/381465}{mathoverflow.net/a/381465}.
+\end{thebibliography}
+\end{document}
