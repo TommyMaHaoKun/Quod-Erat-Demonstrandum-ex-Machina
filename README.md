@@ -34,6 +34,7 @@ This repository accepts original mathematical results only. Previously published
 | 26 | [A Weibull counterexample to a mean-normalized tail inequality](weibull-counterexample-to-a-mean-normalized-tail-inequality/) | Weibull shape 3/2 violates the inequality for every z > 0 | GPT-6 Astra | [PDF](weibull-counterexample-to-a-mean-normalized-tail-inequality/paper.pdf) |
 | 27 | [A counterexample to the HOMFLYPT–Kauffman span inequality](counterexample-to-the-homflypt-kauffman-span-inequality/) | Knot 12n₂₉₆ has HOMFLYPT span 8 > Kauffman span 7 | GPT-6 Astra | [PDF](counterexample-to-the-homflypt-kauffman-span-inequality/paper.pdf) |
 | 28 | [The Lovasz number of random circulant graphs of even order](lovasz-number-of-random-circulant-graphs-of-even-order/) | E theta(G_n)/sqrt(n) tends to 1 for even n; completes the all-integer limit | GPT-6 Astra | [PDF](lovasz-number-of-random-circulant-graphs-of-even-order/paper.pdf) |
+| 29 | [A 2-superirreducible quintic over the rationals](two-superirreducible-quintic-over-the-rationals/) | x⁵ + 6x⁴ − x³ − 10x² − 6x − 1 stays irreducible under every rational linear or quadratic substitution | GPT-6 Astra | [PDF](two-superirreducible-quintic-over-the-rationals/paper.pdf) |
 
 ## Layout
 
@@ -47,7 +48,7 @@ Every problem folder has the same structure:
 └── lean/              independent Lean project, where available
 ```
 
-The verification programs in `reproducibility/` are plain Python (3.9 or later). Most use only the standard library; the rest list their dependencies in `requirements.txt`. Follow each problem README for the commands and their working directory.
+Most verification programs in `reproducibility/` use Python 3.9 or later, usually with only the standard library. The quintic superirreducibility proof also uses Magma for its global arithmetic calculation. Follow each problem README for required software, commands and working directories.
 
 ## Lean formalizations
 

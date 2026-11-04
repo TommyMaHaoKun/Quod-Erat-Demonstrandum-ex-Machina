@@ -1,0 +1,21 @@
+{
+  "purpose": "complete arithmetic verification",
+  "utc": "2026-11-04T00:35:58.051414+00:00",
+  "source": "verify_quintic.m",
+  "code": "// Complete arithmetic verification for the cyclic quintic theorem.\n// Tested with Magma V2.30-1. Run in a fresh Magma process.\nSetSeed(1);\nproofbound := map< PowerStructure(RngOrd) -> Integers() |\n                     order :-> MinkowskiBound(order) >;\nSetClassGroupBoundMaps(proofbound, proofbound);\n\nQ<x> := PolynomialRing(Rationals());\nh := x^5+x^4-4*x^3-3*x^2+3*x+1;\nf := x^5+6*x^4-x^3-10*x^2-6*x-1;\nassert IsIrreducible(f);\nK<r> := NumberField(h);\nalpha := r-r^2-r^3;\nassert MinimalPolynomial(alpha) eq f;\nassert Discriminant(Integers(K)) eq 11^4;\nassert ClassNumber(K : Proof:=\"Full\") eq 1;\nprint \"FIELD: degree 5, discriminant 14641, unconditional class number 1\";\n\nRx<X> := PolynomialRing(K);\nq := ExactQuotient(Evaluate(f,X),X-alpha);\nk := r-1;\nb := -2*r^4-4*r^3+6*r^2+11*r-4;\nA := 2*r^4-r^3-8*r^2+2*r+4;\nB := 5*r^4+4*r^3-r^2-6*r-41;\nC := -11*r^4+77*r^2-132;\necubic := X^3+A*X^2+B*X+C;\nd := k*X+b;\nassert b^2 eq 11*(4-r^2);\nassert b ne 0;\nassert &+[Coefficient(q,i)*X^i*d^(4-i) : i in [0..4]] eq b^2*ecubic;\nE := EllipticCurve([K|0,A,0,B,C]);\nP1 := ProjectiveSpace(Rationals(),1);\ncov := map<E -> P1 | [E.1,k*E.1+b*E.3]>;\norigin_image := cov(E!0);\nassert origin_image[1]/origin_image[2] eq 1/k;\nassert Valuation(Norm(Discriminant(E)),3) eq 0;\nassert Valuation(Norm(b),3) eq 0;\nprint \"GOOD REDUCTION: norms of discriminant and map determinant:\",\n      Norm(Discriminant(E)), Norm(b);\nprint \"MODEL: exact quartic/elliptic identity verified\";\n\nfulltorsion,fulltorsionmap := TorsionSubgroup(E);\nassert Invariants(fulltorsion) eq [2,2];\nsuccess,G,MWmap := PseudoMordellWeilGroup(E);\nassert success;\nassert Invariants(G) eq [2,2,0];\nT1 := MWmap(G.1);\nT2 := MWmap(G.2);\nP := MWmap(G.3);\nassert #TwoSelmerGroup(E) eq 8;\nassert 2*P ne E!0;\nassert 2*T1 eq E!0 and 2*T2 eq E!0 and T1 ne T2;\ntorsion := {i*T1+j*T2 : i,j in [0,1]};\nassert #torsion eq 4;\nprint \"DESCENT: finite odd index subgroup Z/2 + Z/2 + Z\";\nprint \"RANK: 2-Selmer group order 8, full torsion order 4, infinite point P\";\nprint \"GENERATORS:\", [T1,T2,P];\n\nsat := Saturation([P],5 : TorsionFree:=true);\nassert #sat eq 1;\nassert &or[sat[1] eq e*P+T : e in [-1,1], T in torsion];\nprint \"SATURATION: unchanged modulo sign and torsion through prime 5\";\n\nN,V,index_condition,L := Chabauty(MWmap,cov,3);\nassert N eq 2;\nassert #V eq 2;\nassert &and[p in {2,3,5} : p in PrimeDivisors(index_condition)];\nassert &and[cov(MWmap(v)) eq P1![1,0] : v in V];\nprint \"CHABAUTY: prime 3, upper bound\", N;\nprint \"INDEX CONDITION:\", index_condition;\nprint \"GROUP ELEMENTS:\", V;\nprint \"IMAGES:\", [cov(MWmap(v)) : v in V];\nprint \"PASS: all points of E(K) with rational cov-image map to infinity\";\nprint \"PASS: f is 2-superirreducible over Q\";\n",
+  "source_sha256": "10181bfb2b20383990dbb8271f2356cfdfa5bb67c5cc56a0484c6cfaf13d8fcc",
+  "http_status": 200,
+  "response": {
+    "success": true,
+    "stdout": "FIELD: degree 5, discriminant 14641, unconditional class number 1\nGOOD REDUCTION: norms of discriminant and map determinant: 3290880673548599296 \n1331\nMODEL: exact quartic/elliptic identity verified\nDESCENT: finite odd index subgroup Z/2 + Z/2 + Z\nRANK: 2-Selmer group order 8, full torsion order 4, infinite point P\nGENERATORS: [ (-r^4 + 5*r^2 + r - 6 : 0 : 1), (-2*r^4 + 2*r^3 + 9*r^2 - 7*r - 6 \n: 0 : 1), (7*r^4 + r^3 - 22*r^2 - 5*r + 11 : 8*r^4 - 19*r^3 - r^2 + 31*r - 23 : \n1) ]\nSATURATION: unchanged modulo sign and torsion through prime 5\nCHABAUTY: prime 3, upper bound 2\nINDEX CONDITION: 15\nGROUP ELEMENTS: {\n    G.2 - G.3,\n    G.2 + G.3\n}\nIMAGES: [ (1 : 0), (1 : 0) ]\nPASS: all points of E(K) with rational cov-image map to infinity\nPASS: f is 2-superirreducible over Q\n",
+    "exit_code": 0,
+    "truncated": false,
+    "magma": {
+      "version": "2.30-1",
+      "seed": 1810595016,
+      "time_sec": 38.719,
+      "memory": "32.09MB"
+    },
+    "warnings": []
+  }
+}

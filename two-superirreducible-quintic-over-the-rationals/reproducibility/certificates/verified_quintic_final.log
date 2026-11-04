@@ -1,0 +1,19 @@
+FIELD: degree 5, discriminant 14641, unconditional class number 1
+GOOD REDUCTION: norms of discriminant and map determinant: 3290880673548599296 
+1331
+MODEL: exact quartic/elliptic identity verified
+DESCENT: finite odd index subgroup Z/2 + Z/2 + Z
+RANK: 2-Selmer group order 8, full torsion order 4, infinite point P
+GENERATORS: [ (-r^4 + 5*r^2 + r - 6 : 0 : 1), (-2*r^4 + 2*r^3 + 9*r^2 - 7*r - 6 
+: 0 : 1), (7*r^4 + r^3 - 22*r^2 - 5*r + 11 : 8*r^4 - 19*r^3 - r^2 + 31*r - 23 : 
+1) ]
+SATURATION: unchanged modulo sign and torsion through prime 5
+CHABAUTY: prime 3, upper bound 2
+INDEX CONDITION: 15
+GROUP ELEMENTS: {
+    G.2 - G.3,
+    G.2 + G.3
+}
+IMAGES: [ (1 : 0), (1 : 0) ]
+PASS: all points of E(K) with rational cov-image map to infinity
+PASS: f is 2-superirreducible over Q

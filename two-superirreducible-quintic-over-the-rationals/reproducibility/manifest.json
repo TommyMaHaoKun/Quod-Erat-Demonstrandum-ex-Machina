@@ -1,0 +1,10 @@
+{
+  "paper.pdf": "51cc24ce78741458d7cf58c3467a4ca2a297c6b4bc1bc96980586d514418a6bf",
+  "README.md": "1b6e62e99fbab98208a76113165001c1b1cbb4bb476436947b51afe310166712",
+  "reproducibility/certificates/model_identities.json": "315dd417a03337e72f03c255d13421e327ce2e39792e7f29fc850e91f6918c66",
+  "reproducibility/certificates/verified_quintic_final.json": "6189f5a53407aa102e5b4048a4554ab831c3e3ddfa552caf459d1e0e94380c8d",
+  "reproducibility/certificates/verified_quintic_final.log": "ca873e240fb2b38d07eec070b831fdf460ec0dec075adb256ce505073f13827c",
+  "reproducibility/src/magma_request.py": "d19037658694f743da1a5d3bbcf1b72d1c7f3822b8a26a260b0b6be211de07e2",
+  "reproducibility/src/verify_model.py": "26ad865f9385f5558dcb9c3e0fdb63ae8c1351a00ae941ea58f586ac7e72b53c",
+  "reproducibility/src/verify_quintic.m": "10181bfb2b20383990dbb8271f2356cfdfa5bb67c5cc56a0484c6cfaf13d8fcc"
+}
