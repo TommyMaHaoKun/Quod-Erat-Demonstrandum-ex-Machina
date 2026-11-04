@@ -1,0 +1,11 @@
+{
+  "LITERATURE_REVIEW.md": "a78c4d4384c6927b31422c898814c110b433e1537347c0f113fef8c77b5d5913",
+  "paper.pdf": "2f762054e0d48412b6d3e94644ad992a88e5879567f8c58ec93af2881050fb69",
+  "README.md": "f3ec69680b27c38a79695f9162f8d4dde734eeb5b9a5706b80d364d2c1445541",
+  "reproducibility/certificates/one_point_bound.json": "2da0e6d19de3e4a87fdeaba48fdaaee75ba727fca92f0633b6700a06b492810d",
+  "reproducibility/certificates/release_validation.json": "45cda938cfb57d1e69af3dc72071398ce6a5a697e607923786b96939f7da5a31",
+  "reproducibility/INDEPENDENT_REVIEW.md": "36167a2ac475476432a85c6cb11a90478815f6708e9450746cff47a056d1853a",
+  "reproducibility/PROOF_MAP.md": "60aba266648268b15b43404511cc416cae8221247fe4cce559d27c86fc0d38de",
+  "reproducibility/src/verify_one_point_bound.py": "1a4834e5d81e77e8807719cd76272373b65fd2810206174d2854e39c457ab103",
+  "STATUS.md": "ec8ba53c4fd8f71149f9d5ada8d43dd6a7f333c3d3084ec496e20ae5888eac09"
+}

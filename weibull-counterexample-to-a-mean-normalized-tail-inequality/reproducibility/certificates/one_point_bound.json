@@ -1,0 +1,62 @@
+{
+  "status": "PASS_EXACT_RATIONAL_ONE_POINT_CERTIFICATE",
+  "arithmetic": "Python standard-library Fraction; all decisions exact",
+  "t0": {
+    "numerator": "41",
+    "denominator": "20"
+  },
+  "lower_F_Taylor5": {
+    "numerator": "1027819579807",
+    "denominator": "2128896000000"
+  },
+  "upper_second_moment_Taylor6": {
+    "numerator": "1720862510053097",
+    "denominator": "22140518400000000"
+  },
+  "derivative_margin_lower_bound": {
+    "numerator": "2120383863325069",
+    "denominator": "442810368000000000"
+  },
+  "coarse_derivative_margin": {
+    "numerator": "23",
+    "denominator": "10000"
+  },
+  "lower_exp_positive_Taylor6": {
+    "numerator": "356095740361",
+    "denominator": "46080000000"
+  },
+  "exp_reciprocal_comparison": "lower_exp_positive_Taylor6 > 100/13",
+  "longer_derivative_margin": {
+    "numerator": "652030078749589435421445503042638047849135229",
+    "denominator": "50770658477686989344735232000000000000000000000"
+  },
+  "upper_exp_negative_Taylor16": {
+    "numerator": "588402600519488103706333553952107",
+    "denominator": "4570653193666560000000000000000000"
+  },
+  "stationary_F_bound": {
+    "numerator": "4209",
+    "denominator": "8200"
+  },
+  "global_normalized_ratio_cubed_bound": {
+    "numerator": "7381964831571",
+    "denominator": "7530880000000"
+  },
+  "strict_gap_below_one": {
+    "numerator": "148915168429",
+    "denominator": "7530880000000"
+  },
+  "analytic_dependencies": [
+    "Weibull survival exp(-x^(3/2)) and mean Gamma(5/3)",
+    "The tail event splits into two disjoint integrals up to a null boundary",
+    "The symmetric exponent is at least 3*u^2/4",
+    "sqrt(1-u) <= 1-u/2 for 0 <= u <= 1",
+    "Gamma log-convexity gives Gamma(5/3)^3 <= pi/4",
+    "pi < 22/7",
+    "Rescaled positive densities have increasing likelihood ratio",
+    "The stationary majorant G is decreasing for t >= 2",
+    "Taylor remainders have the stated global signs"
+  ],
+  "claim": "For every z>0, the mean-normalized Weibull tail ratio is strictly below one.",
+  "checker_sha256": "1a4834e5d81e77e8807719cd76272373b65fd2810206174d2854e39c457ab103"
+}
