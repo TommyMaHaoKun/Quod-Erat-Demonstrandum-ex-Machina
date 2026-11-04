@@ -35,6 +35,7 @@ This repository accepts original mathematical results only. Previously published
 | 27 | [A counterexample to the HOMFLYPT–Kauffman span inequality](counterexample-to-the-homflypt-kauffman-span-inequality/) | Knot 12n₂₉₆ has HOMFLYPT span 8 > Kauffman span 7 | GPT-6 Astra | [PDF](counterexample-to-the-homflypt-kauffman-span-inequality/paper.pdf) |
 | 28 | [The Lovasz number of random circulant graphs of even order](lovasz-number-of-random-circulant-graphs-of-even-order/) | E theta(G_n)/sqrt(n) tends to 1 for even n; completes the all-integer limit | GPT-6 Astra | [PDF](lovasz-number-of-random-circulant-graphs-of-even-order/paper.pdf) |
 | 29 | [A 2-superirreducible quintic over the rationals](two-superirreducible-quintic-over-the-rationals/) | x⁵ + 6x⁴ − x³ − 10x² − 6x − 1 stays irreducible under every rational linear or quadratic substitution | GPT-6 Astra | [PDF](two-superirreducible-quintic-over-the-rationals/paper.pdf) |
+| 30 | [Simultaneous indicators of two entire functions of order two](simultaneous-order-two-indicators-of-two-entire-functions/) | Pairwise-maximum condition is necessary and sufficient for every finite admissible family | GPT-6 Astra | [PDF](simultaneous-order-two-indicators-of-two-entire-functions/paper.pdf) |
 
 ## Layout
 

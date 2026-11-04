@@ -1,0 +1,29 @@
+{
+  "status": "PASS_EXACT_SYMBOLIC_IDENTITIES",
+  "identities": [
+    "K11",
+    "K12",
+    "K21",
+    "K22",
+    "trace"
+  ],
+  "arithmetic": "sparse Laurent polynomials over Q",
+  "independent_formal_variables": [
+    "A",
+    "B",
+    "uz",
+    "ub",
+    "uzb",
+    "vz",
+    "vb",
+    "vzb",
+    "cz",
+    "cb",
+    "czb",
+    "dz",
+    "db",
+    "dzb"
+  ],
+  "normalization": "conjugate K by diag(sqrt(A),sqrt(B))",
+  "scope": "shear-curvature algebra; analytic construction reviewed separately"
+}
