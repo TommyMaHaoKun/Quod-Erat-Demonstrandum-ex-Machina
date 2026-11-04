@@ -33,6 +33,7 @@ This repository accepts original mathematical results only. Previously published
 | 25 | [The exact six-dimensional bad-science matrix optimum](exact-six-dimensional-bad-science-matrix-optimum/) | β₆ = 1 + √3/2 | GPT-6 Astra | [PDF](exact-six-dimensional-bad-science-matrix-optimum/paper.pdf) |
 | 26 | [A Weibull counterexample to a mean-normalized tail inequality](weibull-counterexample-to-a-mean-normalized-tail-inequality/) | Weibull shape 3/2 violates the inequality for every z > 0 | GPT-6 Astra | [PDF](weibull-counterexample-to-a-mean-normalized-tail-inequality/paper.pdf) |
 | 27 | [A counterexample to the HOMFLYPT–Kauffman span inequality](counterexample-to-the-homflypt-kauffman-span-inequality/) | Knot 12n₂₉₆ has HOMFLYPT span 8 > Kauffman span 7 | GPT-6 Astra | [PDF](counterexample-to-the-homflypt-kauffman-span-inequality/paper.pdf) |
+| 28 | [The Lovasz number of random circulant graphs of even order](lovasz-number-of-random-circulant-graphs-of-even-order/) | E theta(G_n)/sqrt(n) tends to 1 for even n; completes the all-integer limit | GPT-6 Astra | [PDF](lovasz-number-of-random-circulant-graphs-of-even-order/paper.pdf) |
 
 ## Layout
 
