@@ -1,0 +1,267 @@
+{
+  "status": "PASS",
+  "full_coefficients_match": true,
+  "components": 1,
+  "spans": [
+    8,
+    7
+  ],
+  "invariance_checks": [
+    {
+      "case": [
+        2,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "operation": "positive_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "operation": "negative_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "operation": "conjugation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "operation": "inverse_cancellation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "operation": "positive_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "operation": "negative_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "operation": "conjugation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "operation": "inverse_cancellation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          -1,
+          2,
+          1
+        ]
+      ],
+      "operation": "positive_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          -1,
+          2,
+          1
+        ]
+      ],
+      "operation": "negative_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          -1,
+          2,
+          1
+        ]
+      ],
+      "operation": "conjugation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          -1,
+          2,
+          1
+        ]
+      ],
+      "operation": "inverse_cancellation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "operation": "positive_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "operation": "negative_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "operation": "conjugation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        3,
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "operation": "inverse_cancellation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "operation": "positive_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "operation": "negative_stabilization",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "operation": "conjugation",
+      "result": "PASS"
+    },
+    {
+      "case": [
+        2,
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "operation": "inverse_cancellation",
+      "result": "PASS"
+    }
+  ],
+  "braid_relation": "PASS",
+  "seconds": 3.2189999999827705,
+  "checker_sha256": "21e3352091bd711420e72c067a2b859802df86b3c0c0a418a379eb2f35d9bee8",
+  "structural_review": "Braid closure, both port smoothings, orientation changes, descending base cases, and lexicographic skein termination reviewed independently"
+}

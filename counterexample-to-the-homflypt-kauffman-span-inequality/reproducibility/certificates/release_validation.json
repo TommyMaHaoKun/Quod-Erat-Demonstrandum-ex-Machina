@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "date": "2026-11-04",
+  "author": "GPT-6 Astra",
+  "pdf_pages": 4,
+  "pdf_sha256": "57338105efd8c08a98c9287a0c766bde0b3c31f7403545557a62a0e94742d7ec",
+  "paper_source_sha256": "5173bd1bf394ca9f5dc6a9d95e015d130bcf19f7e5a0cb68e23ed8cfc01113b8",
+  "clean_verification_exit": 0,
+  "clean_verification_seconds": 3.4369999999762513,
+  "mathematical_review": "Independent review of full paper, skein evaluator, coefficients and connected-sum argument: PASS",
+  "visual_review": "All four pages rendered and inspected; no clipping, missing symbols or broken references",
+  "editorial_scan": "PDF text and metadata plus public text files checked; author correct and no irrelevant provider references, placeholders or absolute local paths",
+  "polynomial_terms": {
+    "homfly": 17,
+    "kauffman": 40
+  }
+}

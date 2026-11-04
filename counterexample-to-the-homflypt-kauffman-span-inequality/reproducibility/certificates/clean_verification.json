@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "knot": "12n_296",
+  "homfly_span": 8,
+  "kauffman_span": 7,
+  "homfly_states": 1973,
+  "kauffman_states": 104163,
+  "seconds": 3.2810000000172295,
+  "method": "Exact integer arithmetic; independently implemented port-pairing skein recursion from the explicit braid; full coefficient agreement with the published KnotInfo data.",
+  "sha256": {
+    "src/independent_skein.py": "21e3352091bd711420e72c067a2b859802df86b3c0c0a418a379eb2f35d9bee8",
+    "src/verify_all.py": "3e03bb58beebcdb774fecbd11ef5200fb94050b36d40212a35499a72efa7ae1f",
+    "certificates/published_polynomials.json": "65459c4ca712a1b2f26a9447db77e14886eb5744d02b249291a299f1863bde02"
+  }
+}
