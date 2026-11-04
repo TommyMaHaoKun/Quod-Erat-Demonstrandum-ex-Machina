@@ -1,0 +1,12 @@
+{
+  "LITERATURE_REVIEW.md": "2b5ad10da2859bf17d725260f35886e38e128e8256040aa4eeb6093792d43175",
+  "paper.pdf": "6a7e209cbd35806db38740b2b9d371451b759a5eb42cd88c3f6aef7541b81e4c",
+  "README.md": "d6df99d1f9919dab5f5a51c75cc393f0ce22897351e277ed1334bd1da0825698",
+  "reproducibility/certificates/cube6_ideal_bounds.json": "b725f282c2938edc31ad22b6d6ebb84801136b3d89bbb65285919192e275a67f",
+  "reproducibility/certificates/independent_verification.json": "6c81a3f391f09ffefdf45df20f4b98a3e91487f4ce766cc04d4f345d39d86201",
+  "reproducibility/certificates/release_validation.json": "bc698482314fe019af4b6c50a99cead4053da53b23711a64dccf4b2f8fee328d",
+  "reproducibility/PROOF_MAP.md": "30c0aedd2766532806c6741ab1232fb1616c543f085e97d72324609d352533a8",
+  "reproducibility/src/cube_ideal_bounds.py": "9538aa88278ae6bedb480812c7807e8924f12ecadc9b098830f5cec33cc4e81e",
+  "reproducibility/src/verify_theorem.py": "828f7a91a4d3d2efb16f46308f535170052addf3707459fb6a0ff18925263a68",
+  "STATUS.md": "6d67d75f08098234845f4a144d1d5aef5ef685b3aa13744315040432a2ddcef4"
+}

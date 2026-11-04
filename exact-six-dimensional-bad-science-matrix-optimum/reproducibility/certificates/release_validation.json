@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "date": "2026-11-04",
+  "author": "GPT-6 Astra",
+  "pdf_sha256": "6a7e209cbd35806db38740b2b9d371451b759a5eb42cd88c3f6aef7541b81e4c",
+  "pdf_pages": 5,
+  "paper_source_sha256": "7dd04f0ad9f2caf73da39b083cb6385a43f3dc2abf8417dfea2f965cb3cdbfaa",
+  "verifier_sha256": "828f7a91a4d3d2efb16f46308f535170052addf3707459fb6a0ff18925263a68",
+  "clean_extraction_verifier_exit": 0,
+  "printed_manuscript_code_exit": 0,
+  "clean_checks_seconds": 0.188,
+  "certificate_comparison": "Exact match except elapsed time",
+  "compilation": "Tectonic, successful final build",
+  "visual_inspection": "All 5 rendered pages inspected; no clipped formulas, missing glyphs, or broken references",
+  "mathematical_review": "Separate internal review of the full proof and exact verifier: PASS",
+  "editorial_review": "Author and title checked; no irrelevant provider references, prompts, placeholders, or local paths in the paper"
+}

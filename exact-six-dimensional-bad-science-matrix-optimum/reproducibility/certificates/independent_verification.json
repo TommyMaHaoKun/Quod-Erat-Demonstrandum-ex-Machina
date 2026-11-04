@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "method": "Independent increasing-vertex enumeration of every order ideal of size at most 11",
+  "dimension": 6,
+  "ideal_counts_by_size": [
+    1,
+    1,
+    6,
+    15,
+    35,
+    75,
+    156,
+    306,
+    605,
+    1110,
+    2045,
+    3512
+  ],
+  "ideals_checked": 7867,
+  "max_squared_centroids": [
+    0,
+    6,
+    20,
+    38,
+    64,
+    86,
+    116,
+    150,
+    192,
+    214,
+    244,
+    278
+  ],
+  "witness_masks": [
+    "0x0",
+    "0x1",
+    "0x3",
+    "0x7",
+    "0xf",
+    "0x1f",
+    "0x3f",
+    "0x7f",
+    "0xff",
+    "0x1ff",
+    "0x3ff",
+    "0x7ff"
+  ],
+  "exact_majorant_comparisons": [
+    {
+      "m": 0,
+      "u": 448,
+      "v": -256,
+      "certified_lower": "0"
+    },
+    {
+      "m": 1,
+      "u": 298,
+      "v": -168,
+      "certified_lower": "4"
+    },
+    {
+      "m": 2,
+      "u": 172,
+      "v": -96,
+      "certified_lower": "4"
+    },
+    {
+      "m": 3,
+      "u": 74,
+      "v": -40,
+      "certified_lower": "4"
+    },
+    {
+      "m": 4,
+      "u": 0,
+      "v": 0,
+      "certified_lower": "0"
+    },
+    {
+      "m": 5,
+      "u": -38,
+      "v": 24,
+      "certified_lower": "2"
+    },
+    {
+      "m": 6,
+      "u": -52,
+      "v": 32,
+      "certified_lower": "4/3"
+    },
+    {
+      "m": 7,
+      "u": -38,
+      "v": 24,
+      "certified_lower": "2"
+    },
+    {
+      "m": 8,
+      "u": 0,
+      "v": 0,
+      "certified_lower": "0"
+    },
+    {
+      "m": 9,
+      "u": 90,
+      "v": -40,
+      "certified_lower": "20"
+    },
+    {
+      "m": 10,
+      "u": 204,
+      "v": -96,
+      "certified_lower": "36"
+    },
+    {
+      "m": 11,
+      "u": 346,
+      "v": -168,
+      "certified_lower": "52"
+    }
+  ],
+  "large_cells": "Orthogonality bound 32m and positive increasing quadratic gap for m>=12",
+  "matrix_row_squared_norms": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "matrix_squared_sup_norm_counts": {
+    "4": 32,
+    "3": 32
+  },
+  "exact_optimum": "1 + sqrt(3)/2",
+  "seconds": 0.0,
+  "verifier_sha256": "828f7a91a4d3d2efb16f46308f535170052addf3707459fb6a0ff18925263a68"
+}

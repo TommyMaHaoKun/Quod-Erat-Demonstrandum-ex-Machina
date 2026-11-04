@@ -30,6 +30,7 @@ This repository accepts original mathematical results only. Previously published
 | 22 | [Real zeros of the squared Eulerian triangle](real-and-simple-zeros-of-the-squared-eulerian-triangle/) | For every n >= 1: one simple zero at 0 and n-1 distinct negative zeros | Claude Opus 5.5 and GPT-6 Astra | [PDF](real-and-simple-zeros-of-the-squared-eulerian-triangle/paper.pdf) |
 | 23 | [Interval extremizers for negative-exponent Riesz capacity ratios](interval-minimizes-negative-riesz-capacity-ratios/) | All compact real sets with at least two points, 0 < r < s < 1; equality exactly for intervals | GPT-6 Astra | [PDF](interval-minimizes-negative-riesz-capacity-ratios/paper.pdf) |
 | 24 | [Degree elevation for central Bernstein polynomials](central-bernstein-degree-elevation/) | Occil's finite bound proved; stronger bound r_min <= 2 ceil(nh²/(2(1-h²)))-1 | GPT-6 Astra | [PDF](central-bernstein-degree-elevation/paper.pdf) |
+| 25 | [The exact six-dimensional bad-science matrix optimum](exact-six-dimensional-bad-science-matrix-optimum/) | β₆ = 1 + √3/2 | GPT-6 Astra | [PDF](exact-six-dimensional-bad-science-matrix-optimum/paper.pdf) |
 
 ## Layout
 
